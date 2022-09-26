@@ -10,7 +10,7 @@
             <meta name="description" content="descripción de la web, se recomienda 90 caracteres"> <!--Es la ficha que contiene la descripcion de la pagina y que sera leida por el buscador-->
             <meta name="keywords"    content="palabras clave, separadas, por comas">
          
-            <link href="style/app.css" rel="stylesheet"> <!--señala el link del archivo css de donde se toma el estilo de la pagina-->
+            <link href="style.css" rel="stylesheet"> <!--señala el link del archivo css de donde se toma el estilo de la pagina-->
         </head>
     
     
@@ -20,18 +20,18 @@
             <header>
                 <div>
                     <div>
-                        <div>
-                            <div>
+                        <div class="logo-header">
+                            <div class="logo-empresa">
                                 <h3>Logo empresa</h3>
                             </div> 
-                            <div>
+                            <div class="nombre-empresa">
                                 <h3>Título</h3>
                             </div> 
                         </div>
                     </div>
-                    <div>
-                        <div>
-                            <h3>Inicio Reserva contacto</h3> <!--hacer lista horizontal no numerada ul/ con CSS-->
+                    <div class="menu-principal">
+                        <div class="menu-opciones">
+                            <h3>Inicio Reserva contacto</h3> <!--hacer lista horizontal no numerada ul/ con CSS--><!--normalmente son una lista-->
                         </div>
                     </div>
                 </div>
@@ -39,60 +39,77 @@
                         
     
             <main>
-                
-                <div class="index-slider"><!--Slider-->
-                    <div>imagen fondo slider</div>
-                    <div>Un título que evoca sensaciones</div><!--Es el texto de la captura-->
-                    <div>Reservar</div><!--boton reservar-->                
-                </div>
-
-
-                <div class="index-services"><!--Servicios-->
-                    <div>Disfruta de nuestras experiencias</div>
-
-                    <div>
-                        <div class="index-services-item">
-                            <div>Imagen 1</div>
-                            <div>Descripcion 1 imagen</div>
-                            <div>subtitulo + enlace</div>
-                            <div>descripción</div>
-                        </div>
-                        
-                        <div class="index-services-item">
-                            <div>Imagen 2</div>
-                            <div>Descripcion 2 imagen</div>
-                            <div>subtitulo + enlace</div>
-                            <div>descripción</div>
-                        </div>
-
-                        <div class="index-services-item">
-                            <div>Imagen 3</div>
-                            <div>Descripcion 3 imagen</div>
-                            <div>subtitulo + enlace</div>
-                            <div>descripción</div>
-                        </div>
-
-                        <div class="index-services-item">
-                            <div>Imagen 4</div>
-                            <div>Descripcion 4 imagen</div>
-                            <div>subtitulo + enlace</div>
-                            <div>descripción</div>
-                        </div>
-                    </div>   
-                </div>
-
-
-                <div class="index-textinf"><!--bloque texto inferior-->
-                    <div>texto</div>
-                    <div>Imagen bote</div>
-                </div>
             
+                <div class="index"><!--este contenedor lo recomienda Carlos, poner el mismo nombre de la pagina-->
+                    <div class="one-column">
+                        <div class="column">
+                            <div class="index-slider"><!--Slider-->
+                                <div>imagen fondo slider</div>
+                                <div>Un título que evoca sensaciones</div><!--Es el texto de la captura-->
+                                <div>Reservar</div><!--boton reservar-->                
+                            </div>        
+                        </div>
+                    </div>
+               
+                    <div class="one-column">
+                        <div class="column">
+                            <div class="index-services"><!--Servicios-->
+                            <div>Disfruta de nuestras experiencias</div>
+                        </div>
+                    </div>
+
+                    <div class="one-colum"></div>
+                        <div class="four-columns">
+                            <div class="index-services-item">
+                                <div class="services-imagen">Imagen </div>
+                                <div class="services-titulo">Descripcion  imagen</div>
+                                <div class="services-enlace">subtitulo + enlace</div>
+                                <div class="services-description">descripción</div>
+                            </div>
+                            
+                            <div class="index-services-item">
+                                <div>Imagen</div>
+                                <div>Descripcion imagen</div>
+                                <div>subtitulo + enlace</div>
+                                <div>descripción</div>
+                            </div>
+
+                            <div class="index-services-item">
+                                <div>Imagen</div>
+                                <div>Descripcion imagen</div>
+                                <div>subtitulo + enlace</div>
+                                <div>descripción</div>
+                            </div>
+
+                            <div class="index-services-item">
+                                <div>Imagen</div>
+                                <div>Descripcion imagen</div>
+                                <div>subtitulo + enlace</div>
+                                <div>descripción</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="one-column">
+                        <div class="column">
+                            <div class="banner-text"><!--bloque texto inferior-->
+                                <div>texto</div>
+                                <div>Imagen bote</div>
+                            </div>
+                        </div>
+                    </div>               
+                </div>
+           
             </main>
     
-            <footer>
-                <div><p>@2048</p> <p>pagina de verdad</p></div>
-            </footer> 
-              
+                    <div class="one-column">
+                        <div class="column">
+                            <footer>
+                                <div class="copyright"><p>@2048</p> <p>pagina de verdad</p></div>
+                            </footer> 
+                        </div>
+                    </div>
+        
         </body>
     
     </html>
