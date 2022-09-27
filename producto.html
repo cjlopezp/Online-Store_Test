@@ -16,63 +16,84 @@
 
         <body>
             
-                <header>
-                    <div class="producto-header">
-                        <div>
-                            <div>
-                                <div>
-                                    <h3>Logo empresa</h3>
-                                </div> 
-                                <div>
-                                    <h3>Título</h3>
-                                </div> 
+            <header>
+                <div class="one-column">
+                    <div class="header-menu"">
+                        <div class="two-columns">       
+                            <div class="one-column">   
+                                <div class="Img-corporativa">
+                                    <div class="two-columns">
+                                                                    
+                                        <div class="column">
+                                            <div class="logo-empresa"><h3>Logo empresa</h3></div> 
+                                        </div>   
+
+                                        <div class="column">    
+                                            <div class="nombre-empresa"><h3>Título</h3></div> 
+                                        </div>
+                                                                                    
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div>
-                            <div>
-                                <h3>Inicio Reserva contacto</h3> <!--hacer lista horizontal no numerada ul/ con CSS-->
+                                
+                            <div class="one-column">   
+                                <div class="menu-opciones"> 
+                                    <ul class="nav"><!--hacer lista horizontal no numerada ul/ con CSS--><!--normalmente son una lista-->
+                                        <li>Inicio</li>
+                                        <li>Reserva</li>
+                                        <li>Contactos</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </header>
+                </div>   
+            </header>
             
 
             <main>
+                <div class="one-column">
+                    <div class="producto">
+                        <div class="two-columns">
+                            <div class="column">
+                                <div class="slider-gallery-main"><!--Columna izquierda-->
+                                    <div class="slider-gallery">Velero</div><!--imagen del barco - Es un slider-->                                        
+                                        <div>
+                                            <div class="miniature">miniatura</div><!--imagenes detalladas del barco-->
+                                            <div class="miniature">miniatura</div>
+                                            <div class="miniature">miniatura</div>
+                                            <div class="miniature">miniatura</div>
+                                            <div class="miniature">miniatura</div>                    
+                                        </div>
+                                </div>
+                            </div>
 
-                <div class="producto">
-                    <div class="slider-gallery-main"><!--Columna izquierda-->
-                        <div class="slider-gallery">Velero</div><!--imagen del barco - Es un slider-->
-                        <div>
-                            <div class="miniature">miniatura</div><!--imagenes detalladas del barco-->
-                            <div class="miniature">miniatura</div>
-                            <div class="miniature">miniatura</div>
-                            <div class="miniature">miniatura</div>
-                            <div class="miniature">miniatura</div>                    
+                            <div class="column">
+                                <div class="producto-alquiler"><!--columna derecha-->
+                                    <div  class="producto-alquiler-descripcion"><p><h2>tipo de barco y eslora</h2></p> <p>valor y descripcion del barco</p></div>
+                                
+                                    <div class="producto-alquiler-cantidad">
+                                        <div class="producto-alquiler-cantidad-dias">Cantidad de días</div>
+                                        
+                                        <div class="amount-quantity">
+                                            <div class="quantity-minos"><button>-</button></div>
+                                            <div class="quantity-item">Numeral</div> <!--insertar elemento dinamico que cambie el numero segun se usen los botones que lo acompañen-->
+                                            <div class="quantity-plus"><button>+</button></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="settings-summit"><Button class="settings-summit">reservar</Button></div>                        
+                                </div>
+                            </div>       
                         </div>
                     </div>
-
-                    <div class="producto-alquiler"><!--columna derecha-->
-                        <div  class="producto-alquiler-descripcion"><p><h2>tipo de barco y eslora</h2></p> <p>valor y descripcion del barco</p></div>
-                       
-                        <div class="producto-alquiler-cantidad">
-                            <div class="producto-alquiler-cantidad-dias">Cantidad de días</div>
-                            
-                            <div class="amount-quantity">
-                                <div class="quantity-minos"><button>-</button></div>
-                                <div class="quantity-item">Numeral</div> <!--insertar elemento dinamico que cambie el numero segun se usen los botones que lo acompañen-->
-                                <div class="quantity-plus"><button>+</button></div>
-                            </div>
-                        </div>
-
-                        <div class="settings-summit"><Button class="settings-summit">reservar</Button></div>                        
-                    </div>        
                 </div>
-                
             </main>
 
             <footer>
-                <div class="copyright"><p>@2048</p> <p>pagina de verdad</p></div>
-            </footer> 
+                <div class="footer-copyright">@2048</div>
+                <div class="footer-link"></div> <!--Aqui link pagina de verdad-->
+            </footer>
 
         </body>
 
