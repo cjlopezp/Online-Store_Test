@@ -18,109 +18,108 @@
         <body>
     
             <header>
-                <div class="one-column">
-                    <div class="header-menu"">
-                        <div class="two-columns">       
-                            <div class="one-column">   
-                                <div class="Img-corporativa">
-                                    <div class="two-columns">
-                                                                    
-                                        <div class="column">
-                                            <div class="logo-empresa">Logo empresa</div> 
-                                        </div>   
-
-                                        <div class="column">    
-                                            <div class="nombre-empresa">Título</div> 
-                                        </div>
-                                                                                    
-                                    </div>
-                                </div>
-                            </div>
-                                
-                            <div class="one-column">   
-                                <div class="menu-opciones"> 
-                                    <ul class="nav"><!--hacer lista horizontal no numerada ul/ con CSS--><!--normalmente son una lista-->
-                                        <li>Inicio</li>
-                                        <li>Reserva</li>
-                                        <li>Contactos</li>
-                                    </ul>
-                                </div>
+                <div class="header-menu">
+                    <div class="two-columns">       
+                        <div class="column">   
+                            <div class="logo">
+                                <div class="logo-imagen">Logo empresa</div> 
+                                <div class="logo-titulo">Título</div>                                                
                             </div>
                         </div>
+                            
+                        <div class="column"> 
+                            <nav class="menu-opciones">
+                                <ul><!--hacer lista horizontal no numerada ul/ con CSS--><!--normalmente son una lista-->
+                                    <li>Inicio</li>
+                                    <li>Reserva</li>
+                                    <li>Contactos</li>
+                                </ul>
+                            </nav>  
+                        </div>
                     </div>
-                </div>   
-            </header>
+                </div>
+            </header>        
     
             <main>
-                <div class="one-column">
+                <div class="column">
                     <div class="column">
-                        <div class="checkout-titulo">Finalizar compra</div>
+                        <div class="pagina-titulo">Finalizar compra</div>
                     </div>
+                </div>
 
                     <div class="checkout-info">
                         <div class="two-columns">   
-                            <div class="column"></div> 
-                                <div class="checkout-info-datacliente"><!--columna izquierda pagina completa-->
+                            <div class="column">
+                                <div class="checkout-data"><!--columna izquierda pagina completa-->
                                     <div class="two-columns">
 
                                         <div class="column">
-                                            <div class="checkout-info-datacliente-data-columnaizq-nombre"><label for="nombre">Nombre</label></div>
-                                            <div class="checkout-info-datacliente-data-columnaizq-nombrecampo"><input type="text" id="nombre" name="nombre"><br></br></div>
-                                            <div class="checkout-info-datacliente-data-columnaizq-telefono"><label for="telefono">Telefono</label></div>
-                                            <div class="checkout-info-datacliente-data-columnaizq-telefonocampo"><input type="text" id="telefono" name="telefono"></div>
-                                            <div class="checkout-info-datacliente-data-columnaizq-ciudad"><label for="ciudad">Ciudad</label></div>
-                                            <div class="checkout-info-datacliente-data-columnaizq-ciudadcampo"><input type="text" id="ciudad" name="ciudad"></div>
+                                            <div class="field-name"><label for="name">Nombre</label></div>
+                                            <div class="field-input"><input type="text" id="name" name="name"><br></br></div>
+                                            <div class="field-phone"><label for="phone">Telefono</label></div>
+                                            <div class="field-input"><input type="text" id="phone" name="phone"></div>
+                                            <div class="field-city"><label for="city">Ciudad</label></div>
+                                            <div class="field-input"><input type="text" id="city" name="city"></div> <!--debe ser un desplegable-->
                                         </div>
 
                                         <div class="column">
-                                            <div class="checkout-info-datacliente-data-columnader-apellidos"><label for="apellidos">Apellidos</label></div>
-                                                <div class="checkout-info-datacliente-data-columnader-apellidoscampo"><input type="text" id="apellidos" name="apellidos"></div>
-                                                <div class="checkout-info-datacliente-data-columnader-email"><label for="email"></label> Email</div>
-                                                <div class="checkout-info-datacliente-data-columnader-emailcampo"><input type="text" id="apellidos" name="email"></div>
-                                                <div class="checkout-info-datacliente-data-columnader-cp"><label for="cp">Código postal</label></div>
-                                                <div class="checkout-info-datacliente-data-columnader-cpcampo"><input type="text" id="cp" name="cp"></div>
-                                            </div>   
-                                        </div>        
-                                        
-                            <div class="column">                                            
-                                <div class="checkout-info-datacliente-envio-direccion"><label for="direccion">Direccion</label></div>
-                                <div class="checkout-info-datacliente-envio-direccioncampo"><input type="text" id="direccion" name="direccion"></label></div>                    
-                            </div>            
-
-                                                         <div class="checkout-info-checkout">
-
-                                <div class="checkout-info-checkout-resumen">Resumen de la compra
-                                    
-                                    <div class="checkout-info-checkout-resumen-conceptos">
-
-                                        <div class="checkout-info-checkout-resumen-conceptos-iva"><!--son filas-->
-                                            <div class="checkout-info-checkout-resumen-conceptos-iva-iva">IVA</div>
-                                            <div class="checkout-info-checkout-resumen-conceptos-iva-ivavalor">20 €</div>
-                                        </div>
-                                        
-                                        <div class="checkout-info-checkout-resumen-conceptos-transporte">
-                                            <div class="checkout-info-checkout-resumen-conceptos-transporte-transporte">Transporte</div>
-                                            <div class="checkout-info-checkout-resumen-conceptos-transporte-transportevalor">0 €</div>
-                                        </div>
-
-                                        <div class="checkout-info-checkout-resumen-conceptos-total">
-                                            <div class="checkout-info-checkout-resumen-conceptos-total-total">Total</div>
-                                            <div class="checkout-info-checkout-resumen-conceptos-total-totalvalor">20 €</div>
-                                        </div>
-
+                                            <div class="field-lastname"><label for="lastname">Apellidos</label></div>
+                                            <div class="field-input"><input type="text" id="lastnames" name="lastname"></div>
+                                            <div class="field-email"><label for="email"></label> Email</div>
+                                            <div class="field-input"><input type="text" id="email" name="email"></div>
+                                            <div class="field-postal-code"><label for="cp">Código postal</label></div>
+                                            <div class="field-input"><input type="text" id="cp" name="cp"></div>
+                                        </div>   
                                     </div>
+
+                                    <div class="column">                                            
+                                        <div class="field-address"><label for="address">Direccion</label></div>
+                                        <div class="field-input"><input type="text" id="address" name="address"></label></div>                    
+                                    </div>  
                                 </div>
+                            </div>              
 
-                                <div class="checkout-info-checkout-metpago">
-                                    <div class="checkout-info-checkout-metpago-transbanc">Transferencia bancaria</div>
-                                    <div class="checkout-info-checkout-metpago-paypal">Paypal</div>
-                                    <div class="checkout-info-checkout-metpago-transbanc-tarjcredit">Tarjeta de credito</div>
+                            <div class="column">   
+                                <div class="checkout-summary">
+                                    <div class="column">
+                                        
+                                        <div class="column">
+                                            <div class="checkout-table-title">Resumen de la compra
+                                        </div>
+                                        
+                                            <div class="two-columns">
+                                                <div class="column">
+                                                    <div class="checkout-concepts">
+                                                        <div class="checkout-iva">IVA</div>
+                                                        <div class="checkout-shipping">Transporte</div>
+                                                        <div class="checkout-total">Total</div>
+                                                    </div>
+
+                                                <div class="column">
+                                                    <div class="checkout-concepts-cost"><!--son filas-->
+                                                        <div class="checkout-iva-cost">20 €</div>
+                                                        <div class="checkout-transport-cost">0 €</div>
+                                                        <div class="checkout-total-valor">120 €</div>
+                                                    </div>
+                                                </div>
+                                            </div>    
+                                                
+                                        <div class="column">
+                                            <div class="checkout-payment">
+                                                <div class="checkout-banctrans">Transferencia bancaria</div>
+                                                <div class="checkout-paypal">Paypal</div>
+                                                <div class="checkout-credit-card">Tarjeta de credito</div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div>
+                                            <div class="generic-button"><button>Pagar</button> </div>
+                                        </div> 
+
+                                    </div>            
                                 </div>
-
-                                <div class="checkout-info-checkout-botonpago">Pagar</div>
-
                             </div>
-                        </div>
+                        </div>    
                     </div>
                 </div>
             </main>

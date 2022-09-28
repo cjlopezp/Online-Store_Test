@@ -18,99 +18,123 @@
         <body>
     
             <header>
-                <div>
-                    <div>
-                        <div>Logo empresa</div>
-                        <div><h3>Título</h3></div>                       
-                    </div>
-
-                    <div>
-                        <h3>Inicio Reserva contacto</h3><!--hacer lista horizontal no numerada ul/ con CSS--><!--puede eliminarse "contacto de este menú"-->
+                <div class="header-menu">
+                    <div class="two-columns">       
+                        <div class="column">   
+                            <div class="logo">
+                                <div class="logo-imagen">
+                                    <img src="" alt="">
+                                </div> 
+                                <div class="logo-titulo">
+                                    <h1>Título</h1>
+                                </div>                                                
+                            </div>
+                        </div>
+                            
+                        <div class="column"> 
+                            <nav class="menu-opciones">
+                                <ul><!--hacer lista horizontal no numerada ul/ con CSS--><!--normalmente son una lista-->
+                                    <li>Inicio</li>
+                                    <li>Reserva</li>
+                                    <li>Contactos</li>
+                                </ul>
+                            </nav>  
+                        </div>
                     </div>
                 </div>
-            </header>
+            </header>        
     
             <main>
-                <div class="contacto-titulo">Contacte con nosotros</div>
-
-                <div class="contacto-datos">
-                    <div class="contacto-datos-empresa"><!--Columna izquierda de la pagina-->
-                        
-                        <div class="contactodatos-empresa-telefono">
-                            <div class="contactodatos-empresa-telefono-miniatura">miniatura</div>
-                            <div class="contactodatos-empresa-telefono-numerotel">+34678900384</div>
-                        </div>  
-                        
-                        <div class="contactodatos-empresa-email">
-                            <div class="contactodatos-empresa-email-miniatura"></div>
-                            <div class="contactodatos-empresa-email-emailcoaunt">info@alizeboats.com</div>
+                <div class="contacto">
+                    <div class="column">
+                        <div class="column">
+                            <div class="pagina-titulo"><h1>Contacte con nosotros</h1></div>
                         </div>
-                        
-                        <div class="contactodatos-empresa-ubicacion">
-                            <div class="contactodatos-empresa-ubicacion-miniatura"></div>
-                            <div class="contactodatos-empresa-ubicacion-direccion">Club Marítimo de San Antonio de la Playa</div>
-                        </div>
-
-                        <div class="contactodatos-empresa-diasapertura">
-                            <div class="contactodatos-empresa-diasapertura-miniatura"></div>
-                            <div class="contactodatos-empresa-diasapertura-abierto">Abierto todos los días</div>
-                        </div>
-
-                        <div class="contactodatos-empresa-horario">
-                            <div class="contactodatos-empresa-horario-miniatura"></div>
-                            <div class="contactodatos-empresa-horario-horalaboral">8:00 - 14:00</div>
-                        </div>
-
                     </div>
-                    
-                    <div class="contactodatos-cliente"><!--columna derecha de la pagina-->
-                        
-                        <div class="contactodatos-cliente-datosgeneral">
 
-                            <div class="contactodatos-cliente-datosgeneral-iz"><!--columna izquierda-->
+                    <div class="two-columns">
+                        <div class="column">
+                            <div class="contacto-datos"><!--Columna izquierda de la pagina-->
+                            
+                                <div class="contacto-dato">
+                                    <div class="contacto-icono">
+                                        <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                        <path fill="currentColor" d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z" />
+                                        </svg></div>
+                                    <div class="contactoinformacion"><span>+34678900384</span></div>
+                                </div>  
                                 
-                                <div class="contactodatos-cliente-datosgeneral-iz-nombre">
-                                    <div class="contactodatos-cliente-datosgeneral-iz-nombre-nombre">Nombre</div>
-                                    <div class="contactodatos-cliente-datosgeneral-iz-nombre-campo"></div>
-                                </div>
-
-                                <div class="contactodatos-cliente-datosgeneral-iz-telefono">
-                                    <div class="contactodatos-cliente-datosgeneral-iz-telefono-telefono">teléfono</div>
-                                    <div class="contactodatos-cliente-datosgeneral-iz-telefono-campo"></div>
-                                </div>
-
+                                <div class="contacto-dato">
+                                    <div class="contacto-icono">
+                                        <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                        <path fill="currentColor" d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z" />
+                                    </svg></div>
+                                    <div class="contacto-informacion"><span>info@alizeboats.com</span></div>
+                                </div>  
+                                
+                                <div class="contacto-dato">
+                                    <div class="contacto-icono"><svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                        <path fill="currentColor" d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z" />
+                                    </svg></div>
+                                    <div class="contacto-informacion"><span>Club Maritimo San Antonio de la Playa</span></div>
+                                </div>  
+        
+                                <div class="contacto-dato">
+                                    <div class="contacto-icono"><svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                        <path fill="currentColor" d="M9,10V12H7V10H9M13,10V12H11V10H13M17,10V12H15V10H17M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5C3.89,21 3,20.1 3,19V5A2,2 0 0,1 5,3H6V1H8V3H16V1H18V3H19M19,19V8H5V19H19M9,14V16H7V14H9M13,14V16H11V14H13M17,14V16H15V14H17Z" />
+                                    </svg></div>
+                                    <div class="contacto-informacion"><span>Abierto todos los dias</span></div>
+                                </div>   
+        
+                                <div class="contacto-dato">
+                                    <div class="contacto-icono"><svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                        <path fill="currentColor" d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M16.2,16.2L11,13V7H12.5V12.2L17,14.9L16.2,16.2Z" />
+                                    </svg></div>
+                                    <div class="contacto-informacion"><span>8:00 14:00</span></div>
+                                </div>  
+        
                             </div>
-
-                            <div class="contactodatos-cliente-datosgeneral-der"><!--columna derecha-->
-
-                                <div class="contactodatos-cliente-datosgeneral-der-apellidos">
-                                    <div class="contactodatos-cliente-datosgeneral-der-apellidos-apellidos">Apellidos</div>
-                                    <div class="contactodatos-cliente-datosgeneral-der-apellidos-campo"></div>
-                                </div>
-
-                                <div class="contactodatos-cliente-datosgeneral-der-email">
-                                    <div class="contactodatos-cliente-datosgeneral-der-email-email">E-mail</div>
-                                    <div class="contactodatos-cliente-datosgeneral-der-Email-campo"></div>
-                                </div>
-
-                            </div>
-
-                            <div class="clascontactodatos-cliente-mensaje">
-                                <div class="clascontactodatos-cliente-mensaje-mensaje"></div>
-                                <div class="clascontactodatos-cliente-mensaje"><textarea</div>
-                            </div>
-
-                            <div class="clascontactodatos-cliente-botonenviar">
-                                <div class="clascontactodatos-cliente-mensaje-botonenviar"><button>Enviar</button></div>
-                            </div>
-
                         </div>
-                    </div>
-                </div>
+
+                        <div class="column">
+                            <div class="contact-form">
+                                <div class="column">
+                                    <div class="two-columns">
+                                       
+                                        <div class="column">
+                                            <div class="field-name"><label for="name"><p>Nombre</p></label></div>
+                                            <div class="field-input"><input type="text" id="name" name="name"><br></br></div>
+                                            <div class="field-phone"><label for="phone"><p>Telefono</p> </label></div>
+                                            <div class="field-input"><input type="text" id="phone" name="phone"></div>
+                                        </div>
+
+                                        <div class="column">
+                                            <div class="field-lastname"><label for="lastname"><p>Apellidos</p></label></div>
+                                            <div class="field-input"><input type="text" id="lastnames" name="lastname"></div>
+                                            <div class="field-email"><label for="email"></label><p>Email</p></div>
+                                            <div class="field-input"><input type="text" id="email" name="email"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="textarea">
+                                        <div class="textarea-name"><p>Mensaje</p></div>
+                                        <div class="textarea-input"><textarea></textarea></div>
+                                    </div>    
+
+                                    <div class="generic-button">
+                                        <div class="generic-button"><button><p>Enviar</p></button> </div>
+                                    </div>
+
+                                </div>
+                             </div>       
+                        </div>
+                    </div>                    
+                </div>          
             </main>
     
             <footer>
-                <div class="copyright"><p>@2048</p> <p>pagina de verdad</p></div>
+                <div class="footer-copyright"><p>@2048</p> </div>
+                <div class="footer-link"><p>Link sitio verdadero</p></div> <!--Aqui link pagina de verdad-->
             </footer>
               
         </body>

@@ -17,117 +17,102 @@
         <body>
             
             <header>
-                <div class="one-column">
-                    <div class="header-menu"">
-                        <div class="two-columns">       
-                            <div class="one-column">   
-                                <div class="Img-corporativa">
-                                    <div class="two-columns">
-                                                                    
-                                        <div class="column">
-                                            <div class="logo-empresa">Logo empresa</div> 
-                                        </div>   
-
-                                        <div class="column">    
-                                            <div class="nombre-empresa">Título</div> 
-                                        </div>
-                                                                                    
-                                    </div>
-                                </div>
-                            </div>
-                                
-                            <div class="one-column">   
-                                <div class="menu-opciones"> 
-                                    <ul class="nav"><!--hacer lista horizontal no numerada ul/ con CSS--><!--normalmente son una lista-->
-                                        <li>Inicio</li>
-                                        <li>Reserva</li>
-                                        <li>Contactos</li>
-                                    </ul>
-                                </div>
+                <div class="header-menu">
+                    <div class="two-columns">       
+                        <div class="column">   
+                            <div class="logo">
+                                <div class="logo-imagen">Logo empresa</div> 
+                                <div class="logo-titulo">Título</div>                                                
                             </div>
                         </div>
+                            
+                        <div class="column"> 
+                            <nav class="menu-opcions">
+                                <ul><!--hacer lista horizontal no numerada ul/ con CSS--><!--normalmente son una lista-->
+                                    <li>
+                                        <a href="">Inicio</a>
+                                        <a href="">Reserva</a>
+                                        <a href="">Contactos</a>                                    
+                                    </li>
+                                </ul>
+                            </nav>  
+                        </div>
                     </div>
-                </div>   
-            </header>
+                </div>
+            </header>        
             
 
             <main>
 
-                <div class="one-column">
-                    <div class="producto">
-                        <div class="two-columns">
-                            <div class="column">
-                                <div class="slider-gallery">Velero</div><!--imagen del barco - Es un slider-->                                
-                            </div>          
-
-                            <div class="column"> 
-                                <div class="five-columns">          
-                                    <div class="column">
-                                        <div class="miniature">miniatura</div><!--imagenes detalladas del barco-->
-                                    </div> 
-                                    <div class="column">   
-                                        <div class="miniature">miniatura</div>
-                                    </div>
-                                    <div class="column">   
-                                        <div class="miniature">miniatura</div>
-                                    </div>  
-                                    <div class="column">  
-                                        <div class="miniature">miniatura</div>
-                                    </div>  
-                                    <div class="column">   
-                                        <div class="miniature">miniatura</div> 
-                                    </div>                   
-                                </div>                                                              
-                            </div>                 
-                                
-                            <div class="column">
-                                <div class="one-column">
-                                    <div  class="producto-alquiler-descripcion"><p><h2>tipo de barco y eslora</h2></p> <p>valor y descripcion del barco</p></div>                                    
-                                </div>        
-                            
-                                <div class="one-column">
-                                    <div class="producto-alquiler-cantidad">
-                                        <div class="two-columns">
-                                            <div class="column">
-                                                <div class="producto-alquiler-cantidad-dias">Cantidad de días</div>
-                                            </div>
-            
-                                            <div class="column">
-                                                <div class="amount-quantity">
-                                                    <div class="three-columns">
-                                                        
-                                                        <div class="column">
-                                                            <div class="quantity-minos"><button>-</button></div>
-                                                        </div>
-
-                                                        <div class="column">
-                                                            <div class="quantity-item">Numeral</div> <!--insertar elemento dinamico que cambie el numero segun se usen los botones que lo acompañen--> 
-                                                        </div>   
-                                                        
-                                                        <div class="column">
-                                                            <div class="quantity-plus"><button>+</button></div>
-                                                        </div>        
-                                                                                                                        
-                                                    </div>
-                                                </div>
-                                            </div>
+                <div class="product">
+                    <div class="two-columns">
+                        <div class="column">
+                            <div class="slider-gallery">
+                                <div class="slider-gallery-main">
+                                    <img src="" alt="">
+                                </div>
+                                <div class="slider-gallery-miniatures"> 
+                                    <div class="five-columns">          
+                                        <div class="column">
+                                            <div class="slider-gallery-miniature"><img src="" alt=""></div><!--imagenes detalladas del barco en miniatura-->
+                                        </div> 
+                                        <div class="column">   
+                                            <div class="slider-gallery-miniature"><img src="" alt=""></div>
                                         </div>
-                                    </div>
+                                        <div class="column">   
+                                            <div class="slider-gallery-miniature"><img src="" alt=""></div>
+                                        </div>  
+                                        <div class="column">  
+                                            <div class="slider-gallery-miniature"><img src="" alt=""></div>
+                                        </div>  
+                                        <div class="column">   
+                                            <div class="slider-gallery-miniature"><img src="" alt=""></div> 
+                                        </div>                   
+                                    </div>                                                              
+                                </div>                      
+                            </div><!--imagen del barco - Es un slider-->                   
+                        </div>          
+   
+                        <div class="column">
+                            <div class="product-description">
+                                <div class="product-description-title">
+                                    <h2>tipo de barco y eslora</h2>
+                                </div>
+                                <div class="product-description-price">
+                                    <h3>valor</h3>
+                                </div>
+                                <div class="product-description-detail">
+                                    <p>descripcion del barco</p>
+                                </div>
+                            </div>                                    
+                        
+                            <div class="product-rent-amount">
 
-                                <div class="one-column">
-                                    <div class="column">
-                                        <div class="settings-summit"><Button class="settings-summit">reservar</Button></div>
-                                    </div>
-                                </div>                                                     
-                            </div>       
-                        </div> <!--ciere two columns pagina-->
-                    </div>
+                                <div class="product-rent-dias"><h3>Cantidad de días</h3> </div>
+
+                                <div class="amount-quantity">
+                                        
+                                    <div class="quantity-minos"><button>-</button></div>
+
+                                    <div class="quantity-item">Numeral</div> <!--insertar elemento dinamico que cambie el numero segun se usen los botones que lo acompañen--> 
+                                
+                                    <div class="quantity-plus"><button>+</button></div>
+                                                                                        
+                                </div>
+                            </div>
+
+                            <div class="add-to-cart-button">
+                                <button class="custom-button">reservar</button>
+                            </div>
+                                                                                
+                        </div>       
+                    </div> <!--ciere two columns pagina-->
                 </div>
             </main>
 
             <footer>
-                <div class="footer-copyright">@2048</div>
-                <div class="footer-link"></div> <!--Aqui link pagina de verdad-->
+                <div class="footer-copyright"><p>@2048</p></div>
+                <div class="footer-link"><p>Link sitio de verdad</p></div> <!--Aqui link pagina de verdad-->
             </footer>
 
         </body>

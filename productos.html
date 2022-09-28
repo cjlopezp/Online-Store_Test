@@ -17,112 +17,146 @@
         <body>
 
             <header>
-                <div class="one-column">
-                    <div class="header-menu"">
-                        <div class="two-columns">       
-                            <div class="one-column">   
-                                <div class="Img-corporativa">
-                                    <div class="two-columns">
-                                                                    
-                                        <div class="column">
-                                            <div class="logo-empresa">Logo empresa</div> 
-                                        </div>   
-
-                                        <div class="column">    
-                                            <div class="nombre-empresa">Título</div> 
-                                        </div>
-                                                                                    
-                                    </div>
-                                </div>
-                            </div>
-                                
-                            <div class="one-column">   
-                                <div class="menu-opciones"> 
-                                    <ul class="nav"><!--hacer lista horizontal no numerada ul/ con CSS--><!--normalmente son una lista-->
-                                        <li>Inicio</li>
-                                        <li>Reserva</li>
-                                        <li>Contactos</li>
-                                    </ul>
-                                </div>
+                <div class="header-menu">
+                    <div class="two-columns">       
+                        <div class="column">   
+                            <div class="logo">
+                                <div class="logo-imagen"><img src="" alt=""></div> 
+                                <div class="logo-titulo"><h1>Título</h1></div>                                                
                             </div>
                         </div>
+                            
+                        <div class="column"> 
+                            <nav class="menu-opcions">
+                                <ul><!--hacer lista horizontal no numerada ul/ con CSS--><!--normalmente son una lista-->
+                                    <li>   
+                                        <a href="">Inicio</a>
+                                        <a href="">Reserva</a>                                   
+                                        <a href="">Contactos</a>
+                                    </li> 
+                                </ul>
+                            </nav>  
+                        </div>
                     </div>
-                </div>   
-            </header>
+                </div>
+            </header>        
 
             <main>
 
-                <div class="productos"><!--div general de la pagina-->
-                    <div class="two-columns">
-                        <div class="column">
-                            <div class="productos-categorias"><!--Columna izquierda-->
-                                <div class="productos-categorias-titulo">Categorias
-                                    <div class="productos-categorias-oferta">                    
-                                        <ul><!--lista categorias-->
-                                            <li>Todas</li>
-                                            <li>Lanchas</li>
-                                            <li>Llauts</li>
-                                            <li>Veleros</li>
-                                        </ul>
-                                    </div>  
-                                </div>    
+                <div class="products"><!--div general de la pagina-->
+                    <div class="two-columns-aside">
+                        <div class="column-aside">
+                            <div class="products-categories"><!--Columna izquierda-->
+                                <div class="products-categories-titly"><H2>Categorias</H2> 
+                                </div>
+                                <div class="products-categorie-list">                    
+                                    <ul><!--lista categorias-->
+                                        <li>
+                                            <a href="">Todas</a>
+                                            <a href="">Lanchas</a>
+                                            <a href="">Llauts</a>                                       
+                                            <a href="">Veleros</a>
+                                        </li>                                    
+                                    </ul>
+                                </div>  
                             </div>
                         </div>
 
-                        <div class="column">
-                            <div class="productos-disponiblidad"><!--(product-result)contenedor columna derecha-->
-                                <div class="one-column">
-                                    <div class="productos-disponibilidad-existencias"><!--cajon menú-->
-                                        <div class="two-columns">
-
-                                            <div class="column">
-                                            <div class="productos-disponibilidad-existencias-actual">Se estan enseñando 20 de 100 productos</div> <!--texto dinamico que depende de la cantidad de producto-->
-                                            </div>
-                                            
-                                            <div class="column">
-                                            <div class="productos-disponibilidad-existencias-menu">Todos  Lanchas Llauts   Veleros</div> <!--Menú desplegable (dropdown, filter)-->
-                                            </div>
-                                        </div>                                        
+                        <div class="column-main">
+                            <div class="products-availability"><!--(product-result)contenedor columna derecha-->
+                                    <!--cajon menú-->
+                                <div class="two-columns">
+                                    <div class="column">
+                                        <div class="products-availability-items"><p>Se estan enseñando 20 de 100 productos</p></div> <!--texto dinamico que depende de la cantidad de producto-->
                                     </div>
+                                    
+                                    <div class="column">
+                                        <div class="products-availability-filter">
+                                            <ul>
+                                                <li>
+                                                    <a href="">Todos</a>
+                                                    <a href="">Lanchas</a>
+                                                    <a href="">Llauts</a>
+                                                    <a href="">Veleros</a>
+                                                </li>
+                                            </ul>
 
-                                </div>
+                                    
+                                                   
+                                        </div> <!--Menú desplegable (dropdown, filter)-->
+                                    </div>
+                                </div>                                        
                             </div>
                             
-                            <div class="productos-disponiblidad-alquiler"><!--cajón bloques barcos (products-gallery)-->
-                                <div class="productos-disponiblidad-alquiler-item">
-                                    <div class="three-columns">
-                                        
-                                        <div class="column">
-                                            <div class="imagen-precio"><!--poner imagen y precio en un div y editarlo por capas-->
-                                                <div>    
-                                                    <div class="productos-disponiblidad-alquiler-item-precio">Precio día</div><!--Valor que podria variar en el tiempo.-->
-                                                    <div class="productos-disponiblidad-alquiler-item-imagen">Imagen barco</div>
-                                                </div>
-                                                <div class="productos-disponiblidad-alquiler-item-eslora">Eslora del barco</div><!--texto dinamico asociado al producto-->
-                                                <div class="productos-disponiblidad-alquiler-item-enlace"><a>ver producto</a></div><!--Enlace para ir a la pagina del barco-->
+                            <div class="products-mosaico"><!--cajón bloques barcos (products-gallery)-->
+                                <div class="three-columns">
+                                    
+                                    <div class="column">                                       
+                                        <div class="products-mosaico-item">
+                                            <div class="image-price"><!--poner imagen y precio en un div y editarlo por capas-->
+                                                <div class="products-mosaico-item-price"><p>Precio día</p></div><!--Valor que podria variar en el tiempo.-->
+                                                <div class="products-mosaico-item-image"><p>Imagen barco</p></div>
+                                            </div>
+                                            <div class="products-mosaico-item-title"><p>Eslora del barco</p></div><!--texto dinamico asociado al producto-->
+                                            <div class="products-mosaico-item-button"><a href="producto.html"></a>ver producto</div><!--Enlace para ir a la pagina del barco-->
                                         </div>
-                                        
-                                        <div class="column">
-                                            <div class="imagen-precio"><!--poner imagen y precio en un div y editarlo por capas-->
-                                                <div>    
-                                                    <div class="productos-disponiblidad-alquiler-item-precio">Precio día</div><!--Valor que podria variar en el tiempo. Texto dinamico????-->
-                                                    <div class="productos-disponiblidad-alquiler-item-imagen">Imagen barco</div>
-                                                </div>
-                                                <div class="productos-disponiblidad-alquiler-item-eslora">Eslora del barco</div><!--texto dinamico asociado al producto-->
-                                                <div class="productos-disponiblidad-alquiler-item-enlace"><a>ver producto</a></div><!--Enlace para ir a la pagina del barco-->
+                                    </div>
+                                    
+                                    <div class="column">                                       
+                                        <div class="products-mosaico-item">
+                                            <div class="image-price"><!--poner imagen y precio en un div y editarlo por capas-->
+                                                <div class="products-mosaico-item-price"><p>Precio día</p></div><!--Valor que podria variar en el tiempo.-->
+                                                <div class="products-mosaico-item-image"><p>Imagen barco</p></div>
+                                            </div>
+                                            <div class="products-mosaico-item-title"><p>Eslora del barco</p></div><!--texto dinamico asociado al producto-->
+                                            <div class="products-mosaico-item-button"><a href="producto.html"></a>ver producto</div><!--Enlace para ir a la pagina del barco-->
                                         </div>
+                                    </div>
 
-                                        <div class="column">
-                                            <div class="imagen-precio"><!--poner imagen y precio en un div y editarlo por capas-->
-                                                <div>    
-                                                    <div class="productos-disponiblidad-alquiler-item-precio">Precio día</div><!--Valor que podria variar en el tiempo-->
-                                                    <div class="productos-disponiblidad-alquiler-item-imagen">Imagen barco</div>
-                                                </div>
-                                                <div class="productos-disponiblidad-alquiler-item-eslora">Eslora del barco</div><!--texto dinamico asociado al producto-->
-                                                <div class="productos-disponiblidad-alquiler-item-enlace"><a>ver producto</a></div><!--Enlace para ir a la pagina del barco-->
-                                        </div>     
-                                    </div>                        
-                                </div>    
+                                    <div class="column">                                       
+                                        <div class="products-mosaico-item">
+                                            <div class="image-price"><!--poner imagen y precio en un div y editarlo por capas-->
+                                                <div class="products-mosaico-item-price"><p>Precio día</p></div><!--Valor que podria variar en el tiempo.-->
+                                                <div class="products-mosaico-item-image"><p>Imagen barco</p></div>
+                                            </div>
+                                            <div class="products-mosaico-item-title"><p>Eslora del barco</p></div><!--texto dinamico asociado al producto-->
+                                            <div class="products-mosaico-item-button"><a href="producto.html"></a>ver producto</div><!--Enlace para ir a la pagina del barco-->
+                                        </div>
+                                    </div>
+
+                                    <div class="column">                                       
+                                        <div class="products-mosaico-item">
+                                            <div class="image-price"><!--poner imagen y precio en un div y editarlo por capas-->
+                                                <div class="products-mosaico-item-price"><p>Precio día</p></div><!--Valor que podria variar en el tiempo.-->
+                                                <div class="products-mosaico-item-image"><p>Imagen barco</p></div>
+                                            </div>
+                                            <div class="products-mosaico-item-title"><p>Eslora del barco</p></div><!--texto dinamico asociado al producto-->
+                                            <div class="products-mosaico-item-button"><a href="producto.html"></a>ver producto</div><!--Enlace para ir a la pagina del barco-->
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="column">                                       
+                                        <div class="products-mosaico-item">
+                                            <div class="image-price"><!--poner imagen y precio en un div y editarlo por capas-->
+                                                <div class="products-mosaico-item-price"><p>Precio día</p></div><!--Valor que podria variar en el tiempo.-->
+                                                <div class="products-mosaico-item-image"><p>Imagen barco</p></div>
+                                            </div>
+                                            <div class="products-mosaico-item-title"><p>Eslora del barco</p></div><!--texto dinamico asociado al producto-->
+                                            <div class="products-mosaico-item-button"><a href="producto.html"></a>ver producto</div><!--Enlace para ir a la pagina del barco-->
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="column">                                       
+                                        <div class="products-mosaico-item">
+                                            <div class="image-price"><!--poner imagen y precio en un div y editarlo por capas-->
+                                                <div class="products-mosaico-item-price"><p>Precio día</p></div><!--Valor que podria variar en el tiempo.-->
+                                                <div class="products-mosaico-item-image"><p>Imagen barco</p></div>
+                                            </div>
+                                            <div class="products-mosaico-item-title"><p>Eslora del barco</p></div><!--texto dinamico asociado al producto-->
+                                            <div class="products-mosaico-item-button"><a href="producto.html"></a>ver producto</div><!--Enlace para ir a la pagina del barco-->
+                                        </div>
+                                    </div>>
+                                </div>                        
                             </div>
                         </div>                                            
                     </div>
@@ -131,8 +165,8 @@
             </main>
 
             <footer>
-                <div class="footer-copyright">@2048</div>
-                <div class="footer-link"></div> <!--Aqui link pagina de verdad-->
+                <div class="footer-copyright"><p>@2048</p></div>
+                <div class="footer-link"><p>Link sitio de verdad</p></div> <!--Aqui link pagina de verdad-->
             </footer>
         
         </body>
