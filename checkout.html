@@ -43,7 +43,7 @@
             <main>
                 <div class="column">
                     <div class="column">
-                        <div class="pagina-titulo">Finalizar compra</div>
+                        <div class="pagina-titulo"><h1>Finalizar compra</h1></div>
                     </div>
                 </div>
 
@@ -54,26 +54,26 @@
                                     <div class="two-columns">
 
                                         <div class="column">
-                                            <div class="field-name"><label for="name">Nombre</label></div>
+                                            <div class="field-name"><label for="name"><h4>Nombre</h4> </label></div>
                                             <div class="field-input"><input type="text" id="name" name="name"><br></br></div>
-                                            <div class="field-phone"><label for="phone">Telefono</label></div>
+                                            <div class="field-phone"><label for="phone"><h4>Telefono</h4> </label></div>
                                             <div class="field-input"><input type="text" id="phone" name="phone"></div>
-                                            <div class="field-city"><label for="city">Ciudad</label></div>
+                                            <div class="field-city"><label for="city"><h4>Ciudad</h4></label></div>
                                             <div class="field-input"><input type="text" id="city" name="city"></div> <!--debe ser un desplegable-->
                                         </div>
 
                                         <div class="column">
-                                            <div class="field-lastname"><label for="lastname">Apellidos</label></div>
+                                            <div class="field-lastname"><label for="lastname"><h4>Apellidos</h4></label></div>
                                             <div class="field-input"><input type="text" id="lastnames" name="lastname"></div>
-                                            <div class="field-email"><label for="email"></label> Email</div>
+                                            <div class="field-email"><label for="email"></label><h4>Email</h4></div>
                                             <div class="field-input"><input type="text" id="email" name="email"></div>
-                                            <div class="field-postal-code"><label for="cp">Código postal</label></div>
+                                            <div class="field-postal-code"><label for="cp"><h4>Código postal</h4></label></div>
                                             <div class="field-input"><input type="text" id="cp" name="cp"></div>
                                         </div>   
                                     </div>
 
                                     <div class="column">                                            
-                                        <div class="field-address"><label for="address">Direccion</label></div>
+                                        <div class="field-address"><label for="address"><h4>Direccion</h4></label></div>
                                         <div class="field-input"><input type="text" id="address" name="address"></label></div>                    
                                     </div>  
                                 </div>
@@ -84,31 +84,35 @@
                                     <div class="column">
                                         
                                         <div class="column">
-                                            <div class="checkout-table-title">Resumen de la compra
+                                            <div class="checkout-table-title"><h4>Resumen de la compra</h4></div>
                                         </div>
                                         
                                             <div class="two-columns">
                                                 <div class="column">
                                                     <div class="checkout-concepts">
-                                                        <div class="checkout-iva">IVA</div>
-                                                        <div class="checkout-shipping">Transporte</div>
-                                                        <div class="checkout-total">Total</div>
+                                                        <div class="checkout-iva"><h4>IVA</h4></div>
+                                                        <div class="checkout-shipping"><h4>Transporte</h4></div>
+                                                        <div class="checkout-total"><h4>Total</h4></div>
                                                     </div>
 
                                                 <div class="column">
                                                     <div class="checkout-concepts-cost"><!--son filas-->
-                                                        <div class="checkout-iva-cost">20 €</div>
-                                                        <div class="checkout-transport-cost">0 €</div>
-                                                        <div class="checkout-total-valor">120 €</div>
+                                                        <div class="checkout-iva-cost"><h4>20 €</h4></div>
+                                                        <div class="checkout-transport-cost"><h4>0 €</h4></div>
+                                                        <div class="checkout-total-valor"><h4>120 €</h4></div>
                                                     </div>
                                                 </div>
                                             </div>    
                                                 
                                         <div class="column">
                                             <div class="checkout-payment">
-                                                <div class="checkout-banctrans">Transferencia bancaria</div>
-                                                <div class="checkout-paypal">Paypal</div>
-                                                <div class="checkout-credit-card">Tarjeta de credito</div>
+                                                <input type="radio" id="bank-transfer" name="pay-method" value="Transferencia bancaria">
+                                                <label for="html">Transferencia bancaria</label><br> 
+                                                <input type="radio" id="paypal" name="pay-method" value="Paypal">
+                                                <label for="paypal">Paypal</label><br>
+                                                <input type="radio" id="credit-card" name="pay-method" value="Tarjeta de credito">
+                                                <label for="javascript">Tarjeta de credito</label><br>
+                                                <!--<input type="submit" value="Pagar">-->
                                             </div>
                                         </div>
                                         
@@ -125,8 +129,8 @@
             </main>
     
             <footer>
-                <div class="footer-copyright">@2048</div>
-                <div class="footer-link"></div> <!--Aqui link pagina de verdad-->
+                <div class="footer-copyright"><p>@2048</p></div>
+                <div class="footer-link"><p>Link sitio de verdad</p></div> <!--Aqui link pagina de verdad-->
             </footer>
               
         </body>
