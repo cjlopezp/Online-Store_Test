@@ -97,24 +97,24 @@ select { /* 1 */
 }
 
 button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+[type=button],
+[type=reset],
+[type=submit] {
     -webkit-appearance: button;
 }
 
 button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
     border-style: none;
     padding: 0;
 }
 
 button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
     outline: 1px dotted ButtonText;
 }
 
@@ -139,23 +139,23 @@ textarea {
     overflow: auto;
 }
 
-[type="checkbox"],
-[type="radio"] {
+[type=checkbox],
+[type=radio] {
     box-sizing: border-box; /* 1 */
     padding: 0; /* 2 */
 }
 
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
     height: auto;
 }
 
-[type="search"] {
+[type=search] {
     -webkit-appearance: textfield; /* 1 */
     outline-offset: -2px; /* 2 */
 }
 
-[type="search"]::-webkit-search-decoration {
+[type=search]::-webkit-search-decoration {
     -webkit-appearance: none;
 }
 
@@ -349,359 +349,410 @@ footer{
 /* online-Store-Test divs */
 
         /* index*/
-/* header*/
-class="header-menu">
-class="two-columns">       
-class="column">   
-class="logo">
-class="logo-imagen"
-class="logo-titulo">
-class="column"> 
-<nav class="menu-opciones">    
-/* header */
+
+/* <header> */
+
+body {
+    background-color: rgb(42, 76, 186, 255);  
+}
+
+.column{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.header-menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.two-columns {
+    display: flex;
+    justify-content: space-between;
+    width: 48%;   
+}      
+
+.logo   {
+    display: flex;
+    justify-content: space-between;
+    width:30%;
+}
+
+.logo-imagen
+.logo-titulo
+.column 
+.menu-opciones {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+/* </header> */
 
 /* main */
-class="home">
-class="column">
-class="column">
-class="slider">
-class="slider-imagen">
-class="slider-titulo">
-class="slider-boton">
-class="featured">
-class="column">
-class="column">
-class="featured-title">
-class="featured-elements">
-class="four-columns">
-class="column">
-class="featured-item">
-class="featured-imagen"
-class="featured-titulo"
-class="featured-enlace">
-class="featured-description">
-class="column">
-class="home-featured-item">
-class="featured-imagen">
-class="featured-titulo">
-class="featured-enlace">
-class="featured-description">
-class="column">
-class="home-featured-item">
-class="featured-imagen">
-class="featured-titulo">
-class="featured-enlace">
-class="featured-description">
-class="column">
-class="home-featured-item">
-class="featured-imagen">
-class="featured-titulo"
-class="featured-enlace"
-class="featured-description"
-class="banner-text">
-class="two-columns">
-class="column">
-class="banner-text-description">
-class="column">      
-class="banner-text-image">
+.home
+.column
+.column
+.slider {
+    width: 100%;
+}
+
+
+.slider-imagen {
+    display: flex;
+    justify-content: space-between; 
+    width: 100%;
+}
+.slider-titulo {
+    font-size: 2rem;
+    font-weight: 400;
+    text-decoration: none;   
+}
+.slider-boton
+.featured{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.column
+.column
+.featured-title
+.featured-elements
+.four-columns{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.column
+.featured-item
+.featured-imagen
+.featured-titulo
+.featured-enlace
+.featured-description
+.column
+.home-featured-item
+.featured-imagen
+.featured-titulo
+.featured-enlace
+.featured-description
+.column
+.home-featured-item
+.featured-imagen
+.featured-titulo
+.featured-enlace
+.featured-description
+.column
+.home-featured-item
+.featured-imagen
+.featured-titulo
+.featured-enlace
+.featured-description
+.banner-text
+.two-columns
+.column
+.banner-text-description
+.column      
+.banner-text-image
 /* main */                             
             
 /* footer */
-class="footer-copyright">
-class="footer-link">
+.footer-copyright
+.footer-link
 /* footer */       
         /* index */
 
         /* productos */
 /* header */
-class="header-menu">
-class="two-columns">       
-class="column">   
-class="logo">
-class="logo-imagen">
-class="logo-titulo">                                               
-class="column"> 
-<nav class="menu-opcions">
+.header-menu
+.two-columns       
+.column   
+.logo
+.logo-imagen
+.logo-titulo                                               
+.column 
+<nav .menu-opcions
 /* header */  
 
 /* main */
-class="products">
-class="two-columns-aside">
-class="column-aside">
-class="products-categories"
-class="products-categories-titly"
-class="products-categorie-list"> 
-class="column-main">
-class="products-availability">
-class="two-columns">
-class="column">
-class="products-availability-items">
-class="column">
-class="products-availability-filter">
-class="products-mosaico">
-class="three-columns">
-class="column">                                       
-class="products-mosaico-item">
-class="image-price">
-class="products-mosaico-item-price">
-class="products-mosaico-item-image">
-class="products-mosaico-item-title">
-class="products-mosaico-item-button">
+.products
+.two-columns-aside
+.column-aside
+.products-categories
+.products-categories-titly
+.products-categorie-list 
+.column-main
+.products-availability
+.two-columns
+.column
+.products-availability-items
+.column
+.products-availability-filter
+.products-mosaico
+.three-columns
+.column                                       
+.products-mosaico-item
+.image-price
+.products-mosaico-item-price
+.products-mosaico-item-image
+.products-mosaico-item-title
+.products-mosaico-item-button
 /* main */
 
 /* footer */
-class="footer-copyright"
-class="footer-link"
+.footer-copyright
+.footer-link
 /* footer */
             /* productos */
 
 
             /* producto */
 /* header */
-class="header-menu">
-class="two-columns">       
-class="column">   
-class="logo">
-class="logo-imagen">
-class="logo-titulo">                                            
-class="column"> 
-<nav class="menu-opcions">
+.header-menu
+.two-columns       
+.column   
+.logo
+.logo-imagen
+.logo-titulo                                            
+.column 
+<nav .menu-opcions
 /* header */
 
 /* main */
-class="product">
-class="two-columns">
-class="column">
-class="slider-gallery">
-class="slider-gallery-main">
-class="slider-gallery-miniatures"> 
-class="five-columns">          
-class="column">
-class="slider-gallery-miniature">
-class="column">   
-class="slider-gallery-miniature"
-class="column">   
-class="slider-gallery-miniature"
-class="column">  
-class="slider-gallery-miniature">
-class="column">   
-class="slider-gallery-miniature"
-class="column">
-class="product-description">
-class="product-description-title">
-class="product-description-price">
-class="product-description-detail">
-class="product-rent-amount">
-class="product-rent-dias">
-class="amount-quantity">
-class="quantity-minos">
-class="quantity-item">
-class="quantity-plus">
-class="add-to-cart-button">
-class="custom-button"
+.product
+.two-columns
+.column
+.slider-gallery
+.slider-gallery-main
+.slider-gallery-miniatures 
+.five-columns          
+.column
+.slider-gallery-miniature
+.column   
+.slider-gallery-miniature
+.column   
+.slider-gallery-miniature
+.column  
+.slider-gallery-miniature
+.column   
+.slider-gallery-miniature
+.column
+.product-description
+.product-description-title
+.product-description-price
+.product-description-detail
+.product-rent-amount
+.product-rent-dias
+.amount-quantity
+.quantity-minos
+.quantity-item
+.quantity-plus
+.add-to-cart-button
+.custom-button
 /* main */
 
 /* footer */
-class="footer-copyright">
-class="footer-link">
+.footer-copyright
+.footer-link
 /* footer */
             /* producto */
 
 
             /* carrito */
 /* header */
-class="header-menu">
-class="two-columns">       
-class="column">   
-class="logo">
-class="logo-imagen"> 
-class="logo-titulo"                                                
-class="column"> 
-<nav class="menu-opciones">                                
+.header-menu
+.two-columns       
+.column   
+.logo
+.logo-imagen 
+.logo-titulo                                                
+.column 
+<nav .menu-opciones                                
 /* header */
 
 
 /* main */
-class="column">
-class="shopping-settings">
-class="four-columns">
-class="column">
-class="shopping-head">
-class="shopping-product-miniature">
-class="shopping-product-miniature">
-class="column">
-class="shopping-head">
-class="shopping-product">
-class="shopping-product">
-class="column">
-class="shopping-head">
-class="shopping-price">
-class="shopping-price">
-class="column">
-class="shopping-head">
-class="shopping-quantity">
-class="generic-button">
-class="shopping-amount">
-class="generic-button">
-class="shopping-quantity">
-class="generic-button">
-class="shopping-amount">
-class="generic-button">
-class="column">
-class="shopping-summary">
-class="column">
-class="column">    
-class="shopping-summary-title">                   
-class="column">
-class="two-columns">
-class="column">
-class="shopping-iva">
-class="shopping-transport">
-class="shopping-total">
-class="column">
-class="shopping-iva-cost">
-class="shopping-shipping-cost">
-class="shopping-total-cost">
-class="column">
-class="two-columns">
-class="column">
-class="generic-button"> 
-class="column">
-class="generic-button">
+.column
+.shopping-settings
+.four-columns
+.column
+.shopping-head
+.shopping-product-miniature
+.shopping-product-miniature
+.column
+.shopping-head
+.shopping-product
+.shopping-product
+.column
+.shopping-head
+.shopping-price
+.shopping-price
+.column
+.shopping-head
+.shopping-quantity
+.generic-button
+.shopping-amount
+.generic-button
+.shopping-quantity
+.generic-button
+.shopping-amount
+.generic-button
+.column
+.shopping-summary
+.column
+.column    
+.shopping-summary-title                   
+.column
+.two-columns
+.column
+.shopping-iva
+.shopping-transport
+.shopping-total
+.column
+.shopping-iva-cost
+.shopping-shipping-cost
+.shopping-total-cost
+.column
+.two-columns
+.column
+.generic-button 
+.column
+.generic-button
 /* main */
 
 
 /* footer */
-class="footer-copyright">
-class="footer-link"
+.footer-copyright
+.footer-link
 /* footer */
     /* carrito */
 
 
     /* checkout */   
 /* header */
- class="header-menu">
- class="two-columns">       
- class="column">   
- class="logo">
- class="logo-imagen"> 
- class="logo-titulo">                                             
- class="column"> 
-<nav class="menu-opciones">
+ .header-menu
+ .two-columns       
+ .column   
+ .logo
+ .logo-imagen 
+ .logo-titulo                                             
+ .column 
+<nav .menu-opciones
 /* header */
 
 
 /* main */
-class="column">
-class="column">
-lass="pagina-titulo">
-class="checkout-info">
-class="two-columns">   
-class="column">
-class="checkout-data">
-class="column">
-class="field-name">
-class="field-input">
-class="field-phone">
-class="field-input">
-class="field-city">
-class="field-input">
-class="column">
-class="field-lastname">
-class="field-input">
-class="field-email">
-class="field-input">
-class="field-postal-code">
-class="field-input">
-class="column">                                            
-class="field-address">
-class="field-input">               
-class="column">   
-class="checkout-summary">
-class="column">
-class="column">
-class="checkout-table-title">
-class="two-columns">
-class="column">
-class="checkout-concepts">
-class="checkout-iva">
-class="checkout-shipping">
-class="checkout-total">
-class="column">
-class="checkout-concepts-cost">
-class="checkout-iva-cost"
-class="checkout-transport-cost">
-class="checkout-total-valor">
-class="column">
-class="checkout-payment">
-class="checkout-banctrans">
-class="checkout-paypal">
-class="checkout-credit-card">
-class="generic-button">
+.column
+.column
+.pagina-titulo
+.checkout-info
+.two-columns   
+.column
+.checkout-data
+.column
+.field-name
+.field-input
+.field-phone
+.field-input
+.field-city
+.field-input
+.column
+.field-lastname
+.field-input
+.field-email
+.field-input
+.field-postal-code
+.field-input
+.column                                            
+.field-address
+.field-input               
+.column   
+.checkout-summary
+.column
+.column
+.checkout-table-title
+.two-columns
+.column
+.checkout-concepts
+.checkout-iva
+.checkout-shipping
+.checkout-total
+.column
+.checkout-concepts-cost
+.checkout-iva-cost
+.checkout-transport-cost
+.checkout-total-valor
+.column
+.checkout-payment
+.checkout-banctrans
+.checkout-paypal
+.checkout-credit-card
+.generic-button
 /* main */
 
 
 /* footer */
-class="footer-copyright">
-class="footer-link">
+.footer-copyright
+.footer-link
 /* footer */
     /* checkout */     
     
     /* contacto */
 /* header */
-class="header-menu">
-class="two-columns">       
-class="column">   
-class="logo">
-class="logo-imagen">
-class="logo-titulo">                                              
-class="column"> 
-nav class="menu-opciones">
+.header-menu
+.two-columns       
+.column   
+.logo
+.logo-imagen
+.logo-titulo                                              
+.column 
+nav .menu-opciones
 /* header */
 
 /* main */
-class="two-columns">
-class="column">
-class="contacto-datos">
-class="contacto-dato">
-class="contacto-icono">
-class="contacto-informacion">
-class="contacto-dato">
-class="contacto-icono">
-class="contacto-informacion">
-class="contacto-dato">
-class="contacto-icono">
-class="contacto-informacion">
-class="contacto-dato">
-class="contacto-icono">m
-class="contacto-informacion">
-class="contacto-dato">
-class="contacto-icono">
-class="contacto-informacion">
+.two-columns
+.column
+.contacto-datos
+.contacto-dato
+.contacto-icono
+.contacto-informacion
+.contacto-dato
+.contacto-icono
+.contacto-informacion
+.contacto-dato
+.contacto-icono
+.contacto-informacion
+.contacto-dato
+.contacto-iconom
+.contacto-informacion
+.contacto-dato
+.contacto-icono
+.contacto-informacion
 
-class="column">
-class="contact-form">
-class="column">
-class="two-columns">
-class="column">
-class="field-name">
-class="field-phone">
-class="field-input">
-class="column">
-class="field-lastname">
-class="field-input">
-class="field-email">
-class="field-input">
-class="textarea">
-class="textarea-name">
-class="textarea-input">
-class="generic-button">
-class="generic-button">
+.column
+.contact-form
+.column
+.two-columns
+.column
+.field-name
+.field-phone
+.field-input
+.column
+.field-lastname
+.field-input
+.field-email
+.field-input
+.textarea
+.textarea-name
+.textarea-input
+.generic-button
+.generic-button
 /* main */
 
 /* footer */
-class="footer-copyright">
-class="footer-link">
+.footer-copyright
+.footer-link
 /* footer */
     /* contacto */
 
