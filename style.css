@@ -83,6 +83,7 @@ textarea {
     font-size: 100%; /* 1 */
     line-height: 1.15; /* 1 */
     margin: 0; /* 2 */
+    width: 100%;
 }
 
 button,
@@ -97,24 +98,24 @@ select { /* 1 */
 }
 
 button,
-[type=button],
-[type=reset],
-[type=submit] {
+[type="button"],
+[type="reset"],
+[type="submit"] {
     -webkit-appearance: button;
 }
 
 button::-moz-focus-inner,
-[type=button]::-moz-focus-inner,
-[type=reset]::-moz-focus-inner,
-[type=submit]::-moz-focus-inner {
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
     border-style: none;
     padding: 0;
 }
 
 button:-moz-focusring,
-[type=button]:-moz-focusring,
-[type=reset]:-moz-focusring,
-[type=submit]:-moz-focusring {
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
     outline: 1px dotted ButtonText;
 }
 
@@ -139,23 +140,23 @@ textarea {
     overflow: auto;
 }
 
-[type=checkbox],
-[type=radio] {
+[type="checkbox"],
+[type="radio"] {
     box-sizing: border-box; /* 1 */
     padding: 0; /* 2 */
 }
 
-[type=number]::-webkit-inner-spin-button,
-[type=number]::-webkit-outer-spin-button {
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
     height: auto;
 }
 
-[type=search] {
+[type="search"] {
     -webkit-appearance: textfield; /* 1 */
     outline-offset: -2px; /* 2 */
 }
 
-[type=search]::-webkit-search-decoration {
+[type="search"]::-webkit-search-decoration {
     -webkit-appearance: none;
 }
 
@@ -213,8 +214,10 @@ video{
 
 /* Typography */
 
-h1, h2, h3, h4, h5, h6, a, p{
+h1, h2, h3, h4, h5, h6, a, p {
+    font-family: '';
     color: hsl(0, 0%, 100%);
+    
 }
 
 h1, h2, h3, h4 {
@@ -227,6 +230,7 @@ h5, h6 {
 
 a, td, th, p, button, span, label, select, input, textarea, li{
     font-family: '';
+    color: white;
 }
 
 h1 {
@@ -261,12 +265,25 @@ a:hover, a:focus {
     outline-offset: 0;
 }
 
+.custom-button {
+    border: none;
+    box-shadow: 3px 5px 16px 3px #000;
+    color: rgb(189, 29, 29);
+    padding: 0.5rem 1.5rem;
+    font-family: Arial, Helvetica, sans-serif ;
+    font-size: 1.2rem;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 12px;
+}
+
 /* Layout */
 
 /* Columns */
 
 .five-columns{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;  
 }
@@ -277,6 +294,7 @@ a:hover, a:focus {
 
 .four-columns{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
 }
@@ -287,6 +305,7 @@ a:hover, a:focus {
 
 .three-columns{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
 }
@@ -297,6 +316,7 @@ a:hover, a:focus {
 
 .two-columns{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
 }
@@ -331,6 +351,10 @@ a:hover, a:focus {
 
 /* Structure */ 
 
+body {
+    background-color: rgb(42, 76, 186, 255);  
+}
+
 header{
 
 }
@@ -346,422 +370,349 @@ footer{
 /* Components */
 
 
-/* online-Store-Test divs */
+/* <body>*/
 
-        /* index*/
+/* <Header> */
 
-/* <header> */
-
-body {
-    background-color: rgb(42, 76, 186, 255);  
+header{
+    height: 10vh;
+    padding: 0 2%;
+    width: 96%;
 }
 
-.column{
+.logo {
+    align-items: center;
     display: flex;
+    height: 10vh;
+}
+
+.logo .logo-imagen{
+    margin-right: 1rem;
+    width: 5%;
+}
+
+.logo-titulo h2{
+    font-size: 2rem;
+}     
+
+.menu-opciones{
+    margin-left: auto;
+    width: 30%;
+}
+
+.menu-opciones ul {
+    align-items: center;
+    display: flex;
+    height: 10vh;
     justify-content: space-between;
     width: 100%;
 }
 
-.header-menu {
+.menu-opciones ul li {
+    color: hsl(0, 0%, 100%);
+    font-weight: 600;
+}
+     
+
+.contenido {
+    font: 16px sans-serif;
+    height: 100px;
+    border: 1px solid black;
     display: flex;
-    justify-content: space-between;
-    width: 100%;
+    
 }
 
-.two-columns {
-    display: flex;
-    justify-content: space-between;
-    width: 48%;   
-}      
-
-.logo   {
-    display: flex;
-    justify-content: space-between;
-    width:30%;
+.footer-distribution {
+    width:100%;  
+    display: grid;
+    justify-items: center;
+    font-size: 16px;
+    font-weight: 600; 
+    padding: 0% 0 2% 0;   
 }
 
-.logo-imagen
-.logo-titulo
-.column 
-.menu-opciones {
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
+.footer-copyright {
+    width: 10%;
+    margin: 1rem 0;
+    display: grid;
+    align-self: center;
+    text-align: center;
+}
+
+.footer-link {
+    width: 10%;
+    text-align: center;    
 }
 
 /* </header> */
 
-/* main */
-.home
-.column
-.column
+/* <main> */
+
+.main    {
+width: 100%;
+}
+.home {
+    width: 100%;
+} 
+
 .slider {
+    position: relative;
     width: 100%;
 }
-
 
 .slider-imagen {
+    position: absolute;
+    z-index: 900;
+}
+
+.slider-titulo{
+    background-color: rgba(0, 0, 0, 0.219);
+    padding: 0.5rem 1rem;
+    position: absolute;
+    z-index: 1000;
+    left: 10%;
+    top: 30vh;
+}
+
+.slider-titulo h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #ffffff;
+    z-index: 1;
+}
+
+.slider-boton{
+    position: absolute;
+    z-index: 1000;
+    left: 10%;
+    top: 40vh;
+    font-family: 'Montserrat', sans-serif;
+    color: #000000;
+    font-size: 1.3em;
+    z-index: 1;
+}
+
+    /*featured*/
+
+.featured {
+    padding: 0 5%;
+    width: 90%;
+    font-size: 20px;
+    font-weight: 600px;
+}
+
+.featured-title {
+    text-align: center;
+    height: 10vh; 
     display: flex;
-    justify-content: space-between; 
+    justify-content: center;
+    align-items: center;  
+}
+
+.featured-elements {
+    padding: 1% 0 2% 0;    
+}
+
+.home-featured-item  {
+    border: 2px solid white;
+    border-radius: 10px;
+    overflow: hidden;
+    font-size: 1.0rem;
+    font-weight: 600;
+}
+
+.featured-imagen    {
     width: 100%;
 }
-.slider-titulo {
-    font-size: 2rem;
-    font-weight: 400;
-    text-decoration: none;   
-}
-.slider-boton
-.featured{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-.column
-.column
-.featured-title
-.featured-elements
-.four-columns{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-.column
-.featured-item
-.featured-imagen
-.featured-titulo
-.featured-enlace
-.featured-description
-.column
-.home-featured-item
-.featured-imagen
-.featured-titulo
-.featured-enlace
-.featured-description
-.column
-.home-featured-item
-.featured-imagen
-.featured-titulo
-.featured-enlace
-.featured-description
-.column
-.home-featured-item
-.featured-imagen
-.featured-titulo
-.featured-enlace
-.featured-description
-.banner-text
-.two-columns
-.column
-.banner-text-description
-.column      
-.banner-text-image
-/* main */                             
-            
-/* footer */
-.footer-copyright
-.footer-link
-/* footer */       
-        /* index */
 
-        /* productos */
-/* header */
-.header-menu
-.two-columns       
-.column   
-.logo
-.logo-imagen
-.logo-titulo                                               
-.column 
-<nav .menu-opcions
-/* header */  
-
-/* main */
-.products
-.two-columns-aside
-.column-aside
-.products-categories
-.products-categories-titly
-.products-categorie-list 
-.column-main
-.products-availability
-.two-columns
-.column
-.products-availability-items
-.column
-.products-availability-filter
-.products-mosaico
-.three-columns
-.column                                       
-.products-mosaico-item
-.image-price
-.products-mosaico-item-price
-.products-mosaico-item-image
-.products-mosaico-item-title
-.products-mosaico-item-button
-/* main */
-
-/* footer */
-.footer-copyright
-.footer-link
-/* footer */
-            /* productos */
-
-
-            /* producto */
-/* header */
-.header-menu
-.two-columns       
-.column   
-.logo
-.logo-imagen
-.logo-titulo                                            
-.column 
-<nav .menu-opcions
-/* header */
-
-/* main */
-.product
-.two-columns
-.column
-.slider-gallery
-.slider-gallery-main
-.slider-gallery-miniatures 
-.five-columns          
-.column
-.slider-gallery-miniature
-.column   
-.slider-gallery-miniature
-.column   
-.slider-gallery-miniature
-.column  
-.slider-gallery-miniature
-.column   
-.slider-gallery-miniature
-.column
-.product-description
-.product-description-title
-.product-description-price
-.product-description-detail
-.product-rent-amount
-.product-rent-dias
-.amount-quantity
-.quantity-minos
-.quantity-item
-.quantity-plus
-.add-to-cart-button
-.custom-button
-/* main */
-
-/* footer */
-.footer-copyright
-.footer-link
-/* footer */
-            /* producto */
-
-
-            /* carrito */
-/* header */
-.header-menu
-.two-columns       
-.column   
-.logo
-.logo-imagen 
-.logo-titulo                                                
-.column 
-<nav .menu-opciones                                
-/* header */
-
-
-/* main */
-.column
-.shopping-settings
-.four-columns
-.column
-.shopping-head
-.shopping-product-miniature
-.shopping-product-miniature
-.column
-.shopping-head
-.shopping-product
-.shopping-product
-.column
-.shopping-head
-.shopping-price
-.shopping-price
-.column
-.shopping-head
-.shopping-quantity
-.generic-button
-.shopping-amount
-.generic-button
-.shopping-quantity
-.generic-button
-.shopping-amount
-.generic-button
-.column
-.shopping-summary
-.column
-.column    
-.shopping-summary-title                   
-.column
-.two-columns
-.column
-.shopping-iva
-.shopping-transport
-.shopping-total
-.column
-.shopping-iva-cost
-.shopping-shipping-cost
-.shopping-total-cost
-.column
-.two-columns
-.column
-.generic-button 
-.column
-.generic-button
-/* main */
-
-
-/* footer */
-.footer-copyright
-.footer-link
-/* footer */
-    /* carrito */
-
-
-    /* checkout */   
-/* header */
- .header-menu
- .two-columns       
- .column   
- .logo
- .logo-imagen 
- .logo-titulo                                             
- .column 
-<nav .menu-opciones
-/* header */
-
-
-/* main */
-.column
-.column
-.pagina-titulo
-.checkout-info
-.two-columns   
-.column
-.checkout-data
-.column
-.field-name
-.field-input
-.field-phone
-.field-input
-.field-city
-.field-input
-.column
-.field-lastname
-.field-input
-.field-email
-.field-input
-.field-postal-code
-.field-input
-.column                                            
-.field-address
-.field-input               
-.column   
-.checkout-summary
-.column
-.column
-.checkout-table-title
-.two-columns
-.column
-.checkout-concepts
-.checkout-iva
-.checkout-shipping
-.checkout-total
-.column
-.checkout-concepts-cost
-.checkout-iva-cost
-.checkout-transport-cost
-.checkout-total-valor
-.column
-.checkout-payment
-.checkout-banctrans
-.checkout-paypal
-.checkout-credit-card
-.generic-button
-/* main */
-
-
-/* footer */
-.footer-copyright
-.footer-link
-/* footer */
-    /* checkout */     
+.featured-titulo    {
     
-    /* contacto */
-/* header */
-.header-menu
-.two-columns       
-.column   
-.logo
-.logo-imagen
-.logo-titulo                                              
-.column 
-nav .menu-opciones
-/* header */
+} 
 
-/* main */
-.two-columns
-.column
-.contacto-datos
-.contacto-dato
-.contacto-icono
-.contacto-informacion
-.contacto-dato
-.contacto-icono
-.contacto-informacion
-.contacto-dato
-.contacto-icono
-.contacto-informacion
-.contacto-dato
-.contacto-iconom
-.contacto-informacion
-.contacto-dato
-.contacto-icono
-.contacto-informacion
+.featured-enlace    { 
+       
+}
+.featured-enlace a{ color: aqua;  
+       
+}
 
-.column
-.contact-form
-.column
-.two-columns
-.column
-.field-name
-.field-phone
-.field-input
-.column
-.field-lastname
-.field-input
-.field-email
-.field-input
-.textarea
-.textarea-name
-.textarea-input
-.generic-button
-.generic-button
-/* main */
+.featured-description {
+    width: 90%;
+    text-align: left;
+     
+}  
 
-/* footer */
-.footer-copyright
-.footer-link
-/* footer */
-    /* contacto */
+.banner-text   {
+    padding: 0 5%;    
+    width: 90%;
+    font-size: 1.2rem;
+    font-weight: 600px;
+}
 
+.banner-text-description{
+    font-size: 2rem;
+    width: 90%;
+    text-align: left;
+    padding: 1rem 0;
 
-                                         
-                                    
+}
 
+.banner-text-image{
+    width: 90%;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/*Product*/
+
+.product    {
+    width: 80%;
+    padding: 2rem 10%;
+} 
+
+.slider-gallery {
+
+} 
+
+.slider-gallery-main{
+    padding: 2rem;
+} 
+
+.slider-gallery-miniatures  {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem;
+}
+
+.slider-gallery-miniature{
+    
+}
 
 
+.slider-gallery-miniature{}
+.slider-gallery-miniature{}
+.slider-gallery-miniature{}
+.slider-gallery-miniature{}
+
+.product-description{
+    padding: 2rem;
+}
+
+.product-description-title{
+    margin-bottom: 1rem;
+}
 
 
+.product-description-price{
+    margin-bottom: 1rem;
+} 
 
+.product-description-detail{
+    margin-bottom: 2rem;
+    text-align: justify;
+}
+
+.product-description-detail p{
+    margin-bottom: 1rem;
+}
+
+.product-rent-amount {
+    display:flex;    
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.product-rent-dias{
+    margin-right: 2rem;
+}
+
+.amount-quantity{
+    display: flex;
+    width: 50%;
+}
+
+.quantity-minos, 
+.quantity-plus{
+    width: 10%;
+}
+
+.quantity-minos button, 
+.quantity-plus button{
+    color:rgba(0, 0, 0);
+    font-weight: 600;
+}
+
+.quantity-minos button{
+    border: none;
+    border-top-left-radius: 0.5rem;
+}
+
+.quantity-item{
+    width: 10%;
+}
+
+.quantity-item input{
+    color: #000;
+    text-align: center;
+    width: 100%;
+}
+
+.add-to-cart-button{
+    width: 30%;
+} 
+ 
+ 
+/**/
+
+/*Contacto*/
+
+.contacto {
+    width: 100%;
+} 
+
+.pagina-titulo {
+    text-align: center;
+    padding: 1rem 0 5rem 0;    
+}
+
+.contacto-datos {
+    width: 100%;
+}
+
+.contacto-dato {
+    display: flex;
+    justify-content: start;
+    margin: 2rem 5rem;
+    font-size: 2rem;;
+} 
+
+.contacto-icono {
+    width: 10%;
+
+} 
+
+.contactoinformacion {
+    
+} 
+
+.contacto-dato {} 
+.contacto-icono {} 
+.contacto-informacion {} 
+.contact-form {
+    width: 100%;
+} 
+
+.field-name {} 
+.field-input {} 
+.field-phone {} 
+.field-input {} 
+.field-lastname {} 
+.field-input {} 
+.field-email {} 
+.field-input {}  
+.textarea {} 
+.textarea-input {} 
+.generic-button {} 
+.generic-button {}
+
+
+/*Contacto*/
