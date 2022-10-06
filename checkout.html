@@ -18,27 +18,29 @@
         <body>
     
             <header>
-                <div class="header-menu">
-                    <div class="two-columns">       
-                        <div class="column">   
-                            <div class="logo">
-                                <div class="logo-imagen">Logo empresa</div> 
-                                <div class="logo-titulo">Título</div>                                                
-                            </div>
-                        </div>
-                            
-                        <div class="column"> 
-                            <nav class="menu-opciones">
-                                <ul><!--hacer lista horizontal no numerada ul/ con CSS--><!--normalmente son una lista-->
-                                    <li>Inicio</li>
-                                    <li>Reserva</li>
-                                    <li>Contactos</li>
-                                </ul>
-                            </nav>  
+                <div class="two-columns">       
+                    <div class="column">   
+                        <div class="logo">
+                            <div class="logo-imagen">
+                                <img src="images/logo.png" alt="logo">
+                            </div> 
+                            <div class="logo-titulo">
+                                <h2>Mallorca Sea</h2> 
+                            </div>                                                
                         </div>
                     </div>
+                        
+                    <div class="column"> 
+                        <nav class="menu-opciones">
+                            <ul><!--hacer lista horizontal no numerada ul/ con CSS--><!--normalmente son una lista-->
+                                <li>Inicio</li>
+                                <li>Reserva</li>
+                                <li>Contactos</li>
+                            </ul>
+                        </nav>  
+                    </div>
                 </div>
-            </header>        
+            </header>      
     
             <main>
                 <div class="column">
@@ -50,77 +52,151 @@
                     <div class="checkout-info">
                         <div class="two-columns">   
                             <div class="column">
-                                <div class="checkout-data"><!--columna izquierda pagina completa-->
-                                    <div class="two-columns">
+                                <div class="contact-form">
+                                    <div class="column">
+                                        <div class="two-columns">
+                                            
+                                            <div class="form-element">
+                                                <div class="form-element-label">
+                                                    <label for="name">Nombre</label>
+                                                </div>
+                                                <div class="form-element-input">
+                                                    <input type="text" id="name" name="name">
+                                                </div>
+                                            </div>
 
-                                        <div class="column">
-                                            <div class="field-name"><label for="name"><h4>Nombre</h4> </label></div>
-                                            <div class="field-input"><input type="text" id="name" name="name"><br></br></div>
-                                            <div class="field-phone"><label for="phone"><h4>Telefono</h4> </label></div>
-                                            <div class="field-input"><input type="text" id="phone" name="phone"></div>
-                                            <div class="field-city"><label for="city"><h4>Ciudad</h4></label></div>
-                                            <div class="field-input"><input type="text" id="city" name="city"></div> <!--debe ser un desplegable-->
+    
+                                            <div class="form-element">
+                                                <div class="form-element-label">
+                                                    <label for="phone">Telefono</label>
+                                                </div>
+                                                <div class="form-element-input">
+                                                    <input type="text" id="phone" name="phone">                                           
+                                                </div>
+                                            </div>
+    
+                                            <div class="form-element">
+                                                <div class="form-element-label">
+                                                    <label for="lastname"><p>Apellidos</label>
+                                                </div>
+                                                <div class="form-element-input">
+                                                    <input type="text" id="lastnames" name="lastname">
+                                                </div>
+                                            </div>
+    
+                                            <div class="form-element">
+                                                <div class="form-element-label">
+                                                    <label for="email">Email</label>
+                                                </div>
+                                                <div class="form-element-input">
+                                                    <input type="text" id="email" name="email">                                
+                                                </div>
+                                            </div>
+
+                                            <div class="form-element">
+                                                <div class="form-element-label">
+                                                    <label for="email">Ciudad</label>
+                                                </div>
+                                                <div class="form-element-input">
+                                                    <input type="text" id="ciudad" name="ciudad">                                
+                                                </div>
+                                            </div>
+                                        
+                                            <div class="form-element">
+                                                <div class="form-element-label">
+                                                    <label for="email">Código postal</label>
+                                                </div>
+                                                <div class="form-element-input">
+                                                    <input type="text" id="codpostal" name="codpostal">                                
+                                                </div>
+                                            </div>                                            
                                         </div>
-
-                                        <div class="column">
-                                            <div class="field-lastname"><label for="lastname"><h4>Apellidos</h4></label></div>
-                                            <div class="field-input"><input type="text" id="lastnames" name="lastname"></div>
-                                            <div class="field-email"><label for="email"></label><h4>Email</h4></div>
-                                            <div class="field-input"><input type="text" id="email" name="email"></div>
-                                            <div class="field-postal-code"><label for="cp"><h4>Código postal</h4></label></div>
-                                            <div class="field-input"><input type="text" id="cp" name="cp"></div>
-                                        </div>   
+                                        <div class="form-element">
+                                            <div class="form-element-label">
+                                                <label for="email">Dirección</label>
+                                            </div>
+                                            <div class="form-element-input">
+                                                <input type="text" id="address" name="address">                                
+                                            </div>
+                                        </div>                                        
                                     </div>
-
-                                    <div class="column">                                            
-                                        <div class="field-address"><label for="address"><h4>Direccion</h4></label></div>
-                                        <div class="field-input"><input type="text" id="address" name="address"></label></div>                    
-                                    </div>  
-                                </div>
-                            </div>              
+                                 </div>       
+                            </div>
 
                             <div class="column">   
                                 <div class="checkout-summary">
                                     <div class="column">
-                                        
-                                        <div class="column">
-                                            <div class="checkout-table-title"><h4>Resumen de la compra</h4></div>
+                                        <div class="summary-element">
+                                            <div class="summary-element">
+                                                <div class="summary-title"><h3>Resumen de la compra</h3></div> 
+                                            </div>
                                         </div>
-                                        
-                                            <div class="two-columns">
-                                                <div class="column">
-                                                    <div class="checkout-concepts">
-                                                        <div class="checkout-iva"><h4>IVA</h4></div>
-                                                        <div class="checkout-shipping"><h4>Transporte</h4></div>
-                                                        <div class="checkout-total"><h4>Total</h4></div>
-                                                    </div>
+                                    </div>   
 
-                                                <div class="column">
-                                                    <div class="checkout-concepts-cost"><!--son filas-->
-                                                        <div class="checkout-iva-cost"><h4>20 €</h4></div>
-                                                        <div class="checkout-transport-cost"><h4>0 €</h4></div>
-                                                        <div class="checkout-total-valor"><h4>120 €</h4></div>
-                                                    </div>
-                                                </div>
-                                            </div>    
-                                                
-                                        <div class="column">
-                                            <div class="checkout-payment">
-                                                <input type="radio" id="bank-transfer" name="pay-method" value="Transferencia bancaria">
-                                                <label for="html">Transferencia bancaria</label><br> 
-                                                <input type="radio" id="paypal" name="pay-method" value="Paypal">
-                                                <label for="paypal">Paypal</label><br>
-                                                <input type="radio" id="credit-card" name="pay-method" value="Tarjeta de credito">
-                                                <label for="javascript">Tarjeta de credito</label><br>
-                                                <!--<input type="submit" value="Pagar">-->
+                                        
+                                    <div class="two-columns">
+                                        
+                                        <div class="summary-element">
+                                            <div class="summary-item">
+                                                <div class="iva"><p>IVA</p></div>
+                                            </div>
+                                        </div>    
+
+                                        <div class="summary-element">
+                                            <div class="summary-item">
+                                                <div class="iva-value"><p>20 €</p></div>
                                             </div>
                                         </div>
                                         
-                                        <div>
-                                            <div class="generic-button"><button>Pagar</button> </div>
-                                        </div> 
+                                        <div class="summary-element">
+                                            <div class="summary-item">
+                                                <div class="transporte"><p>Transporte</p></div>
+                                            </div>
+                                        </div>    
 
-                                    </div>            
+                                        <div class="summary-element">
+                                            <div class="summary-item">
+                                                <div class="transporte-value"><p>0 €</p></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="summary-element">
+                                            <div class="summary-item">
+                                                <div class="total"><p>Total</p></div>
+                                            </div>
+                                        </div>    
+
+                                        <div class="summary-element">
+                                            <div class="summary-item">
+                                                <div class="total-value"><p>0 €</p></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                          
+                                                
+                                    <div class="column">
+                                        <div class="checkout-payment">
+
+                                        
+
+                                            <input type="radio" id="bank-transfer" name="pay-method" value="Transferencia bancaria">
+                                            <label for="bank-transfer">Transferencia bancaria</label><br> 
+                                            
+                                            <input type="radio" id="paypal" name="pay-method" value="Paypal">
+                                            <label for="paypal">Paypal</label><br>
+                                            
+                                            <input type="radio" id="credit-card" name="pay-method" value="Tarjeta de credito">
+                                            <label for="credit-card">Tarjeta de credito</label><br>
+                                            <!--<input type="submit" value="Pagar">-->
+                                        </div>
+                                    </div>
+                                    
+                                    <div>
+                                        <button class="custom-button" type="submit" value="Submit">Pagar</button>
+                                    </div> 
+
+                                                
                                 </div>
                             </div>
                         </div>    
@@ -128,9 +204,9 @@
                 </div>
             </main>
     
-            <footer>
+            <footer class="footer-distribution">
                 <div class="footer-copyright"><p>@2048</p></div>
-                <div class="footer-link"><p>Link sitio de verdad</p></div> <!--Aqui link pagina de verdad-->
+                <div class="footer-link"><a href="">Link sitio de verdad</a></div> <!--Aqui link pagina de verdad-->
             </footer>
               
         </body>

@@ -369,6 +369,22 @@ footer{
 
 /* Components */
 
+/* Form */
+
+.form-element{
+    margin-bottom: 1rem;
+}
+
+.form-element .form-element-input textarea{
+    color:hsl(0, 0%, 0%);
+    height: 20vh;
+    padding: 2rem;
+}
+
+.form-element .form-element-input input{
+    color:hsl(0, 0%, 0%);
+    padding-left: 0.5rem;
+}
 
 /* <body>*/
 
@@ -531,7 +547,7 @@ width: 100%;
 .featured-enlace    { 
        
 }
-.featured-enlace a{ color: aqua;  
+.featured-enlace a { color: aqua;  
        
 }
 
@@ -666,7 +682,8 @@ width: 100%;
 /*Contacto*/
 
 .contacto {
-    width: 100%;
+    padding: 0 10%;
+    width: 80%;
 } 
 
 .pagina-titulo {
@@ -687,8 +704,11 @@ width: 100%;
 
 .contacto-icono {
     width: 10%;
-
 } 
+
+.contacto-icono svg path{
+    fill:hsl(0, 0%, 100%);
+}
 
 .contactoinformacion {
     
@@ -697,43 +717,129 @@ width: 100%;
 .contacto-dato {} 
 .contacto-icono {} 
 .contacto-informacion {} 
+
 .contact-form {
     display: flex;
     justify-content: left;
     font-size: 1.5rem;
-    padding: 1rem 0;
+    padding: 2rem;
+    margin: 0 0 0 2rem;
 } 
 
-.contact1,
-.contact2   {
-    justify-content: space-around;
-    margin: 1rem 1rem;
+.field-name  {
+    margin: 0.5rem 0;
 }
 
-.contact1{}
-.contact2{}
+.field-input {} 
+.field-phone {
+    margin: 0.5rem 0;
+} 
 
-.field-name {} 
 .field-input {} 
-.field-phone {} 
+.field-lastname {
+    margin: 0.5rem 0;
+} 
+
 .field-input {} 
-.field-lastname {} 
-.field-input {} 
-.field-email {} 
+.field-email {
+    margin: 0.5rem 0;
+} 
+
 .field-input {}  
 .textarea {
     margin: 1rem 1rem;
 } 
-.textarea-input {
-    width: 50%;
-} 
-.generic-button {
-    width: 45%;
-} 
 
-.generic-buttone {
-    width: 45%;
-    margin: 0 1rem;
+.textarea{
+    width: 95%;    
+}
+.textarea-name  {
+    margin: 0.5rem 0; 
 }
 
+.textarea-input {
+    width: 100%;
+} 
+
+.generic-button {
+    width: 40%;
+    margin: 2rem 0 0 20rem;
+    
+} 
+
+.custom-button{}
+
+
+
 /*Contacto*/
+
+/*checkout*/
+
+
+.pagina-titulo  {}
+.checkout-info  {}
+.checkout-data  {
+}
+
+.field-name  {}
+.field-input  {
+}
+
+.field-phone  {}
+.field-input  {}
+.field-city  {
+    margin: 0.5rem 0;
+}
+
+.field-input  {}
+.field-lastname  {}
+.field-input  {}
+.field-email  {
+    margin: 0.5rem 0;
+}
+
+.field-input  {}
+.field-postal-code  {
+    margin: 0.5rem 0;
+}
+.field-input  {}
+.field-address  {
+    margin: 0.5rem 0;
+}
+.field-input  {}
+.checkout-summary  {
+    width: 90%;
+}
+.checkout-table-title  {}
+.checkout-concepts  {}
+.checkout-iva  {}
+.checkout-shipping  {}
+.checkout-total  {}
+.checkout-concepts-cost  {}
+.checkout-iva-cost  {}
+.checkout-transport-cost  {}
+.checkout-total-valor  {}
+.checkout-payment  {}
+/*
+<input type="radio" id="bank-transfer" name="pay-method" value="Transferencia bancaria
+<label for="htmlTransferencia bancaria</label><br> 
+<input type="radio" id="paypal" name="pay-method" value="Paypal
+<label for="paypalPaypal</label><br>
+<input type="radio" id="credit-card" name="pay-method" value="Tarjeta de credito
+<label for="javascriptTarjeta de credito</label><br>
+*/
+
+
+
+
+
+.custom-button  {}
+ 
+.summary-item    {
+    display: flex;
+    justify-content: left;
+    font-size: 1.5rem;
+    padding: 2rem;
+    margin: 0 0 0 2rem;
+    border-width: 1rem;
+}
