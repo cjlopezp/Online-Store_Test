@@ -671,7 +671,7 @@ width: 100%;
 
 .pagina-titulo {
     text-align: center;
-    padding: 1rem 0 5rem 0;    
+    padding: 1rem 0 1rem 0;    
 }
 
 .contacto-datos {
@@ -682,7 +682,7 @@ width: 100%;
     display: flex;
     justify-content: start;
     margin: 2rem 5rem;
-    font-size: 2rem;;
+    font-size: 2rem;
 } 
 
 .contacto-icono {
@@ -698,8 +698,20 @@ width: 100%;
 .contacto-icono {} 
 .contacto-informacion {} 
 .contact-form {
-    width: 100%;
+    display: flex;
+    justify-content: left;
+    font-size: 1.5rem;
+    padding: 1rem 0;
 } 
+
+.contact1,
+.contact2   {
+    justify-content: space-around;
+    margin: 1rem 1rem;
+}
+
+.contact1{}
+.contact2{}
 
 .field-name {} 
 .field-input {} 
@@ -709,10 +721,19 @@ width: 100%;
 .field-input {} 
 .field-email {} 
 .field-input {}  
-.textarea {} 
-.textarea-input {} 
-.generic-button {} 
-.generic-button {}
+.textarea {
+    margin: 1rem 1rem;
+} 
+.textarea-input {
+    width: 50%;
+} 
+.generic-button {
+    width: 45%;
+} 
 
+.generic-buttone {
+    width: 45%;
+    margin: 0 1rem;
+}
 
 /*Contacto*/
