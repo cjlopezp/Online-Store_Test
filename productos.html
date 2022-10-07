@@ -10,33 +10,33 @@
             <meta name="description" content="descripción de la web, se recomienda 90 caracteres"> <!--Es la ficha que contiene la descripcion de la pagina y que sera leida por el buscador-->
             <meta name="keywords"    content="palabras clave, separadas, por comas">
         
-            <link href="style/app.css" rel="stylesheet"> <!--señala el link del archivo css de donde se toma el estilo de la pagina-->
+            <link href="style.css" rel="stylesheet"> <!--señala el link del archivo css de donde se toma el estilo de la pagina-->
         </head>
 
 
         <body>
 
             <header>
-                <div class="header-menu">
-                    <div class="two-columns">       
-                        <div class="column">   
-                            <div class="logo">
-                                <div class="logo-imagen"><img src="" alt=""></div> 
-                                <div class="logo-titulo"><h1>Título</h1></div>                                                
-                            </div>
+                <div class="two-columns">       
+                    <div class="column">   
+                        <div class="logo">
+                            <div class="logo-imagen">
+                                <img src="images/logo.png" alt="logo">
+                            </div> 
+                            <div class="logo-titulo">
+                                <h2>Mallorca Sea</h2> 
+                            </div>                                                
                         </div>
-                            
-                        <div class="column"> 
-                            <nav class="menu-opcions">
-                                <ul><!--hacer lista horizontal no numerada ul/ con CSS--><!--normalmente son una lista-->
-                                    <li>   
-                                        <a href="">Inicio</a>
-                                        <a href="">Reserva</a>                                   
-                                        <a href="">Contactos</a>
-                                    </li> 
-                                </ul>
-                            </nav>  
-                        </div>
+                    </div>
+                        
+                    <div class="column"> 
+                        <nav class="menu-opciones">
+                            <ul><!--hacer lista horizontal no numerada ul/ con CSS--><!--normalmente son una lista-->
+                                <li>Inicio</li>
+                                <li>Reserva</li>
+                                <li>Contactos</li>
+                            </ul>
+                        </nav>  
                     </div>
                 </div>
             </header>        
@@ -47,16 +47,14 @@
                     <div class="two-columns-aside">
                         <div class="column-aside">
                             <div class="products-categories"><!--Columna izquierda-->
-                                <div class="products-categories-titly"><H2>Categorias</H2> 
-                                </div>
+                                <div class="products-categories-titly"><H2>Categorias</H2></div> 
+                                
                                 <div class="products-categorie-list">                    
-                                    <ul><!--lista categorias-->
-                                        <li>
-                                            <a href="">Todas</a>
-                                            <a href="">Lanchas</a>
-                                            <a href="">Llauts</a>                                       
-                                            <a href="">Veleros</a>
-                                        </li>                                    
+                                    <ul><!--lista categorias-->                                       
+                                            <li><a href="">Todas</a></li>
+                                            <li><a href="">Lanchas</a></li> 
+                                            <li><a href="">Llauts</a></li>                                     
+                                            <li><a href="">Veleros</a></li>                                                                           
                                     </ul>
                                 </div>  
                             </div>
@@ -164,10 +162,10 @@
   
             </main>
 
-            <footer>
+            <footer class="footer-distribution">
                 <div class="footer-copyright"><p>@2048</p></div>
-                <div class="footer-link"><p>Link sitio de verdad</p></div> <!--Aqui link pagina de verdad-->
-            </footer>
+                <div class="footer-link"><a href="">Link sitio de verdad</a></div> <!--Aqui link pagina de verdad-->
+            </footer> 
         
         </body>
 

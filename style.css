@@ -215,9 +215,7 @@ video{
 /* Typography */
 
 h1, h2, h3, h4, h5, h6, a, p {
-    font-family: '';
     color: hsl(0, 0%, 100%);
-    
 }
 
 h1, h2, h3, h4 {
@@ -263,18 +261,6 @@ a:hover, a:focus {
     outline: none;
     text-decoration: none;
     outline-offset: 0;
-}
-
-.custom-button {
-    border: none;
-    box-shadow: 3px 5px 16px 3px #000;
-    color: rgb(189, 29, 29);
-    padding: 0.5rem 1.5rem;
-    font-family: Arial, Helvetica, sans-serif ;
-    font-size: 1.2rem;
-    cursor: pointer;
-    width: 100%;
-    border-radius: 12px;
 }
 
 /* Layout */
@@ -355,10 +341,6 @@ body {
     background-color: rgb(42, 76, 186, 255);  
 }
 
-header{
-
-}
-
 main{
 
 }
@@ -369,10 +351,23 @@ footer{
 
 /* Components */
 
+.custom-button {
+    border: none;
+    box-shadow: 3px 5px 16px 3px #000;
+    color: rgb(189, 29, 29);
+    padding: 0.5rem 1.5rem;
+    font-family: Arial, Helvetica, sans-serif ;
+    font-size: 1.2rem;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 12px;
+}
+
 /* Form */
 
 .form-element{
     margin-bottom: 1rem;
+    width: 100%;
 }
 
 .form-element .form-element-input textarea{
@@ -429,14 +424,7 @@ header{
     font-weight: 600;
 }
      
-
-.contenido {
-    font: 16px sans-serif;
-    height: 100px;
-    border: 1px solid black;
-    display: flex;
-    
-}
+/* Footer */
 
 .footer-distribution {
     width:100%;  
@@ -460,16 +448,12 @@ header{
     text-align: center;    
 }
 
-/* </header> */
 
-/* <main> */
+/* slider */
 
-.main    {
-width: 100%;
-}
 .home {
     width: 100%;
-} 
+}  
 
 .slider {
     position: relative;
@@ -540,24 +524,16 @@ width: 100%;
     width: 100%;
 }
 
-.featured-titulo    {
-    
-} 
-
-.featured-enlace    { 
-       
-}
-.featured-enlace a { color: aqua;  
-       
+.featured-enlace a { 
+    color: aqua;     
 }
 
 .featured-description {
     width: 90%;
     text-align: left;
-     
 }  
 
-.banner-text   {
+.banner-text{
     padding: 0 5%;    
     width: 90%;
     font-size: 1.2rem;
@@ -569,7 +545,6 @@ width: 100%;
     width: 90%;
     text-align: left;
     padding: 1rem 0;
-
 }
 
 .banner-text-image{
@@ -580,13 +555,9 @@ width: 100%;
 
 /*Product*/
 
-.product    {
+.product{
     width: 80%;
     padding: 2rem 10%;
-} 
-
-.slider-gallery {
-
 } 
 
 .slider-gallery-main{
@@ -599,16 +570,6 @@ width: 100%;
     padding: 2rem;
 }
 
-.slider-gallery-miniature{
-    
-}
-
-
-.slider-gallery-miniature{}
-.slider-gallery-miniature{}
-.slider-gallery-miniature{}
-.slider-gallery-miniature{}
-
 .product-description{
     padding: 2rem;
 }
@@ -616,7 +577,6 @@ width: 100%;
 .product-description-title{
     margin-bottom: 1rem;
 }
-
 
 .product-description-price{
     margin-bottom: 1rem;
@@ -688,7 +648,8 @@ width: 100%;
 
 .pagina-titulo {
     text-align: center;
-    padding: 1rem 0 1rem 0;    
+    padding: 1rem 0 3rem 0;
+       
 }
 
 .contacto-datos {
@@ -710,105 +671,26 @@ width: 100%;
     fill:hsl(0, 0%, 100%);
 }
 
-.contactoinformacion {
-    
-} 
-
-.contacto-dato {} 
-.contacto-icono {} 
-.contacto-informacion {} 
-
 .contact-form {
-    display: flex;
-    justify-content: left;
     font-size: 1.5rem;
     padding: 2rem;
     margin: 0 0 0 2rem;
 } 
 
-.field-name  {
-    margin: 0.5rem 0;
-}
-
-.field-input {} 
-.field-phone {
-    margin: 0.5rem 0;
-} 
-
-.field-input {} 
-.field-lastname {
-    margin: 0.5rem 0;
-} 
-
-.field-input {} 
-.field-email {
-    margin: 0.5rem 0;
-} 
-
-.field-input {}  
-.textarea {
-    margin: 1rem 1rem;
-} 
-
-.textarea{
-    width: 95%;    
-}
-.textarea-name  {
-    margin: 0.5rem 0; 
-}
-
-.textarea-input {
-    width: 100%;
-} 
-
 .generic-button {
     width: 40%;
-    margin: 2rem 0 0 20rem;
-    
+    margin-left: auto;  
 } 
-
-.custom-button{}
-
-
 
 /*Contacto*/
 
 /*checkout*/
+ 
 
-
-.pagina-titulo  {}
-.checkout-info  {}
-.checkout-data  {
-}
-
-.field-name  {}
-.field-input  {
-}
-
-.field-phone  {}
-.field-input  {}
-.field-city  {
-    margin: 0.5rem 0;
-}
-
-.field-input  {}
-.field-lastname  {}
-.field-input  {}
-.field-email  {
-    margin: 0.5rem 0;
-}
-
-.field-input  {}
-.field-postal-code  {
-    margin: 0.5rem 0;
-}
-.field-input  {}
-.field-address  {
-    margin: 0.5rem 0;
-}
-.field-input  {}
-.checkout-summary  {
-    width: 90%;
+.shipping-form{
+    font-size: 1.5rem;
+    padding: 0 6rem;
+    margin: 0 2rem;
 }
 .checkout-table-title  {}
 .checkout-concepts  {}
@@ -829,17 +711,111 @@ width: 100%;
 <label for="javascriptTarjeta de credito</label><br>
 */
 
+.form-element{
+    
+}
+
+.checkout-summary{
+    
+}
 
 
+.summary-element-item{
+    text-align: center;
+    padding: 0 0;
+    font-weight: 600;
+}
 
+.summary-title{
+    background-color: #ffffff;
+    border-style: solid;
+    border-color: #ffffff;
+    text-align: center;
+    margin-top: 1.5rem;
+}
 
-.custom-button  {}
- 
-.summary-item    {
+.summary-title h3{
+    color: blue;
+    font-weight: 600;
+}
+
+.checkout-bill{
+    border-style: solid;
+    border-color: #ffffff;
+}
+
+.bill-element{
     display: flex;
-    justify-content: left;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+.checkout-payment {
+    width: 100%;
+    margin-left: auto;
+    padding: 2;
+
+}
+
+
+.shipping-form{
     font-size: 1.5rem;
     padding: 2rem;
-    margin: 0 0 0 2rem;
-    border-width: 1rem;
+    margin: 0 2rem 0 2rem;
+}
+
+.checkout-payment-item .payment-button .custom-button{
+    width: 20%;
+
+}
+
+.checkout-payment{
+    margin: 1rem 0 1rem 0;
+}
+
+
+
+
+.checkout-payment-item input[type=radio]{
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border-radius: 100%;
+    left: 15px;
+}
+
+.checkout-payment-item{ 
+    position: relative;
+    margin-bottom: 0.5rem;
+	padding: 0.5rem 0 0 4rem;
+	
+}
+
+.checkout-payment-item .payment-button {
+    margin-right: auto;
+}
+
+
+/*productos*/
+
+.products{
+    margin-top: 2rem;
+}
+
+.column-aside{
+    margin-left: 3rem;
+}
+
+
+.products-categories{
+    width: 60%;
+
+}
+
+.products-categories-titly{
+    width: 50%;
+}
+
+.products-categorie-list li{
+    margin: 1rem 0;
 }

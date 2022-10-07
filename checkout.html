@@ -43,19 +43,21 @@
             </header>      
     
             <main>
-                <div class="column">
+                
+                <div class="checkout">    
                     <div class="column">
-                        <div class="pagina-titulo"><h1>Finalizar compra</h1></div>
+                        <div class="column">
+                            <div class="pagina-titulo"><h1>Finalizar compra</h1></div>
+                        </div>
                     </div>
-                </div>
 
                     <div class="checkout-info">
-                        <div class="two-columns">   
-                            <div class="column">
-                                <div class="contact-form">
-                                    <div class="column">
-                                        <div class="two-columns">
-                                            
+                        <div class="shipping-form">                    
+                            <div class="two-columns">   
+                                <div class="column">
+                                    <div class="two-columns">
+                                        <div class="column">
+                                        
                                             <div class="form-element">
                                                 <div class="form-element-label">
                                                     <label for="name">Nombre</label>
@@ -65,31 +67,12 @@
                                                 </div>
                                             </div>
 
-    
                                             <div class="form-element">
                                                 <div class="form-element-label">
                                                     <label for="phone">Telefono</label>
                                                 </div>
                                                 <div class="form-element-input">
                                                     <input type="text" id="phone" name="phone">                                           
-                                                </div>
-                                            </div>
-    
-                                            <div class="form-element">
-                                                <div class="form-element-label">
-                                                    <label for="lastname"><p>Apellidos</label>
-                                                </div>
-                                                <div class="form-element-input">
-                                                    <input type="text" id="lastnames" name="lastname">
-                                                </div>
-                                            </div>
-    
-                                            <div class="form-element">
-                                                <div class="form-element-label">
-                                                    <label for="email">Email</label>
-                                                </div>
-                                                <div class="form-element-input">
-                                                    <input type="text" id="email" name="email">                                
                                                 </div>
                                             </div>
 
@@ -101,7 +84,28 @@
                                                     <input type="text" id="ciudad" name="ciudad">                                
                                                 </div>
                                             </div>
-                                        
+                                                                        
+                                        </div>
+
+                                        <div class="column">
+                                            <div class="form-element">
+                                                <div class="form-element-label">
+                                                    <label for="lastname"><p>Apellidos</label>
+                                                </div>
+                                                <div class="form-element-input">
+                                                    <input type="text" id="lastnames" name="lastname">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-element">
+                                                <div class="form-element-label">
+                                                    <label for="email">Email</label>
+                                                </div>
+                                                <div class="form-element-input">
+                                                    <input type="text" id="email" name="email">                                
+                                                </div>
+                                            </div>
+
                                             <div class="form-element">
                                                 <div class="form-element-label">
                                                     <label for="email">Código postal</label>
@@ -109,8 +113,13 @@
                                                 <div class="form-element-input">
                                                     <input type="text" id="codpostal" name="codpostal">                                
                                                 </div>
-                                            </div>                                            
+                                            </div> 
+
                                         </div>
+
+                                    </div>
+
+                                    <div class="column">
                                         <div class="form-element">
                                             <div class="form-element-label">
                                                 <label for="email">Dirección</label>
@@ -118,90 +127,106 @@
                                             <div class="form-element-input">
                                                 <input type="text" id="address" name="address">                                
                                             </div>
-                                        </div>                                        
-                                    </div>
-                                 </div>       
-                            </div>
+                                        </div> 
+                                    </div>                                        
+                                            
+                                </div>
 
-                            <div class="column">   
-                                <div class="checkout-summary">
-                                    <div class="column">
-                                        <div class="summary-element">
+                                <div class="column">   
+                                    <div class="checkout-summary">
+                                        <div class="column">
+
                                             <div class="summary-element">
-                                                <div class="summary-title"><h3>Resumen de la compra</h3></div> 
+                                                <div class="summary-element-title">
+                                                    <div class="summary-title"><h3>Resumen de la compra</h3></div> 
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>   
+                                            
+                                        </div>   
 
-                                        
-                                    <div class="two-columns">
-                                        
-                                        <div class="summary-element">
-                                            <div class="summary-item">
-                                                <div class="iva"><p>IVA</p></div>
-                                            </div>
-                                        </div>    
-
-                                        <div class="summary-element">
-                                            <div class="summary-item">
-                                                <div class="iva-value"><p>20 €</p></div>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="summary-element">
-                                            <div class="summary-item">
-                                                <div class="transporte"><p>Transporte</p></div>
-                                            </div>
-                                        </div>    
-
-                                        <div class="summary-element">
-                                            <div class="summary-item">
-                                                <div class="transporte-value"><p>0 €</p></div>
-                                            </div>
-                                        </div>
-
-                                        <div class="summary-element">
-                                            <div class="summary-item">
-                                                <div class="total"><p>Total</p></div>
-                                            </div>
-                                        </div>    
-
-                                        <div class="summary-element">
-                                            <div class="summary-item">
-                                                <div class="total-value"><p>0 €</p></div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                          
+                                        <div class="checkout-bill">    
+                                            <div class="two-columns">
                                                 
+                                                <div class="column">
+
+                                                    <div class="bill-element">
+                                                        <div class="summary-element-item">
+                                                            <div class="iva"><p>IVA</p></div>
+                                                        </div>
+                                                    </div>    
+                                                    
+                                                    <div class="bill-element">
+                                                        <div class="summary-element-item">
+                                                            <div class="transporte"><p>Transporte</p></div>
+                                                        </div>
+                                                    </div> 
+
+                                                    <div class="bill-element">
+                                                        <div class="summary-element-item">
+                                                            <div class="total"><p>Total</p></div>
+                                                        </div>
+                                                    </div>  
+                                                                                                
+                                                </div> 
+                                                
+                                                <div class="column">
+                                                    <div class="bill-element">
+                                                        <div class="summary-element-item">
+                                                            <div class="iva-value"><p>20 €</p></div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="bill-element">
+                                                        <div class="summary-element-item">
+                                                            <div class="transporte-value"><p>0 €</p></div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="bill-element">
+                                                        <div class="summary-element-item">
+                                                            <div class="total-value"><p>0 €</p></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>    
+
+                                    </div>        
+                                                    
                                     <div class="column">
                                         <div class="checkout-payment">
 
+                                            <div class="checkout-payment-item">
+                                                <input type="radio" id="bank-transfer" name="pay-method" value="Transferencia bancaria">
+                                                <label for="bank-transfer">Transferencia bancaria</label><br>                                                 
+                                            </div>
+
+                                            <div class="checkout-payment-item">
+                                                <input type="radio" id="paypal" name="pay-method" value="Paypal">
+                                                <label for="paypal">Paypal</label><br>
+                                            </div>    
+
+                                            <div class="checkout-payment-item">
+                                                <input type="radio" id="credit-card" name="pay-method" value="Tarjeta de credito">
+                                                <label for="credit-card">Tarjeta de credito</label><br>                                        
+                                            </div>
+
+                                            <div class="checkout-payment-item">
+                                                <div class="payment-button">
+                                                    <button class="custom-button" type="submit" value="Submit">Pagar</button>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+
                                         
 
-                                            <input type="radio" id="bank-transfer" name="pay-method" value="Transferencia bancaria">
-                                            <label for="bank-transfer">Transferencia bancaria</label><br> 
-                                            
-                                            <input type="radio" id="paypal" name="pay-method" value="Paypal">
-                                            <label for="paypal">Paypal</label><br>
-                                            
-                                            <input type="radio" id="credit-card" name="pay-method" value="Tarjeta de credito">
-                                            <label for="credit-card">Tarjeta de credito</label><br>
-                                            <!--<input type="submit" value="Pagar">-->
-                                        </div>
-                                    </div>
-                                    
-                                    <div>
-                                        <button class="custom-button" type="submit" value="Submit">Pagar</button>
-                                    </div> 
-
-                                                
+                                    </div>                                                                                       
                                 </div>
-                            </div>
-                        </div>    
-                    </div>
-                </div>
+                            </div>  
+                        </div>  
+                    </div>                    
+                </div>    
             </main>
     
             <footer class="footer-distribution">
