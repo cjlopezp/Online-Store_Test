@@ -686,12 +686,23 @@ header{
 
 /*checkout*/
  
+.checkout{
+    width: 80%;
+    padding: 2rem 10%;
+}
 
-.shipping-form{
+.checkout-info{
+    width: 80%;
+    padding: 2rem 10%;
+}
+
+.shipping-form{    
+    width: 10 0%;
     font-size: 1.5rem;
-    padding: 0 6rem;
+    padding: 2rem 10%rem;
     margin: 0 2rem;
 }
+
 .checkout-table-title  {}
 .checkout-concepts  {}
 .checkout-iva  {}
@@ -716,9 +727,13 @@ header{
 }
 
 .checkout-summary{
-    
+    padding: 1vh;
+    width: 80%;
 }
 
+.summary-element{
+    
+}
 
 .summary-element-item{
     text-align: center;
@@ -732,6 +747,7 @@ header{
     border-color: #ffffff;
     text-align: center;
     margin-top: 1.5rem;
+    padding: 1vh 0;
 }
 
 .summary-title h3{
