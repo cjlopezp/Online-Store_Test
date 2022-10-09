@@ -572,6 +572,7 @@ header{
 
 .product-description{
     padding: 2rem;
+    text-align: center;
 }
 
 .product-description-title{
@@ -648,7 +649,7 @@ header{
 
 .pagina-titulo {
     text-align: center;
-    padding: 1rem 0 3rem 0;
+    padding: 1rem 0 1rem 0;
        
 }
 
@@ -693,7 +694,7 @@ header{
 
 .checkout-info{
     width: 80%;
-    padding: 2rem 10%;
+    padding: 1rem 10%;
 }
 
 .shipping-form{    
@@ -769,8 +770,6 @@ header{
 .checkout-payment {
     width: 100%;
     margin-left: auto;
-    padding: 2;
-
 }
 
 
@@ -780,9 +779,9 @@ header{
     margin: 0 2rem 0 2rem;
 }
 
-.checkout-payment-item .payment-button .custom-button{
+ .payment-button{
     width: 20%;
-
+    margin-right: auto;
 }
 
 .checkout-payment{
@@ -803,8 +802,7 @@ header{
 .checkout-payment-item{ 
     position: relative;
     margin-bottom: 0.5rem;
-	padding: 0.5rem 0 0 4rem;
-	
+	padding: 0.5rem 0 0 4rem;	
 }
 
 .checkout-payment-item .payment-button {
@@ -818,20 +816,104 @@ header{
     margin-top: 2rem;
 }
 
+.menu-visible li{
+    margin-right: auto;
+    width: 30%;
+    padding: 0.5rem 0;
+}
+
+.products-avail-categories{  
+}
+
+.menu-desplegable{
+    display: inline;
+    flex-flow: wrap;    
+}
+
+.menu-productos{
+    margin-right: 0.5rem;
+    width: 50%;    
+}
+
+.menu-productos ul {
+    align-items: center;
+    display: flex;
+    height: 5vh;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.menu-productos ul li {   
+}
+
 .column-aside{
     margin-left: 3rem;
 }
 
+.products .column-aside{
+   border-right: 1px solid #ffffff;
+    border-width: 0.2rem; 
+}
 
 .products-categories{
     width: 60%;
-
+    height: 5vh;
 }
 
-.products-categories-titly{
-    width: 50%;
+.products-categories-title{
+    width: 50%;   
 }
 
-.products-categorie-list li{
+.menu-productos {
+    padding: 0 1rem;
+    margin-left: auto; 
+}
+
+
+.products-availability{
+    padding: 1rem 0 1rem 0;
+    width: 98%;   
+}
+
+.products-avail-categories{
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;   
+}
+
+.product-mosaico{
+    border:solid white;
+    border-width: 0.25rem;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 1rem;
+    position: relative;
     margin: 1rem 0;
+}
+
+.products-mosaico{
+    width: 98%;
+    display: flex;
+}
+
+.product-image{
+    position: relative;
+    z-index: 800;
+}
+
+.product-price{
+    position: absolute;
+    z-index: 1000;
+    left: 70%;
+    top: 0vh;
+    font-family: 'Montserrat', sans-serif;
+    color: #000000;
+    font-size: 1.3em;
+    z-index: 900; 
+    width: 30%; 
+}
+
+.product-button{
+    text-align: center;
 }
