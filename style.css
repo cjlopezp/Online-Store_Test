@@ -612,19 +612,28 @@ header{
     width: 10%;
 }
 
+.quantity-plus button{
+    border: none;
+    border-top-right-radius: 0.4rem;
+    border-bottom-right-radius: 0.4rem;    
+}
+
 .quantity-minos button, 
 .quantity-plus button{
     color:rgba(0, 0, 0);
     font-weight: 600;
+    padding: 0.1rem 0 0.1rem 0;
 }
 
 .quantity-minos button{
     border: none;
-    border-top-left-radius: 0.5rem;
+    border-top-left-radius: 0.4rem;
+    border-bottom-left-radius: 0.4rem;
 }
 
 .quantity-item{
     width: 10%;
+     
 }
 
 .quantity-item input{
@@ -693,15 +702,10 @@ header{
 }
 
 .checkout-info{
-    width: 80%;
-    padding: 1rem 10%;
+    width: 100%;
 }
 
-.shipping-form{    
-    width: 10 0%;
-    font-size: 1.5rem;
-    padding: 2rem 10%rem;
-    margin: 0 2rem;
+
 }
 
 .checkout-table-title  {}
@@ -723,18 +727,14 @@ header{
 <label for="javascriptTarjeta de credito</label><br>
 */
 
-.form-element{
-    
-}
+
+
 
 .checkout-summary{
     padding: 1vh;
     width: 80%;
 }
 
-.summary-element{
-    
-}
 
 .summary-element-item{
     text-align: center;
@@ -776,12 +776,12 @@ header{
 .shipping-form{
     font-size: 1.5rem;
     padding: 2rem;
-    margin: 0 2rem 0 2rem;
+    font-size: 1.5rem;
 }
 
  .payment-button{
     width: 20%;
-    margin-right: auto;
+    margin-left: 1rem;
 }
 
 .checkout-payment{
@@ -802,12 +802,12 @@ header{
 .checkout-payment-item{ 
     position: relative;
     margin-bottom: 0.5rem;
-	padding: 0.5rem 0 0 4rem;	
+	padding: 0.5rem 0 0 4rem;
+    font-size: 1.5rem;	
+    font-weight: 600;
 }
 
-.checkout-payment-item .payment-button {
-    margin-right: auto;
-}
+
 
 
 /*productos*/
@@ -817,9 +817,8 @@ header{
 }
 
 .menu-visible li{
-    margin-right: auto;
-    width: 30%;
     padding: 0.5rem 0;
+    font-size: 1.5rem;
 }
 
 .products-avail-categories{  
@@ -831,7 +830,7 @@ header{
 }
 
 .menu-productos{
-    margin-right: 0.5rem;
+    margin-right: 0rem;
     width: 50%;    
 }
 
@@ -860,8 +859,10 @@ header{
     height: 5vh;
 }
 
-.products-categories-title{
-    width: 50%;   
+.products-categories-title h2{
+    width: 50%;  
+    padding: 0 0 1rem 0; 
+    font-size: 2.5rem;
 }
 
 .menu-productos {
@@ -871,7 +872,7 @@ header{
 
 
 .products-availability{
-    padding: 1rem 0 1rem 0;
+    padding: 0.25rem 0 1rem 0;
     width: 98%;   
 }
 
@@ -879,12 +880,13 @@ header{
     height: 5vh;
     display: flex;
     align-items: center;
-    margin-left: 1rem;   
+    margin-left: 1rem; 
+    
 }
 
 .product-mosaico{
     border:solid white;
-    border-width: 0.25rem;
+    border-width: 0.5rem;
     border-radius: 10px;
     overflow: hidden;
     margin-left: 1rem;
@@ -908,12 +910,74 @@ header{
     left: 70%;
     top: 0vh;
     font-family: 'Montserrat', sans-serif;
-    color: #000000;
+    color: #ffffff;
     font-size: 1.3em;
     z-index: 900; 
     width: 30%; 
+    background-color: #000000;
+}
+
+.product-caracterist{
+    text-align: center;
+    padding: 1rem 0 1rem 0;
+    font-size: 2rem;
+    font-weight: 600;
 }
 
 .product-button{
     text-align: center;
+    padding: 1rem 0 1rem 0;
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 600;
+    border: 0.18rem solid #1C6EA4; 
+    background:#1666A4;
+    background: linear-gradient(to right, #1666A4 0%, #2388CB 50%, #39CAEA 100%);
 }
+
+.products-avail-categories > .products-availability-items p{
+    font-size: 1.5rem;
+}
+
+ .menu-productos > ul{
+    font-size: 1.2rem;
+}
+
+/*carrito*/
+
+.shopping-cart{
+    width: 90%;
+    margin: 0 5%;
+}
+
+.shopping-settings{
+    width: 90%;
+    margin:0 5%;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+      
+}
+.shopping-summary{
+    width: 50%;
+}
+
+.shopping-sets{
+    width: 100%;
+    font-size: 1.7rem;
+    font-weight: 600;
+    
+    
+    
+    
+}
+
+.shopping-sets .shopping-head p{}
+
+.shopping-head{
+
+}
+.shopping-product-miniature{}
+.shopping-product{}
+.shopping-price{}
+.shopping-quantity{}
