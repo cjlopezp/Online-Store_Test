@@ -955,16 +955,48 @@ header{
     margin:0 5%;
     padding: 1rem 0;
     display: flex;
-    justify-content: center;
-      
+    justify-content: space-around;
 }
-.shopping-summary{
-    width: 50%;
+
+.shopping-sets> 
+.shopping-head{
+    border-bottom: 2px solid #A4A4A4;
+    
+}
+
+.shopping-sets>
+.shopping-head, 
+.shopping-product-miniature, 
+.shopping-product, 
+.shopping-price{
+    width: 100%;
+    padding: 0.5rem 0;
+    display: flex;
+    justify-content: center;
+        
 }
 
 .shopping-sets{
+  
+}
+
+
+.amount-quantity{
     width: 100%;
-    font-size: 1.7rem;
+    padding: 0.5rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+.shopping-sets{
+    width: 100%;
+    font-size: 1.3rem;
     font-weight: 600;
     
     
@@ -980,4 +1012,47 @@ header{
 .shopping-product-miniature{}
 .shopping-product{}
 .shopping-price{}
-.shopping-quantity{}
+.shopping-quantity{
+    
+}
+
+.shopping-summary{
+    width: 95%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0.5vh;
+}
+
+.shopping-summary-title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-left: 1rem;
+    
+    
+}
+
+.shop-item div{
+    width: 44   %;
+    padding:0.5rem 3rem;
+    
+    display: flex;
+    justify-content: center;
+    border:solid white;
+
+}
+
+
+
+
+
+.shopping-summary> .column{
+    display: flex;
+    justify-content: flex-end;
+    border-color: #000;
+}
+
+.back-button, .buy-button{
+  
+    width: 50%;
+}
