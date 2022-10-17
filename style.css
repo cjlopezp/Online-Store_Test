@@ -97,6 +97,10 @@ select { /* 1 */
     text-transform: none;
 }
 
+option{
+    color:hsl(0, 0%, 0%);
+}
+
 button,
 [type="button"],
 [type="reset"],
@@ -187,7 +191,7 @@ table {
 }
 
 td, th {
-    padding: 0;
+    padding: 0.0rem;
 }
 
 ol, ul {
@@ -219,15 +223,15 @@ h1, h2, h3, h4, h5, h6, a, p {
 }
 
 h1, h2, h3, h4 {
-    font-family: '';
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;;
 }
 
 h5, h6 {
-    font-family:'';
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;;
 }
 
-a, td, th, p, button, span, label, select, input, textarea, li{
-    font-family: '';
+a, td, th, p, button, span, label, input, textarea, li{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;;
     color: white;
 }
 
@@ -341,14 +345,6 @@ body {
     background-color: rgb(42, 76, 186, 255);  
 }
 
-main{
-
-}
-
-footer{
-
-}
-
 /* Components */
 
 .custom-button {
@@ -381,6 +377,10 @@ footer{
     padding-left: 0.5rem;
 }
 
+.form-send-button{
+    width: max-content;
+    margin-left: 1rem;
+}
 /* <body>*/
 
 /* <Header> */
@@ -430,9 +430,9 @@ header{
     width:100%;  
     display: grid;
     justify-items: center;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600; 
-    padding: 0% 0 2% 0;   
+    padding-bottom: 2%;   
 }
 
 .footer-copyright {
@@ -447,7 +447,6 @@ header{
     width: 10%;
     text-align: center;    
 }
-
 
 /* slider */
 
@@ -477,7 +476,6 @@ header{
 .slider-titulo h1{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #ffffff;
-    z-index: 1;
 }
 
 .slider-boton{
@@ -486,74 +484,81 @@ header{
     left: 10%;
     top: 40vh;
     font-family: 'Montserrat', sans-serif;
-    color: #000000;
     font-size: 1.3em;
-    z-index: 1;
 }
 
-    /*featured*/
+/*featured*/
 
 .featured {
     padding: 0 5%;
-    width: 90%;
-    font-size: 20px;
-    font-weight: 600px;
+    width: 90%
 }
 
 .featured-title {
     text-align: center;
-    height: 10vh; 
-    display: flex;
-    justify-content: center;
-    align-items: center;  
+    padding: 2rem 0;
+}
+
+/* Propiedades de texto se dan sólo a los elementos de texto, no a las cajas*/
+.featured-title h2{
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
 .featured-elements {
-    padding: 1% 0 2% 0;    
+    padding: 1rem 0;    
 }
 
 .home-featured-item  {
     border: 2px solid white;
-    border-radius: 10px;
+    border-radius: 1rem;
     overflow: hidden;
-    font-size: 1.0rem;
-    font-weight: 600;
 }
 
-.featured-imagen    {
+.featured-imagen{
     width: 100%;
 }
 
-.featured-enlace a { 
+.featured-titulo, .featured-enlace,.featured-description{
+    padding: 0.5rem;
+}
+
+.featured-titulo h3{
+    font-size: 1.5rem;
+}
+
+.featured-enlace span { 
     color: aqua;     
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
 .featured-description {
-    width: 90%;
     text-align: left;
 }  
 
 .banner-text{
     padding: 0 5%;    
     width: 90%;
-    font-size: 1.2rem;
-    font-weight: 600px;
 }
 
 .banner-text-description{
-    font-size: 2rem;
     width: 90%;
     text-align: left;
     padding: 1rem 0;
 }
 
+.banner-text-description p{
+    font-size: 2rem;
+    font-weight: 600;
+}
+
 .banner-text-image{
-    width: 90%;
-    text-align: center;
+    width: 100%;
     padding: 1rem 0;
 }
 
-/*Product*/
+/*Producto*/
 
 .product{
     width: 80%;
@@ -595,21 +600,20 @@ header{
 .product-rent-amount {
     display:flex;    
     align-items: center;
+    width: 50%;
+    margin: 0 auto;
     margin-bottom: 2rem;
 }
 
-.product-rent-dias{
-    margin-right: 2rem;
-}
-
+/* Amount Button */
 .amount-quantity{
     display: flex;
-    width: 50%;
+    justify-content: center;
 }
 
 .quantity-minos, 
 .quantity-plus{
-    width: 10%;
+    width: 20%;
 }
 
 .quantity-plus button{
@@ -622,7 +626,10 @@ header{
 .quantity-plus button{
     color:rgba(0, 0, 0);
     font-weight: 600;
+    height: 100%;
     padding: 0.1rem 0 0.1rem 0;
+    cursor: pointer;
+
 }
 
 .quantity-minos button{
@@ -632,18 +639,21 @@ header{
 }
 
 .quantity-item{
-    width: 10%;
+    width: 20%;
      
 }
 
 .quantity-item input{
+    border: 0;
+    height: 100%;
     color: #000;
     text-align: center;
     width: 100%;
 }
 
 .add-to-cart-button{
-    width: 30%;
+    margin: 0 auto;
+    width: max-content;
 } 
  
  
@@ -687,11 +697,6 @@ header{
     margin: 0 0 0 2rem;
 } 
 
-.generic-button {
-    width: 40%;
-    margin-left: auto;  
-} 
-
 /*Contacto*/
 
 /*checkout*/
@@ -704,31 +709,6 @@ header{
 .checkout-info{
     width: 100%;
 }
-
-
-}
-
-.checkout-table-title  {}
-.checkout-concepts  {}
-.checkout-iva  {}
-.checkout-shipping  {}
-.checkout-total  {}
-.checkout-concepts-cost  {}
-.checkout-iva-cost  {}
-.checkout-transport-cost  {}
-.checkout-total-valor  {}
-.checkout-payment  {}
-/*
-<input type="radio" id="bank-transfer" name="pay-method" value="Transferencia bancaria
-<label for="htmlTransferencia bancaria</label><br> 
-<input type="radio" id="paypal" name="pay-method" value="Paypal
-<label for="paypalPaypal</label><br>
-<input type="radio" id="credit-card" name="pay-method" value="Tarjeta de credito
-<label for="javascriptTarjeta de credito</label><br>
-*/
-
-
-
 
 .checkout-summary{
     padding: 1vh;
@@ -789,8 +769,6 @@ header{
 }
 
 
-
-
 .checkout-payment-item input[type=radio]{
     position: absolute;
     height: 15px;
@@ -812,8 +790,11 @@ header{
 
 /*productos*/
 
+/* Para dar márgenes a una página asignamos un width menor de 100 y lo que sobra se lo damos a los padding*/
 .products{
     margin-top: 2rem;
+    padding: 0 5%;
+    width: 90%;
 }
 
 .menu-visible li{
@@ -821,82 +802,33 @@ header{
     font-size: 1.5rem;
 }
 
-.products-avail-categories{  
+.products-availability{
+    margin-bottom: 2rem;
 }
 
-.menu-desplegable{
-    display: inline;
-    flex-flow: wrap;    
-}
-
+/* Para empujar una caja a un extremo le damos un width menor que 100 y un margin auto que usará todo el espacio sobrante como margen*/
 .menu-productos{
-    margin-right: 0rem;
-    width: 50%;    
-}
-
-.menu-productos ul {
-    align-items: center;
-    display: flex;
-    height: 5vh;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.menu-productos ul li {   
-}
-
-.column-aside{
-    margin-left: 3rem;
-}
-
-.products .column-aside{
-   border-right: 1px solid #ffffff;
-    border-width: 0.2rem; 
+    margin-left: auto;
+    width: 50%;  
 }
 
 .products-categories{
-    width: 60%;
-    height: 5vh;
+    border-right: 1px solid #ffffff;
+    border-width: 0.2rem; 
+    width: 100%;
+    height: 100%;
 }
 
 .products-categories-title h2{
-    width: 50%;  
-    padding: 0 0 1rem 0; 
     font-size: 2.5rem;
 }
 
-.menu-productos {
-    padding: 0 1rem;
-    margin-left: auto; 
-}
-
-
-.products-availability{
-    padding: 0.25rem 0 1rem 0;
-    width: 98%;   
-}
-
-.products-avail-categories{
-    height: 5vh;
-    display: flex;
-    align-items: center;
-    margin-left: 1rem; 
-    
-}
-
 .product-mosaico{
-    border:solid white;
-    border-width: 0.5rem;
+    border: 0.5rem solid white;
     border-radius: 10px;
     overflow: hidden;
-    margin-left: 1rem;
     position: relative;
-    margin: 1rem 0;
-}
-
-.products-mosaico{
-    width: 98%;
-    display: flex;
+    margin-bottom: 1rem;
 }
 
 .product-image{
@@ -907,13 +839,13 @@ header{
 .product-price{
     position: absolute;
     z-index: 1000;
-    left: 70%;
-    top: 0vh;
+    right: 0;
+    top: 0;
     font-family: 'Montserrat', sans-serif;
     color: #ffffff;
     font-size: 1.3em;
     z-index: 900; 
-    width: 30%; 
+    padding: 0 1rem;
     background-color: #000000;
 }
 
@@ -924,10 +856,11 @@ header{
     font-weight: 600;
 }
 
-.product-button{
+.product-button button{
     text-align: center;
     padding: 1rem 0 1rem 0;
     color: #ffffff;
+    cursor: pointer;
     font-size: 2rem;
     font-weight: 600;
     border: 0.18rem solid #1C6EA4; 
@@ -950,109 +883,64 @@ header{
     margin: 0 5%;
 }
 
-.shopping-settings{
-    width: 90%;
-    margin:0 5%;
-    padding: 1rem 0;
-    display: flex;
-    justify-content: space-around;
+.table{
+    padding: 2rem 0;
 }
 
-.shopping-sets> 
-.shopping-head{
-    border-bottom: 2px solid #A4A4A4;
-    
+.table-header{
+    border-bottom: 0.3rem solid white;
 }
 
-.shopping-sets>
-.shopping-head, 
-.shopping-product-miniature, 
-.shopping-product, 
-.shopping-price{
-    width: 100%;
+.table-body{
+    padding: 2rem 0;
+}
+
+.table-head, .table-body-data-element{
     padding: 0.5rem 0;
-    display: flex;
-    justify-content: center;
-        
+    text-align: center;
 }
 
-.shopping-sets{
-  
+.table-head span, .table-body-data-element span{
+    font-size: 1.5rem;
 }
 
-
-.amount-quantity{
-    width: 100%;
-    padding: 0.5rem 0;
-    display: flex;
-    justify-content: center;
-}
-
-
-
-
-
-
-
-.shopping-sets{
-    width: 100%;
-    font-size: 1.3rem;
-    font-weight: 600;
-    
-    
-    
-    
-}
-
-.shopping-sets .shopping-head p{}
-
-.shopping-head{
-
-}
-.shopping-product-miniature{}
-.shopping-product{}
-.shopping-price{}
-.shopping-quantity{
-    
-}
 
 .shopping-summary{
     width: 95%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     margin-top: 0.5vh;
 }
-
-.shopping-summary-title{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-left: 1rem;
-    
-    
+/* Post revision Carlos */
+.shopping-summary > .column{
+    width: 30%;
+    margin-left: auto;
 }
 
+.shopping-summary, .column, .checkout-summary{
+    margin-left: auto;
+}
+
+
+
+/* /Post revision Carlos */
+
+
+ 
+
+
+
 .shop-item div{
-    width: 44   %;
+    width: 44%;
     padding:0.5rem 3rem;
-    
     display: flex;
     justify-content: center;
     border:solid white;
-
-}
-
-
-
-
-
-.shopping-summary> .column{
-    display: flex;
-    justify-content: flex-end;
-    border-color: #000;
 }
 
 .back-button, .buy-button{
-  
-    width: 50%;
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
 }
+

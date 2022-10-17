@@ -45,7 +45,7 @@
 
                 <div class="products"><!--div general de la pagina-->
                     <div class="two-columns-aside">
-                        <div class="column-aside">
+                        <div class="column-aside"> <!--El ancho de esta columna debe ser ajustado para mejorar la estetica de la pagina-->
                             <div class="products-categories"><!--Columna izquierda-->
                                 <div class="products-categories-title"><h2>Categorias</h2></div> 
                                 
@@ -71,12 +71,12 @@
                                     
                                     <div class="column">
                                         <div class="menu-productos"> 
-                                            <ul>
-                                                <li><a href="">Todas</a></li>
-                                                <li><a href="">Lanchas</a></li> 
-                                                <li><a href="">Llauts</a></li>                                     
-                                                <li><a href="">Veleros</a></li>
-                                            </ul>                              
+                                            <select>
+                                                <option selected>Todas</option>
+                                                <option>Lanchas</option>
+                                                <option>Llauts</option>
+                                                <option>Veleros</option>
+                                            </select>                          
                                         </div> <!--Menú desplegable (dropdown, filter)-->
                                     </div>
                                 </div>                                        
@@ -88,66 +88,114 @@
                                     <div class="column">                                       
                                         <div class="product-mosaico">
                                             <div class="image-price"><!--poner imagen y precio en un div y editarlo por capas-->
-                                                <button class="product-price" type="submit" value="submit">100€ / día</button><!--Valor que podria variar en el tiempo.-->
-                                                <div class="product-image"><img src="images/producto/miniaturas/1705-page_detail-6149.jpg" alt="500" width="" height="500"></div>
+                                                <div class="product-price">
+                                                    <span>100€ / día</span><!--Valor que podria variar en el tiempo.-->
+                                                </div>
+                                                <div class="product-image">
+                                                    <img src="images/producto/miniaturas/1705-page_detail-6149.jpg" alt="barco">
+                                                </div>
                                             </div>
-                                            <div class="product-caracterist"><p>Barca de 12 m</p></div><!--texto dinamico asociado al producto-->
-                                            <div class="product-button"><a href="producto.html">ver producto</a></div><!--Enlace para ir a la pagina del barco-->
-                                        </div>
-                                    
-                                    
-                                                                          
-                                        <div class="product-mosaico">
-                                            <div class="image-price"><!--poner imagen y precio en un div y editarlo por capas-->
-                                                <button class="product-price" type="submit" value="submit">100€ / día</button><!--Valor que podria variar en el tiempo.-->
-                                                <div class="product-image"><img src="images/producto/miniaturas/1705-page_detail-6149.jpg" alt="500" width="" height="500"></div>
-                                            </div>
-                                            <div class="product-caracterist"><p>Barca de 12 m</p></div><!--texto dinamico asociado al producto-->
-                                            <div class="product-button"><a href="producto.html">ver producto</a></div><!--Enlace para ir a la pagina del barco-->
+                                            <div class="product-caracterist">
+                                                <p>Barca de 12 m</p>
+                                            </div><!--texto dinamico asociado al producto-->
+                                            <div class="product-button">
+                                                <button>ver producto</button>
+                                            </div><!--Enlace para ir a la pagina del barco-->
                                         </div>
                                     </div>
 
                                     <div class="column">                                       
                                         <div class="product-mosaico">
                                             <div class="image-price"><!--poner imagen y precio en un div y editarlo por capas-->
-                                                <button class="product-price" type="submit" value="submit">100€ / día</button><!--Valor que podria variar en el tiempo.-->
-                                                <div class="product-image"><img src="images/producto/miniaturas/1705-page_detail-6149.jpg" alt="500" width="" height="500"></div>
+                                                <div class="product-price">
+                                                    <span>100€ / día</span><!--Valor que podria variar en el tiempo.-->
+                                                </div>
+                                                <div class="product-image">
+                                                    <img src="images/producto/miniaturas/1705-page_detail-6149.jpg" alt="barco">
+                                                </div>
                                             </div>
-                                            <div class="product-caracterist"><p>Barca de 12 m</p></div><!--texto dinamico asociado al producto-->
-                                            <div class="product-button"><a href="producto.html">ver producto</a></div><!--Enlace para ir a la pagina del barco-->
-                                        </div>
-                                    
-
-                                                                           
-                                        <div class="product-mosaico">
-                                            <div class="image-price"><!--poner imagen y precio en un div y editarlo por capas-->
-                                                <button class="product-price" type="submit" value="submit">100€ / día</button><!--Valor que podria variar en el tiempo.-->
-                                                <div class="product-image"><img src="images/producto/miniaturas/1705-page_detail-6149.jpg" alt="500" width="" height="500"></div>
-                                            </div>
-                                            <div class="product-caracterist"><p>Barca de 12 m</p></div><!--texto dinamico asociado al producto-->
-                                            <div class="product-button"><a href="producto.html">ver producto</a></div><!--Enlace para ir a la pagina del barco-->
+                                            <div class="product-caracterist">
+                                                <p>Barca de 12 m</p>
+                                            </div><!--texto dinamico asociado al producto-->
+                                            <div class="product-button">
+                                                <button>ver producto</button>
+                                            </div><!--Enlace para ir a la pagina del barco-->
                                         </div>
                                     </div>
                                     
                                     <div class="column">                                       
                                         <div class="product-mosaico">
                                             <div class="image-price"><!--poner imagen y precio en un div y editarlo por capas-->
-                                                <button class="product-price" type="submit" value="submit">100€ / día</button><!--Valor que podria variar en el tiempo.-->
-                                                <div class="product-image"><img src="images/producto/miniaturas/1705-page_detail-6149.jpg" alt="500" width="" height="500"></div>
+                                                <div class="product-price">
+                                                    <span>100€ / día</span><!--Valor que podria variar en el tiempo.-->
+                                                </div>
+                                                <div class="product-image">
+                                                    <img src="images/producto/miniaturas/1705-page_detail-6149.jpg" alt="barco">
+                                                </div>
                                             </div>
-                                            <div class="product-caracterist"><p>Barca de 12 m</p></div><!--texto dinamico asociado al producto-->
-                                            <div class="product-button"><a href="producto.html">ver producto</a></div><!--Enlace para ir a la pagina del barco-->
+                                            <div class="product-caracterist">
+                                                <p>Barca de 12 m</p>
+                                            </div><!--texto dinamico asociado al producto-->
+                                            <div class="product-button">
+                                                <button>ver producto</button>
+                                            </div><!--Enlace para ir a la pagina del barco-->
                                         </div>
-                                    
-                                    
-                                                                           
+                                    </div>
+
+                                    <div class="column">                                       
                                         <div class="product-mosaico">
                                             <div class="image-price"><!--poner imagen y precio en un div y editarlo por capas-->
-                                                <button class="product-price" type="submit" value="submit">100€ / día</button><!--Valor que podria variar en el tiempo.-->
-                                                <div class="product-image"><img src="images/producto/miniaturas/1705-page_detail-6149.jpg" alt="500" width="" height="500"></div>
+                                                <div class="product-price">
+                                                    <span>100€ / día</span><!--Valor que podria variar en el tiempo.-->
+                                                </div>
+                                                <div class="product-image">
+                                                    <img src="images/producto/miniaturas/1705-page_detail-6149.jpg" alt="barco">
+                                                </div>
                                             </div>
-                                            <div class="product-caracterist"><p>Barca de 12 m</p></div><!--texto dinamico asociado al producto-->
-                                            <div class="product-button"><a href="producto.html">ver producto</a></div><!--Enlace para ir a la pagina del barco-->
+                                            <div class="product-caracterist">
+                                                <p>Barca de 12 m</p>
+                                            </div><!--texto dinamico asociado al producto-->
+                                            <div class="product-button">
+                                                <button>ver producto</button>
+                                            </div><!--Enlace para ir a la pagina del barco-->
+                                        </div>
+                                    </div>
+
+                                    <div class="column">                                       
+                                        <div class="product-mosaico">
+                                            <div class="image-price"><!--poner imagen y precio en un div y editarlo por capas-->
+                                                <div class="product-price">
+                                                    <span>100€ / día</span><!--Valor que podria variar en el tiempo.-->
+                                                </div>
+                                                <div class="product-image">
+                                                    <img src="images/producto/miniaturas/1705-page_detail-6149.jpg" alt="barco">
+                                                </div>
+                                            </div>
+                                            <div class="product-caracterist">
+                                                <p>Barca de 12 m</p>
+                                            </div><!--texto dinamico asociado al producto-->
+                                            <div class="product-button">
+                                                <button>ver producto</button>
+                                            </div><!--Enlace para ir a la pagina del barco-->
+                                        </div>
+                                    </div>
+
+                                    <div class="column">                                       
+                                        <div class="product-mosaico">
+                                            <div class="image-price"><!--poner imagen y precio en un div y editarlo por capas-->
+                                                <div class="product-price">
+                                                    <span>100€ / día</span><!--Valor que podria variar en el tiempo.-->
+                                                </div>
+                                                <div class="product-image">
+                                                    <img src="images/producto/miniaturas/1705-page_detail-6149.jpg" alt="barco">
+                                                </div>
+                                            </div>
+                                            <div class="product-caracterist">
+                                                <p>Barca de 12 m</p>
+                                            </div><!--texto dinamico asociado al producto-->
+                                            <div class="product-button">
+                                                <button>ver producto</button>
+                                            </div><!--Enlace para ir a la pagina del barco-->
                                         </div>
                                     </div>
                                 </div>                        
