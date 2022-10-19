@@ -1,0 +1,43 @@
+.amount-quantity{
+    display: flex;
+    justify-content: center;
+
+    .quantity-minos, 
+    .quantity-plus{
+        width: 20%;
+    }
+    
+    .quantity-plus button{
+        border: none;
+        border-top-right-radius: 0.4rem;
+        border-bottom-right-radius: 0.4rem;    
+    }
+    
+    .quantity-minos button, 
+    .quantity-plus button{
+        color:$s-basic-color;
+        font-weight: 600;
+        height: 100%;
+        padding: 0.1rem 0 0.1rem 0;
+        cursor: pointer;
+    }
+    
+    .quantity-minos button{
+        border: none;
+        border-top-left-radius: 0.4rem;
+        border-bottom-left-radius: 0.4rem;
+    }
+    
+    .quantity-item{
+        width: 20%;                     
+    }
+    
+    .quantity-item input{
+        border: 0;
+        height: 100%;
+        color: $s-basic-color;
+        text-align: center;
+        width: 100%;
+    } 
+
+}

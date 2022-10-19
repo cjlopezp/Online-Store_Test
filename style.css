@@ -342,7 +342,7 @@ a:hover, a:focus {
 /* Structure */ 
 
 body {
-    background-color: rgb(42, 76, 186, 255);
+    background-color: rgb(42, 76, 186, 255);  
 }
 
 /* Components */
@@ -447,8 +447,6 @@ header{
     width: 10%;
     text-align: center;    
 }
-
-/*home*/
 
 /* slider */
 
