@@ -1,13 +1,14 @@
-.amount-quantity{
+.amount-quantity{ /*Se uso flex/justify-content: center para ajustar los elementos contenidos en forma de fila */
     display: flex;
     justify-content: center;
 
     .quantity-minos, 
-    .quantity-plus{
+    .quantity-plus{ /*esta forma de codigo permitio modificar una propiedad comun de estos dos 
+                    elementos con mismop valor */
         width: 20%;
     }
     
-    .quantity-plus button{
+    .quantity-plus button{ /*Se eliumino el borde y se redondearon los botones asignando radios*/
         border: none;
         border-top-right-radius: 0.4rem;
         border-bottom-right-radius: 0.4rem;    
@@ -19,7 +20,7 @@
         font-weight: 600;
         height: 100%;
         padding: 0.1rem 0 0.1rem 0;
-        cursor: pointer;
+        cursor: pointer; /*esta propiedad hace cambiar la forma del puntero del raton cuando pasamos por encima del boton*/
     }
     
     .quantity-minos button{
@@ -32,7 +33,8 @@
         width: 20%;                     
     }
     
-    .quantity-item input{
+    .quantity-item input{ /*se especifico sus medidad, se asigno un 
+        color predeterminado y se configuro el alineamiento del texto mostrado por el cuadro*/
         border: 0;
         height: 100%;
         color: $s-basic-color;

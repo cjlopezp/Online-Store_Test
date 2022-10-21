@@ -1,14 +1,20 @@
 //Estrucura Header comun a todas las paginas de mi web//
-.header{
+.header{ /*El contenedor header fue configurado para mantener una altura , 
+    ancho y padding predeterminados a fin de ser usado en toda nuestra web */
+
     height: 10vh;
     padding: 0 2%;
     width: 96%;
 
-    .logo{
+    .logo{ /*Los elementos contenidos se distribuyeron usando la funcion conjunta "flex/align-items:center", 
+         y manteniendo la misma altura del contenedor padre*/
         align-items: center;
         display: flex;
         height: 10vh;
-
+           
+        /* La aplicacion de margen al logo permitio dar un espacion a la derecha con respecto al 
+        al titulo , haciendo esta seccion un poco mas relaja a ala vista. El tamaño de la fuente 
+        se ajusto para mantener una propocionalidad con respecto al logo y a su calidad de titulo*/
         .logo-imagen{
             margin-right: 1rem;
             width: 5%;               
@@ -22,12 +28,17 @@
         } 
     }
 
-    .menu-opciones{
+    .menu-opciones{ /*El ancho del contenedor fue ajustado a 30% para ajustarlo facilmente al 
+        contenedor padre y su posicion dentro del mismo usando "margin-left". En este caso la
+         funcion flex no era necesaria ya que al ser un elemento unico es posible usar 
+         propiedades inherentes a un solo elemento */
         
         margin-left: auto;
         width: 30%;
 
-        .ul{
+        .ul{ /* Para presentar los elementos de este menu usamos el tag "ul" que define una lista no ordenada.
+            Cada uno de los elementos de la lista fueron etiquetados en con el tag "li". Para la distribucion 
+            horizontal y vertical de los elementos de la lista se utilizo la funcion conjunta flex/justify-content/align-items, respectivamente  */
             align-items: center;
             display: flex;
             height: 10vh;
@@ -35,7 +46,9 @@
             width: 100%;  
         }
 
-        .ul .li{
+        .ul .li{ /* Esta estructura de codigo representa la aplicacion de propiedades particulares a un elemento especifico
+            dentro de nuestro codigo. Esto lo haremos cuando se hayan definido propiedades especificas para elementos similares en todo 
+            nuestro codigo, pero necesitemos apicar otras en casos eparticulares como este  */
             color: $p-basic-color;
             font-weight: 600;
         }
