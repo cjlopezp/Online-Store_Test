@@ -14,7 +14,7 @@
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
             <link href="style.css" rel="stylesheet"> <!--señala el link del archivo css de donde se toma el estilo de la pagina-->
-            
+            <script type="module" src="js/index.js"></script>
         </head>
 
 
@@ -109,15 +109,15 @@
                                     <div class="amount-quantity">
                                             
                                         <div class="quantity-minos">
-                                            <button>-</button>
+                                            <button id="quantityMinus">-</button>
                                         </div>
     
                                         <div class="quantity-item">
-                                            <input type="number" value="1">
+                                            <input type="number" value="1" id="quantityItem">
                                         </div> <!--insertar elemento dinamico que cambie el numero segun se usen los botones que lo acompañen--> 
                                     
                                         <div class="quantity-plus">
-                                            <button>+</button>
+                                            <button id="quantityPlus">+</button>
                                         </div>
                                                                                             
                                     </div>
