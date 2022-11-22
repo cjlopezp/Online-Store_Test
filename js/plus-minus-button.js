@@ -1,8 +1,24 @@
 export let renderPlusMinusButton = () => {
     
-    let quantityItem = document.getElementById("quantityItem");
-    let quantityMinus = document.getElementById("quantityMinus");
-    let quantityPlus = document.getElementById("quantityPlus");
+    let quantityItem = document.getElementById('quantityItem');
+    let quantityMinus = document.getElementById('quantityMinus');
+    let quantityPlus = document.getElementById('quantityPlus');
+
+    // minusButton.addEventListener('click', event => {
+    //     event.preventDefault();
+    //     const currentValue = Number(inputField.value) || 0;
+    //     inputField.value = currentValue - 1;
+    //   });
+
+
+    // plusButton.addEventListener('click', event => {
+    //     event.preventDefault();
+    //     const currentValue = Number(inputField.value) || 0;
+    //     inputField.value = currentValue + 1;
+    //   });
+
+
+
 
     quantityPlus.addEventListener("click", () => {
 
@@ -17,7 +33,7 @@ export let renderPlusMinusButton = () => {
         // Por último, podemos dar un nuevo valor al atributo value del input
         // "age", escribiendo después del igual el nuevo valor que queramos que tenga.
         //alert("hola");
-        quantityItem.value = (parseInt(quantityItem) + 1);
+       quantityItem.value = (parseInt(quantityItem) + 1);
     });
 
     quantityMinus.addEventListener("click", () => {
