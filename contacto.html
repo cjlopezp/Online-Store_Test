@@ -14,6 +14,7 @@
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
             <link href="style.css" rel="stylesheet"> <!--señala el link del archivo css de donde se toma el estilo de la pagina--> 
+            <script type="module" src="js/index.js"></script>
         </head>
     
        
@@ -170,7 +171,8 @@
                                                 <label for="message">Mensaje</label>
                                             </div>
                                             <div class="form-element-input">
-                                                <textarea></textarea>                             
+                                                <textarea class="input_message" maxlength="50" id="message" required autocomplte="off"></textarea>                             
+                                                <div id="counter"></div>
                                             </div>
                                         </div>
                                     </div>

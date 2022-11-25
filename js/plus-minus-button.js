@@ -4,24 +4,28 @@ export let renderPlusMinusButton = () => {
     let buttonMinus = document.querySelector('.quantity-minos button');
     let buttonPlus = document.querySelector('.quantity-plus button');
 
-    buttonPlus.addEventListener("click", () => {      
-        //alert("hola");
-        inputField.value = (parseInt(inputField.value) + 1);
-    });
-
-    buttonMinus.addEventListener("click", () => {
-       //alert("hola");
-        inputField.value = (parseInt(inputField.value) - 1);       
-    });
-
-
-
-    inputField.addEventListener('keyup', () =>{
-        if (inputField.value == 0 || inputField.value < 0) 
-            buttonMinus.disabled = true
-        else buttonMinus.disabled = false;  
+    if(buttonPlus){
+        buttonPlus.addEventListener("click", () => {      
+            //alert("hola");
+            inputField.value = (parseInt(inputField.value) + 1);
         });
+    }
 
+    if(buttonMinus){
+        buttonMinus.addEventListener("click", () => {
+            if(inputField.value > 1){
+                inputField.value = (parseInt(inputField.value) - 1);       
+            }
+         });
+    }
+
+    if(inputField){
+        inputField.addEventListener('keyup', () =>{
+            if (inputField.value == 0 || inputField.value < 0) 
+                buttonMinus.disabled = true
+            else buttonMinus.disabled = false;  
+            });
+    }
 }
 
 
