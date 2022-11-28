@@ -1,4 +1,4 @@
-export let rendertext_counter_form = () => {
+export let renderTextCounterForm = () => {
 
     // let inputs = document.querySelectorAll('.input_message');
     // //let counter = document.querySelectorAll('.input_message');

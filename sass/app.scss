@@ -9,18 +9,16 @@
 @import "layout/desktop/header";
 @import "layout/desktop/footer";
 @import "layout/desktop/columns";
-@import "components/desktop/featured-button";
+@import "components/desktop/custom-button";
 @import "components/desktop/featured";
 @import "components/desktop/plus-minus-button";
 @import "components/desktop/slider";
-@import "components/desktop/textual-banner";
-@import "components/desktop/form";
-@import "pages/cart/desktop/cart";
-@import "pages/checkout/desktop/checkout";
-@import "pages/contact/desktop/contact";
-@import "pages/home/desktop/home";
-@import "pages/product/desktop/product";
-@import "pages/products/desktop/products";
+@import "components/desktop/notification";
+@import "pages/carrito";
+@import "pages/contacto";
+@import "pages/home";
+@import "pages/producto";
+@import "pages/productos";
 
 
 

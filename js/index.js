@@ -1,6 +1,9 @@
 import { renderPlusMinusButton } from "./plus-minus-button.js";
-import { rendertext_counter_form } from "./text_counter_form.js";
-
+import { renderTextCounterForm } from "./text-counter-form.js";
+import { renderForm } from "./form.js";
+import { renderNotification } from "./notification.js";
 
 renderPlusMinusButton();
-rendertext_counter_form();
+renderTextCounterForm();
+renderForm();
+renderNotification();

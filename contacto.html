@@ -56,7 +56,7 @@
                     <div class="two-columns">
                         <div class="column">
                             <div class="contacto-datos"><!--Columna izquierda de la pagina-->
-                            
+                      
                                 <div class="contacto-dato">
                                     <div class="contacto-icono">
                                         <svg style="width:24px;height:24px" viewBox="0 0 24 24">
@@ -117,73 +117,78 @@
 
                         <div class="column">
                             <div class="contact-form">
-                                <div class="two-columns">
-                                    <div class="column">
-                                        <div class="form-element">
-                                            <div class="form-element-label">
-                                                <label for="name">Nombre</label>
-                                            </div>
-                                            <div class="form-element-input">
-                                                <input type="text" id="name" name="name">
-                                            </div>
-                                        </div>
-                                    </div>
-                                  
-                                    <div class="column">
-
-                                        <div class="form-element">
-                                            <div class="form-element-label">
-                                                <label for="phone">Telefono</label>
-                                            </div>
-                                            <div class="form-element-input">
-                                                <input type="text" id="phone" name="phone">                                           
+                                <form>
+                                    <div class="two-columns">
+                                        <div class="column">
+                                            <div class="form-element">
+                                                <div class="form-element-label">
+                                                    <label for="name">Nombre</label>
+                                                </div>
+                                                <div class="form-element-input">
+                                                    <input type="text" data-validate="name" id="name-input" name="name">
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-
-                                    <div class="column">
-                                        <div class="form-element">
-                                            <div class="form-element-label">
-                                                <label for="lastname"><p>Apellidos</label>
-                                            </div>
-                                            <div class="form-element-input">
-                                                <input type="text" id="lastnames" name="lastname">
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="column">
-                                        <div class="form-element">
-                                            <div class="form-element-label">
-                                                <label for="email">Email</label>
-                                            </div>
-                                            <div class="form-element-input">
-                                                <input type="text" id="email" name="email">                                
+                                      
+                                        <div class="column">
+    
+                                            <div class="form-element">
+                                                <div class="form-element-label">
+                                                    <label for="phone">Telefono</label>
+                                                </div>
+                                                <div class="form-element-input">
+                                                    <input type="text" data-validate="telephone" id="phone" name="phone">                                           
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>        
-                                </div>
-
-                                <div class="one-column">
-                                    <div class="column">
-                                        <div class="form-element">
-                                            <div class="form-element-label">
-                                                <label for="message">Mensaje</label>
-                                            </div>
-                                            <div class="form-element-input">
-                                                <textarea class="input_message" maxlength="50" id="message" required autocomplte="off"></textarea>                             
-                                                <div id="counter"></div>
+    
+                                        <div class="column">
+                                            <div class="form-element">
+                                                <div class="form-element-label">
+                                                    <label for="lastname"><p>Apellidos</label>
+                                                </div>
+                                                <div class="form-element-input">
+                                                    <input type="text" data-validate="familyname" id="lastnames" name="lastname">
+                                                </div>
                                             </div>
                                         </div>
+    
+                                        <div class="column">
+                                            <div class="form-element">
+                                                <div class="form-element-label">
+                                                    <label for="email">Email</label>
+                                                </div>
+                                                <div class="form-element-input">
+                                                    <input type="text" data-validate="email" id="email" name="email">                                
+                                                </div>
+                                            </div>
+                                        </div>        
                                     </div>
-
-                                    <div class="form-send-button">
-                                        <button class="custom-button" type="submit" value="Submit">Enviar</button>
+    
+                                    <div class="one-column">
+                                        <div class="column">
+                                            <div class="form-element">
+                                                <div class="form-element-label">
+                                                    <label for="message">Mensaje</label>
+                                                </div>
+                                                <div class="form-element-input">
+                                                    <textarea class="input_message" data-validate="textarea" maxlength="50" id="message" required autocomplte="off"></textarea>                             
+                                                    <div id="counter"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+    
+                                        <div class="form-send-button">
+                                            <button class="custom-button send-form-button" id="send-button" type="submit" value="Submit">Enviar</button>
+                                        </div>
                                     </div>
-                                </div>
-                             </div>       
+                                </form>
+                            </div>       
                         </div>
                     </div>                    
+                </div>
+                <div id="notification"> 
+                    <span id="notification-message"></span>
                 </div>          
             </main>
     
