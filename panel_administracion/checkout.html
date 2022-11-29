@@ -1,0 +1,252 @@
+<doctype html>
+
+    <html lang="es">
+    
+        <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1"> <!--Esta linea especifica en que tipos d epantallas puede verse la pagina-->
+            <link rel="shortcut icon" href="https://www.youtube.com/s/desktop/12d6b690/img/favicon.ico"> <!--imagen (icono, FAVICON) que sera mostrada en la pestaña nenlazada desde otra fuente-->
+
+            <meta name="description" content="descripción de la web, se recomienda 90 caracteres"> <!--Es la ficha que contiene la descripcion de la pagina y que sera leida por el buscador-->
+            <meta name="keywords"    content="palabras clave, separadas, por comas">
+       
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+            <link href="style.css" rel="stylesheet"> <!--señala el link del archivo css de donde se toma el estilo de la pagina--> 
+        </head>
+    
+       
+        <body>
+    
+            <header>
+                <div class="two-columns">       
+                    <div class="column">   
+                        <div class="logo">
+                            <div class="logo-imagen">
+                                <img src="images/logo.png" alt="logo">
+                            </div> 
+                            <div class="logo-titulo">
+                                <h2>Mallorca Sea</h2> 
+                            </div>                                                
+                        </div>
+                    </div>
+                        
+                    <div class="column"> 
+                        <nav class="menu-opciones">
+                            <ul><!--hacer lista horizontal no numerada ul/ con CSS--><!--normalmente son una lista-->
+                                <li>Inicio</li>
+                                <li>Reserva</li>
+                                <li>Contactos</li>
+                            </ul>
+                        </nav>  
+                    </div>
+                </div>
+            </header>      
+    
+            <main>
+                
+                <div class="checkout">    
+                    <div class="column">    
+                        <div class="pagina-titulo">
+                            <h1>Finalizar compra</h1>
+                        </div>
+                    </div>
+
+                    <div class="checkout-info">                                            
+                        <div class="two-columns">   
+                            <div class="column">
+                                <div class="shipping-form">
+                                    <div class="two-columns">
+                                        <div class="column">
+                                            <div class="shipping-form-l">
+                                            
+                                                <div class="form-element">
+                                                    <div class="form-element-label">
+                                                        <label for="name">Nombre</label>
+                                                    </div>
+                                                    <div class="form-element-input">
+                                                        <input type="text" id="name" name="name">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-element">
+                                                    <div class="form-element-label">
+                                                        <label for="phone">Telefono</label>
+                                                    </div>
+                                                    <div class="form-element-input">
+                                                        <input type="text" id="phone" name="phone">                                           
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-element">
+                                                    <div class="form-element-label">
+                                                        <label for="email">Ciudad</label>
+                                                    </div>
+                                                    <div class="form-element-input">
+                                                        <input type="text" id="ciudad" name="ciudad">                                
+                                                    </div>
+                                                </div>
+                                                                                
+                                                
+                                            </div>
+                                        </div>
+                                            
+
+                                        <div class="column">
+                                            <div class="shipping-form-r">
+
+                                                <div class="form-element">
+                                                    <div class="form-element-label">
+                                                        <label for="lastname"><p>Apellidos</label>
+                                                    </div>
+                                                    <div class="form-element-input">
+                                                        <input type="text" id="lastnames" name="lastname">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-element">
+                                                    <div class="form-element-label">
+                                                        <label for="email">Email</label>
+                                                    </div>
+                                                    <div class="form-element-input">
+                                                        <input type="text" id="email" name="email">                                
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-element">
+                                                    <div class="form-element-label">
+                                                        <label for="email">Código postal</label>
+                                                    </div>
+                                                    <div class="form-element-input">
+                                                        <input type="text" id="codpostal" name="codpostal">                                
+                                                    </div>
+                                                </div> 
+                                            </div>
+                                        </div>
+
+                                    </div>    
+
+                                    <div class="column">
+                                        <div class="form-element">
+                                            <div class="form-element">
+                                                <div class="form-element-label">
+                                                    <label for="email">Dirección</label>
+                                                </div>
+                                                <div class="form-element-input">
+                                                    <input type="text" id="address" name="address">                                
+                                                </div>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                            
+                                     
+                                </div>                                     
+                            </div>
+
+                            <div class="column">   
+                                <div class="checkout-summary">
+                                    <div class="column">
+
+                                        <div class="summary-element">
+                                            <div class="summary-element-title">
+                                                <div class="summary-title"><h3>Resumen de la compra</h3></div> 
+                                            </div>
+                                        </div>
+                                        
+                                    </div>   
+
+                                    <div class="checkout-bill">    
+                                        <div class="two-columns">
+                                            
+                                            <div class="column">
+
+                                                <div class="bill-element">
+                                                    <div class="summary-element-item">
+                                                        <div class="iva"><p>IVA</p></div>
+                                                    </div>
+                                                </div>    
+                                                
+                                                <div class="bill-element">
+                                                    <div class="summary-element-item">
+                                                        <div class="transporte"><p>Transporte</p></div>
+                                                    </div>
+                                                </div> 
+
+                                                <div class="bill-element">
+                                                    <div class="summary-element-item">
+                                                        <div class="total"><p>Total</p></div>
+                                                    </div>
+                                                </div>  
+                                                                                            
+                                            </div> 
+                                            
+                                            <div class="column">
+                                                <div class="bill-element">
+                                                    <div class="summary-element-item">
+                                                        <div class="iva-value"><p>20 €</p></div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="bill-element">
+                                                    <div class="summary-element-item">
+                                                        <div class="transporte-value"><p>0 €</p></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="bill-element">
+                                                    <div class="summary-element-item">
+                                                        <div class="total-value"><p>0 €</p></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>    
+
+                                </div>        
+                                                
+                                <div class="column">
+                                    <div class="checkout-payment">
+
+                                        <div class="checkout-payment-item">
+                                            <input type="radio" id="bank-transfer" name="pay-method" value="Transferencia bancaria">
+                                            <label for="bank-transfer">Transferencia bancaria</label><br>                                                 
+                                        </div>
+
+                                        <div class="checkout-payment-item">
+                                            <input type="radio" id="paypal" name="pay-method" value="Paypal">
+                                            <label for="paypal">Paypal</label><br>
+                                        </div>    
+
+                                        <div class="checkout-payment-item">
+                                            <input type="radio" id="credit-card" name="pay-method" value="Tarjeta de credito">
+                                            <label for="credit-card">Tarjeta de credito</label><br>                                        
+                                        </div>
+
+                                    </div> 
+                                      
+                                    <div class="checkout-payment-payment">
+                                        <div class="form-send-button">
+                                            <button class="custom-button" type="submit" value="Submit">Pagar</button>
+                                        </div>
+                                    </div>  
+                                        
+                                        
+                                                                   
+                                </div>                                                                                       
+                            </div>
+                        </div>  
+                    </div> 
+                </div>        
+                                    
+                   
+            </main>
+    
+            <footer class="footer-distribution">
+                <div class="footer-copyright"><p>@2048</p></div>
+                <div class="footer-link"><a href="">Link sitio de verdad</a></div> <!--Aqui link pagina de verdad-->
+            </footer>
+              
+        </body>
+    
+    </html>

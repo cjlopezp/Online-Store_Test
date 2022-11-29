@@ -1,0 +1,41 @@
+.product{
+
+    width: 80%;
+    padding: 2rem 10%;
+
+    .product-description{
+        padding: 2rem;
+        text-align: center;
+    
+        .product-description-title{
+            margin-bottom: 1rem;
+        }
+    
+        .product-description-price{
+            margin-bottom: 1rem;
+        } 
+
+        .product-description-detail{
+            margin-bottom: 2rem;
+            text-align: justify;   
+        }
+
+        .product-rent-amount{
+            display:flex;    
+            align-items: center;
+            width: 50%;
+            margin: 0 auto;
+            margin-bottom: 2rem;
+        }
+
+        .add-to-cart-button{
+            margin: 0 auto;
+            width: max-content;
+        }
+
+    }
+}
+
+
+
+

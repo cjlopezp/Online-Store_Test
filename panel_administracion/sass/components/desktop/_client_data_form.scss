@@ -1,0 +1,78 @@
+.checkout-info{ /* Este codigo describe la estructura generica de nuestros formularios. Su estructura
+                    debera ser modificada a necesidad, segun sea requerido por cada nuevo proyecto*/
+    width: 100%;
+
+    .shipping-form{
+
+        .two-columns{ /*Los text-areas que usaremos para capaturar datos se estructuraron en dos columnas
+                        donde datos como nombres y apellidos estaran en la misma linea de lectura, pero 
+                        en diferentes colunmas   */
+
+            .column{
+
+                .shipping-form-l{ /*Este contenedor debera copiarse como tantos sean los datos que se deseen recoger*/
+
+                    .form-element{
+                        margin-bottom: 1rem;
+                        width: 100%;
+                    
+                        .form-element-label{
+                        
+                            .form-element-input {
+
+                                textarea{ /**/
+                                    color:hsl(0, 0%, 0%);
+                                    height: 20vh;
+                                    padding: 2rem;
+                                }
+                            }
+                        }        
+                    }
+                }
+
+            }    
+
+            
+            .column{
+            
+                .shipping-form-r{ /*El numero de copias de este contenedor debera ser igual al numero de  copias de .shipping-form-l */
+
+                    .form-element{
+                        margin-bottom: 1rem;
+                        width: 100%; /*Especificamos el ancho de este contenedor, relativo a su contenedor padre*/
+                    
+                        .form-element-label{
+                        
+                            .form-element-input {
+                                textarea{
+                                    color:hsl(0, 0%, 0%); /*especificamos el color del texto; Se habia predefinido como blanco*/
+                                    height: 20vh; /*Alto del area de texto*/
+                                    padding: 2rem; /*Separacion del texto del borde del contenedor*/
+                                }
+                            }
+                        }           
+                    }
+                }
+            }
+        } 
+        
+        .column{
+
+            .form-element{
+                margin-bottom: 1rem;
+                width: 100%;
+            
+                .form-element-label{
+                        
+                    .form-element-input {
+                        textarea{
+                            color:hsl(0, 0%, 0%);
+                            height: 20vh;
+                            padding: 2rem;
+                        }
+                    }
+                }             
+            }    
+        }
+    } 
+}

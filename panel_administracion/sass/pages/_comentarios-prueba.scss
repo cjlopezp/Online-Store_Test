@@ -1,0 +1,301 @@
+Header
+
+.header{ /*El contenedor header fue configurado para mantener una altura , 
+    ancho y padding predeterminados a fin de ser usado en toda nuestra web */
+
+    height: 10vh;
+    padding: 0 2%;
+    width: 96%;
+
+    .logo{ /*Los elementos contenidos se distribuyeron usando la funcion conjunta "flex/align-items:center", 
+         y manteniendo la misma altura del contenedor padre*/
+        align-items: center;
+        display: flex;
+        height: 10vh;
+           
+        /* La aplicacion de margen al logo permitio dar un espacion a la derecha con respecto al 
+        al titulo , haciendo esta seccion un poco mas relaja a ala vista. El tamaño de la fuente 
+        se ajusto para mantener una propocionalidad con respecto al logo y a su calidad de titulo*/
+        .logo-imagen{
+            margin-right: 1rem;
+            width: 5%;               
+        }
+
+        .logo-titulo {
+            
+            .h2{
+                font-size: 2rem;
+            }
+        } 
+    }
+
+    .menu-opciones{ /*El ancho del contenedor fue ajustado a 30% para ajustarlo facilmente al 
+        contenedor padre y su posicion dentro del mismo usando "margin-left". En este caso la
+         funcion flex no era necesaria ya que al ser un elemento unico es posible usar 
+         propiedades inherentes a un solo elemento */
+        
+        margin-left: auto;
+        width: 30%;
+
+        .ul{ /* Para presentar los elementos de este menu usamos el tag "ul" que define una lista no ordenada.
+            Cada uno de los elementos de la lista fueron etiquetados en con el tag "li". Para la distribucion 
+            horizontal y vertical de los elementos de la lista se utilizo la funcion conjunta flex/justify-content/align-items, respectivamente  */
+            align-items: center;
+            display: flex;
+            height: 10vh;
+            justify-content: space-between;
+            width: 100%;  
+        }
+
+        .ul .li{ /* Esta estructura de codigo representa la aplicacion de propiedades particulares a un elemento especifico
+            dentro de nuestro codigo. Esto lo haremos cuando se hayan definido propiedades especificas para elementos similares en todo 
+            nuestro codigo, pero necesitemos apicar otras en casos eparticulares como este  */
+            color: $p-basic-color;
+            font-weight: 600;
+        }
+    }
+}
+
+//-El slider y todos sus elementos
+
+.slider{ /*El slider nos permite usar el ancho total de la pagina para presentar una imagen como fondo,
+    en la cual podremos posicionar diferentes elementos (en nuestro caso texto y un boton) que permitiran 
+    al usuario interacionar con nuestra web */
+position: relative; /*Posicion relativa especifica de un elemento lo posiciona detras de cualquier otro elemento
+                    y es ubicado en una posicon especifica dentro de la pagina */
+width: 100%;
+
+.slider-imagen{
+    position: absolute; /*Posicion absoluta especifica de un elemento lo posiciona delante de cualquier otro elemento
+                        y es ubicado en una posicon especifica dentro del elemento*/
+    z-index: $z-index-slider-image; /*z-index nos indica la "profundidad" o "capa" donde se situa un elemento.
+                                    pueden usarse diferentes valores (-1, 1, 2 ó 1000, 1001, 1002) para indicar las capas.
+                                    sin embargo, siempre debe darse el valor mas bajo al elemento que se usa en el fondo 
+                                    y el mas alto al elemento que se quiere sobre el. En este caso $z-index-slider-image = 1000*/
+}
+    
+.slider-titulo{
+    background-color: $s-basic-color; /*$s-basic-color:  hsla(0, 0%, 0%, 0.22), equivale al color negro, un atributo que se usara en diferentes lugares de nuestra web*/
+    position: absolute;
+    z-index: $z-index-featured-elements; /*el valor "$z-index-featured-elements", en este caso, se refiere a la variable configuradas por el usuario
+                                            para asignar un valor de 1001 a este elemento. Esta variable podra usarse en otros sitios de la web al ser generico*/
+    left: 10%;
+    top: 30vh;
+
+    .h1{
+        color: $p-basic-color; /*$p-basic-color: hsl(0, 0%, 100%) equivale al color blanco, un atributo que se usara en diferentes lugares de nuestra web */
+    }
+        
+}
+
+.slider-boton{
+    position: absolute;
+    z-index: $z-index-featured-elements;
+    left: 10%; /*posicion horizontal absoluta dentro contenedor slider*/
+    top: 40vh; /*posicion vertical absoluta dentro contenedor slider*/
+    font-family: "Ubuntu", sans-serif; /*Es la fuente que usaremos en los textos. En este caso la fuente debe descargarse de Google fonts, indicandolo en la seccion <head> de cada una de nuestras paginas */
+    font-size: 1.3em;
+}
+}
+
+
+//-Los formularios
+
+.checkout-info{ /* Este codigo describe la estructura generica de nuestros formularios. Su estructura
+    debera ser modificada a necesidad, segun sea requerido por cada nuevo proyecto*/
+width: 100%;
+
+.shipping-form{
+
+.two-columns{ /*Los text-areas que usaremos para capaturar datos se estructuraron en dos columnas
+        donde datos como nombres y apellidos estaran en la misma linea de lectura, pero 
+        en diferentes colunmas   */
+
+.column{
+
+.shipping-form-l{ /*Este contenedor debera copiarse como tantos sean los datos que se deseen recoger*/
+
+    .form-element{
+        margin-bottom: 1rem;
+        width: 100%;
+    
+        .form-element-label{
+        
+            .form-element-input {
+
+                textarea{ /**/
+                    color:hsl(0, 0%, 0%);
+                    height: 20vh;
+                    padding: 2rem;
+                }
+            }
+        }        
+    }
+}
+
+}    
+
+
+.column{
+
+.shipping-form-r{ /*El numero de copias de este contenedor debera ser igual al numero de  copias de .shipping-form-l */
+
+    .form-element{
+        margin-bottom: 1rem;
+        width: 100%; /*Especificamos el ancho de este contenedor, relativo a su contenedor padre*/
+    
+        .form-element-label{
+        
+            .form-element-input {
+                textarea{
+                    color:hsl(0, 0%, 0%); /*especificamos el color del texto; Se habia predefinido como blanco*/
+                    height: 20vh; /*Alto del area de texto*/
+                    padding: 2rem; /*Separacion del texto del borde del contenedor*/
+                }
+            }
+        }           
+    }
+}
+}
+} 
+
+.column{
+
+.form-element{
+margin-bottom: 1rem;
+width: 100%;
+
+.form-element-label{
+        
+    .form-element-input {
+        textarea{
+            color:hsl(0, 0%, 0%);
+            height: 20vh;
+            padding: 2rem;
+        }
+    }
+}             
+}    
+}
+} 
+}
+
+//-El botón de mas y menos
+
+.amount-quantity{ /*Se uso flex/justify-content: center para ajustar los elementos contenidos en forma de fila */
+    display: flex;
+    justify-content: center;
+
+    .quantity-minos, 
+    .quantity-plus{ /*esta forma de codigo permitio modificar una propiedad comun de estos dos 
+                    elementos con mismop valor */
+        width: 20%;
+    }
+    
+    .quantity-plus button{ /*Se eliumino el borde y se redondearon los botones asignando radios*/
+        border: none;
+        border-top-right-radius: 0.4rem;
+        border-bottom-right-radius: 0.4rem;    
+    }
+    
+    .quantity-minos button, 
+    .quantity-plus button{
+        color:$s-basic-color;
+        font-weight: 600;
+        height: 100%;
+        padding: 0.1rem 0 0.1rem 0;
+        cursor: pointer; /*esta propiedad hace cambiar la forma del puntero del raton cuando pasamos por encima del boton*/
+    }
+    
+    .quantity-minos button{
+        border: none;
+        border-top-left-radius: 0.4rem;
+        border-bottom-left-radius: 0.4rem;
+    }
+    
+    .quantity-item{
+        width: 20%;                     
+    }
+    
+    .quantity-item input{ /*se especifico sus medidad, se asigno un 
+        color predeterminado y se configuro el alineamiento del texto mostrado por el cuadro*/
+        border: 0;
+        height: 100%;
+        color: $s-basic-color;
+        text-align: center;
+        width: 100%;
+    } 
+
+}
+
+//-La galería de productos
+//No tenia listo este archivo de sass.
+
+
+.column-aside, .column-main { /*usamos estos elementos para dar el estilo a la pagina
+                                creando dos columnas de diferente ancho. La columna lateral 
+                                la usaremos para presentar el menu*/
+
+}
+
+.column-aside,
+.menu-visible { /*Este menu lo creamos usando una lista desordenada , donde cada elemento a su 
+                vez es un enlace a otras de nuestras paginas*/
+
+}
+
+.column-main,
+.menu-productos{ /*Creamos un dropdown menu, el cual se asociara con la
+                    base de datos de la web permitiendo filtrar todos los productos
+                    en base a su disponiblidad */
+
+}
+
+
+.products-availability{ /*Este elemento se conectara en el futuro con la base de datos 
+                        para mostrar la disponibilidad real de los productos en stock*/
+    margin-bottom: 2rem;
+}
+
+
+.product-mosaico{ /*Preparamos el contenedor de las imagenes 
+                    y los elementos que lo acompañaran*/
+    border: 0.5rem solid white;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.product-price{ /*Usamos el z-index para incluir esta 
+                    informacion acompañando la imagen*/
+    position: absolute;
+    z-index: 1000;
+    right: 0;
+    top: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    font-size: 1.3em;
+    z-index: 900; 
+    padding: 0 1rem;
+    background-color: #000000;
+}
+
+.product-caracterist{ 
+    text-align: center;
+    padding: 1rem 0 1rem 0;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.product-button button{
+    text-align: center;
+    padding: 1rem 0 1rem 0;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: 600;
+    border: 0.18rem solid #1C6EA4; 
+    background:#1666A4;
+    background: linear-gradient(to right, #1666A4 0%, #2388CB 50%, #39CAEA 100%);
+}

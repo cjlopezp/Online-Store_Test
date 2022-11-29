@@ -1,0 +1,36 @@
+.featured{
+    padding: 0 5%;
+    width: 90%;
+
+    .featured-title {
+        h2{
+        font-size: 1.5rem;
+        font-weight: 600;
+        }
+    }    
+    
+    .featured-item{
+        border: 2px solid $p-basic-color;
+        border-radius: 1rem;
+        overflow: hidden;
+
+        .featured-imagen{
+            width: 100%;
+        }
+
+        .featured-title {
+            text-align: center;
+            padding: 2rem 0;
+
+            .h3{
+                font-size: 1.5rem;
+                font-weight: 600; 
+            }
+        }
+
+        .featured-description{
+
+            text-align: left; 
+        }
+    }
+}
