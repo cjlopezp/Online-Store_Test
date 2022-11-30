@@ -1,0 +1,33 @@
+.contacto {
+    padding: 0 10%;
+    width: 80%;
+} 
+
+.contacto-datos {
+    width: 100%;
+}
+
+.contacto-dato {
+    display: flex;
+    justify-content: start;
+    margin: 2rem 5rem;
+    font-size: 2rem;
+} 
+
+.contacto-icono {
+    width: 10%;
+} 
+
+.contacto-icono svg path{
+    fill:hsl(0, 0%, 100%);
+}
+
+.contacto-informacion span{
+    color:hsl(0, 0%, 100%);
+}
+
+.contact-form {
+    font-size: 1.5rem;
+    padding: 2rem;
+    margin: 0 0 0 2rem;
+} 

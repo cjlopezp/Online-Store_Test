@@ -16,9 +16,10 @@
     
     .quantity-minos button, 
     .quantity-plus button{
-        color:$s-basic-color;
+        color: $s-basic-color;
         font-weight: 600;
         height: 100%;
+        width: 100%;
         padding: 0.1rem 0 0.1rem 0;
         cursor: pointer; /*esta propiedad hace cambiar la forma del puntero del raton cuando pasamos por encima del boton*/
     }
@@ -37,7 +38,7 @@
         color predeterminado y se configuro el alineamiento del texto mostrado por el cuadro*/
         border: 0;
         height: 100%;
-        color: $s-basic-color;
+        color: #000;
         text-align: center;
         width: 100%;
     } 

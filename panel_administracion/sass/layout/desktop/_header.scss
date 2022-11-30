@@ -1,5 +1,5 @@
 //Estrucura Header comun a todas las paginas de mi web//
-.header{ /*El contenedor header fue configurado para mantener una altura , 
+header{ /*El contenedor header fue configurado para mantener una altura , 
     ancho y padding predeterminados a fin de ser usado en toda nuestra web */
 
     height: 10vh;
@@ -36,7 +36,7 @@
         margin-left: auto;
         width: 30%;
 
-        .ul{ /* Para presentar los elementos de este menu usamos el tag "ul" que define una lista no ordenada.
+        ul{ /* Para presentar los elementos de este menu usamos el tag "ul" que define una lista no ordenada.
             Cada uno de los elementos de la lista fueron etiquetados en con el tag "li". Para la distribucion 
             horizontal y vertical de los elementos de la lista se utilizo la funcion conjunta flex/justify-content/align-items, respectivamente  */
             align-items: center;
@@ -46,7 +46,7 @@
             width: 100%;  
         }
 
-        .ul .li{ /* Esta estructura de codigo representa la aplicacion de propiedades particulares a un elemento especifico
+        ul li{ /* Esta estructura de codigo representa la aplicacion de propiedades particulares a un elemento especifico
             dentro de nuestro codigo. Esto lo haremos cuando se hayan definido propiedades especificas para elementos similares en todo 
             nuestro codigo, pero necesitemos apicar otras en casos eparticulares como este  */
             color: $p-basic-color;

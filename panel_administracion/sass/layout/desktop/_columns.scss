@@ -1,64 +1,67 @@
-.desktop-five-columns{
+.five-columns{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    width: 100%;
-
-    & > .column{
-        width: 18%;
-    }    
+    width: 100%;  
 }
 
-.desktop-four-columns{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+.five-columns > .column{
+    width: 18%;
+}  
 
-    & > .column{
-        width: 22%;
-    }
-}
-
-.desktop-three-columns{
+.four-columns{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
-
-    & > .column{
-        width: 30%;
-    }
 }
 
-.desktop-two-columns{
+.four-columns > .column{
+    width: 22%;
+}
+
+.three-columns{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.three-columns > .column{
+    width: 30%;
+}
+
+.two-columns{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.two-columns > .column{
+    width: 48%;
+}
+
+.two-columns-aside{
     display: flex;
     justify-content: space-between;
     width: 100%;
-
-    & > .column{
-        width: 48%;
-    }
 }
 
-.desktop-two-columns-aside{
+.two-columns-aside > .column-aside{
+    width: 20%;
+}
+
+.two-columns-aside > .column-main{
+    width: 75%;
+}
+
+.one-column{
+    width: 100%;
+}
+
+.one-column > .column{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     width: 100%;
-
-    & > .column-aside{
-        width: 20%;
-    }
-
-    & > .column-main{
-        width: 75%;
-    }
-}
-
-.desktop-one-column{
-    width: 100%;
-
-    & > .column{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
 }

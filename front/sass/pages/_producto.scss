@@ -18,6 +18,10 @@
         .product-description-detail{
             margin-bottom: 2rem;
             text-align: justify;   
+
+            p{
+                margin-bottom: 1rem;
+            }
         }
 
         .product-rent-amount{
@@ -28,12 +32,13 @@
             margin-bottom: 2rem;
         }
 
-        .add-to-cart-button{
-            margin: 0 auto;
-            width: max-content;
-        }
-
     }
+
+    .add-to-cart-button{
+        margin: 0 auto;
+        width: max-content;
+    } 
+     
 }
 
 

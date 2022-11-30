@@ -1,0 +1,55 @@
+.shopping-cart{
+    width: 90%;
+    margin: 0 5%;
+}
+
+.table{
+    padding: 2rem 0;
+}
+
+.table-header{
+    border-bottom: 0.3rem solid white;
+}
+
+.table-body{
+    padding: 2rem 0;
+}
+
+.table-head, .table-body-data-element{
+    padding: 0.5rem 0;
+    text-align: center;
+}
+
+.table-head span, .table-body-data-element span{
+    color: hsl(0, 0%, 100%);
+    font-size: 1.5rem;
+}
+
+.shopping-summary{
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5vh;
+}
+
+/* Post revision Carlos */
+.shopping-summary > .column{
+    width: 30%;
+    margin-left: auto;
+}
+
+/* /Post revision Carlos */
+
+.shop-item div{
+    width: 44%;
+    padding:0.5rem 3rem;
+    display: flex;
+    justify-content: center;
+    border:solid white;
+}
+
+.back-button, .buy-button{
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+}

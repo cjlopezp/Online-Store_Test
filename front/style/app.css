@@ -364,20 +364,20 @@ div:has(.fixed-hight) {
   padding-bottom: 2rem;
 }
 
-h1, h2, h3, h4, h5, h6, a, p {
+h1, h2, h3, h4, h5, h6, a, p, label {
   color: hsl(0deg, 0%, 100%);
 }
 
 h1, h2, h3, h4 {
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 h5, h6 {
-  font-family: "Ubuntu Condensed", sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 a, td, th, p, button, span, label, select, input, textarea, li {
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 h1 {
@@ -412,12 +412,7 @@ a:hover, a:focus {
 }
 
 body {
-  background-color: hsl(226deg, 63%, 45%);
-  display: flex;
-  flex-direction: column;
-  margin: 1rem 0;
-  min-height: 100vh;
-  width: 100%;
+  background-color: rgb(42, 76, 186);
 }
 
 main {
@@ -433,13 +428,13 @@ main {
   display: none;
 }
 
-.header { /*El contenedor header fue configurado para mantener una altura , 
+header { /*El contenedor header fue configurado para mantener una altura , 
 ancho y padding predeterminados a fin de ser usado en toda nuestra web */
   height: 10vh;
   padding: 0 2%;
   width: 96%;
 }
-.header .logo { /*Los elementos contenidos se distribuyeron usando la funcion conjunta "flex/align-items:center", 
+header .logo { /*Los elementos contenidos se distribuyeron usando la funcion conjunta "flex/align-items:center", 
 y manteniendo la misma altura del contenedor padre*/
   align-items: center;
   display: flex;
@@ -448,21 +443,21 @@ y manteniendo la misma altura del contenedor padre*/
   al titulo , haciendo esta seccion un poco mas relaja a ala vista. El tamaño de la fuente 
   se ajusto para mantener una propocionalidad con respecto al logo y a su calidad de titulo*/
 }
-.header .logo .logo-imagen {
+header .logo .logo-imagen {
   margin-right: 1rem;
   width: 5%;
 }
-.header .logo .logo-titulo .h2 {
+header .logo .logo-titulo .h2 {
   font-size: 2rem;
 }
-.header .menu-opciones { /*El ancho del contenedor fue ajustado a 30% para ajustarlo facilmente al 
+header .menu-opciones { /*El ancho del contenedor fue ajustado a 30% para ajustarlo facilmente al 
 contenedor padre y su posicion dentro del mismo usando "margin-left". En este caso la
  funcion flex no era necesaria ya que al ser un elemento unico es posible usar 
  propiedades inherentes a un solo elemento */
   margin-left: auto;
   width: 30%;
 }
-.header .menu-opciones .ul { /* Para presentar los elementos de este menu usamos el tag "ul" que define una lista no ordenada.
+header .menu-opciones ul { /* Para presentar los elementos de este menu usamos el tag "ul" que define una lista no ordenada.
 Cada uno de los elementos de la lista fueron etiquetados en con el tag "li". Para la distribucion 
 horizontal y vertical de los elementos de la lista se utilizo la funcion conjunta flex/justify-content/align-items, respectivamente  */
   align-items: center;
@@ -471,7 +466,7 @@ horizontal y vertical de los elementos de la lista se utilizo la funcion conjunt
   justify-content: space-between;
   width: 100%;
 }
-.header .menu-opciones .ul .li { /* Esta estructura de codigo representa la aplicacion de propiedades particulares a un elemento especifico
+header .menu-opciones ul li { /* Esta estructura de codigo representa la aplicacion de propiedades particulares a un elemento especifico
 dentro de nuestro codigo. Esto lo haremos cuando se hayan definido propiedades especificas para elementos similares en todo 
 nuestro codigo, pero necesitemos apicar otras en casos eparticulares como este  */
   color: hsl(0deg, 0%, 100%);
@@ -498,70 +493,98 @@ nuestro codigo, pero necesitemos apicar otras en casos eparticulares como este  
   text-align: center;
 }
 
-.desktop-five-columns {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-.desktop-five-columns > .column {
-  width: 18%;
-}
-
-.desktop-four-columns {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-.desktop-four-columns > .column {
-  width: 22%;
-}
-
-.desktop-three-columns {
+.five-columns {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
 }
-.desktop-three-columns > .column {
+
+.five-columns > .column {
+  width: 18%;
+}
+
+.four-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.four-columns > .column {
+  width: 22%;
+}
+
+.three-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.three-columns > .column {
   width: 30%;
 }
 
-.desktop-two-columns {
+.two-columns {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
 }
-.desktop-two-columns > .column {
+
+.two-columns > .column {
   width: 48%;
 }
 
-.desktop-two-columns-aside {
+.two-columns-aside {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
-.desktop-two-columns-aside > .column-aside {
+
+.two-columns-aside > .column-aside {
   width: 20%;
 }
-.desktop-two-columns-aside > .column-main {
+
+.two-columns-aside > .column-main {
   width: 75%;
 }
 
-.desktop-one-column {
+.one-column {
   width: 100%;
 }
-.desktop-one-column > .column {
+
+.one-column > .column {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
+.banner-text {
+  padding: 0 5%;
+  width: 90%;
+}
+.banner-text .banner-text-description {
+  width: 90%;
+  text-align: left;
+  padding: 1rem 0;
+}
+.banner-text .banner-text-description p {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.banner-text .banner-text-image {
+  width: 100%;
+  padding: 1rem 0;
+}
+
 .custom-button {
   border: none;
   box-shadow: 3px 5px 16px 3px #000;
-  color: hsla(0deg, 0%, 0%, 0.22);
+  color: hsl(0deg, 73%, 43%);
   padding: 0.5rem 1.5rem;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 1.2rem;
   cursor: pointer;
   width: 100%;
@@ -572,102 +595,61 @@ nuestro codigo, pero necesitemos apicar otras en casos eparticulares como este  
   padding: 0 5%;
   width: 90%;
 }
+.featured .featured-title {
+  text-align: center;
+  padding: 2rem 0;
+}
 .featured .featured-title h2 {
   font-size: 1.5rem;
   font-weight: 600;
 }
-.featured .featured-item {
+.featured .featured-elements {
+  padding: 1rem 0;
+}
+.featured .home-featured-item {
   border: 2px solid hsl(0deg, 0%, 100%);
   border-radius: 1rem;
   overflow: hidden;
 }
-.featured .featured-item .featured-imagen {
+.featured .featured-imagen {
   width: 100%;
 }
-.featured .featured-item .featured-title {
-  text-align: center;
-  padding: 2rem 0;
+.featured .featured-titulo, .featured .featured-enlace, .featured .featured-description {
+  padding: 0.5rem;
 }
-.featured .featured-item .featured-title .h3 {
+.featured .featured-titulo h3 {
   font-size: 1.5rem;
+}
+.featured .featured-enlace span {
+  color: aqua;
+  font-size: 1.2rem;
   font-weight: 600;
 }
-.featured .featured-item .featured-description {
+.featured .featured-description {
   text-align: left;
 }
 
-.amount-quantity { /*Se uso flex/justify-content: center para ajustar los elementos contenidos en forma de fila */
-  display: flex;
-  justify-content: center;
-}
-.amount-quantity .quantity-minos,
-.amount-quantity .quantity-plus { /*esta forma de codigo permitio modificar una propiedad comun de estos dos 
-elementos con mismop valor */
-  width: 20%;
-}
-.amount-quantity .quantity-plus button { /*Se eliumino el borde y se redondearon los botones asignando radios*/
-  border: none;
-  border-top-right-radius: 0.4rem;
-  border-bottom-right-radius: 0.4rem;
-}
-.amount-quantity .quantity-minos button,
-.amount-quantity .quantity-plus button {
-  color: hsla(0deg, 0%, 0%, 0.22);
-  font-weight: 600;
-  height: 100%;
-  padding: 0.1rem 0 0.1rem 0;
-  cursor: pointer; /*esta propiedad hace cambiar la forma del puntero del raton cuando pasamos por encima del boton*/
-}
-.amount-quantity .quantity-minos button {
-  border: none;
-  border-top-left-radius: 0.4rem;
-  border-bottom-left-radius: 0.4rem;
-}
-.amount-quantity .quantity-item {
-  width: 20%;
-}
-.amount-quantity .quantity-item input { /*se especifico sus medidad, se asigno un 
-color predeterminado y se configuro el alineamiento del texto mostrado por el cuadro*/
-  border: 0;
-  height: 100%;
-  color: hsla(0deg, 0%, 0%, 0.22);
-  text-align: center;
+.form-element {
+  margin-bottom: 1rem;
   width: 100%;
 }
 
-.slider { /*El slider nos permite usar el ancho total de la pagina para presentar una imagen como fondo,
-en la cual podremos posicionar diferentes elementos (en nuestro caso texto y un boton) que permitiran 
-al usuario interacionar con nuestra web */
-  position: relative; /*Posicion relativa especifica de un elemento lo posiciona detras de cualquier otro elemento
-y es ubicado en una posicon especifica dentro de la pagina */
+.form-element .form-element-input textarea {
+  color: hsl(0deg, 0%, 0%);
+  height: 20vh;
+  padding: 2rem;
+}
+
+.form-element .form-element-input input,
+.form-element .form-element-input textarea,
+.form-element .form-element-input select {
+  color: hsl(0deg, 0%, 0%);
+  padding-left: 0.5rem;
   width: 100%;
 }
-.slider .slider-imagen {
-  position: absolute; /*Posicion absoluta especifica de un elemento lo posiciona delante de cualquier otro elemento
-y es ubicado en una posicon especifica dentro del elemento*/
-  z-index: 1000; /*z-index nos indica la "profundidad" o "capa" donde se situa un elemento.
-pueden usarse diferentes valores (-1, 1, 2 ó 1000, 1001, 1002) para indicar las capas.
-sin embargo, siempre debe darse el valor mas bajo al elemento que se usa en el fondo 
-y el mas alto al elemento que se quiere sobre el. En este caso $z-index-slider-image = 1000*/
-}
-.slider .slider-titulo {
-  background-color: hsla(0deg, 0%, 0%, 0.22); /*$s-basic-color:  hsla(0, 0%, 0%, 0.22), equivale al color negro, un atributo que se usara en diferentes lugares de nuestra web*/
-  position: absolute;
-  z-index: 1001; /*el valor "$z-index-featured-elements", en este caso, se refiere a la variable configuradas por el usuario
-   para asignar un valor de 1001 a este elemento. Esta variable podra usarse en otros sitios de la web al ser generico*/
-  left: 10%;
-  top: 30vh;
-}
-.slider .slider-titulo .h1 {
-  color: hsl(0deg, 0%, 100%); /*$p-basic-color: hsl(0, 0%, 100%) equivale al color blanco, un atributo que se usara en diferentes lugares de nuestra web */
-}
-.slider .slider-boton {
-  position: absolute;
-  z-index: 1001;
-  left: 10%; /*posicion horizontal absoluta dentro contenedor slider*/
-  top: 40vh; /*posicion vertical absoluta dentro contenedor slider*/
-  font-family: "Ubuntu", sans-serif; /*Es la fuente que usaremos en los textos. En este caso la fuente debe descargarse de Google fonts, indicandolo en la seccion <head> de cada una de nuestras paginas */
-  font-size: 1.3em;
+
+.form-send-button {
+  width: max-content;
 }
 
 #notification {
@@ -701,6 +683,311 @@ y el mas alto al elemento que se quiere sobre el. En este caso $z-index-slider-i
   font-weight: 600;
 }
 
+.pagina-titulo {
+  text-align: center;
+  padding: 1rem 0 1rem 0;
+}
+
+.amount-quantity { /*Se uso flex/justify-content: center para ajustar los elementos contenidos en forma de fila */
+  display: flex;
+  justify-content: center;
+}
+.amount-quantity .quantity-minos,
+.amount-quantity .quantity-plus { /*esta forma de codigo permitio modificar una propiedad comun de estos dos 
+elementos con mismop valor */
+  width: 20%;
+}
+.amount-quantity .quantity-plus button { /*Se eliumino el borde y se redondearon los botones asignando radios*/
+  border: none;
+  border-top-right-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+}
+.amount-quantity .quantity-minos button,
+.amount-quantity .quantity-plus button {
+  color: hsl(0deg, 73%, 43%);
+  font-weight: 600;
+  height: 100%;
+  width: 100%;
+  padding: 0.1rem 0 0.1rem 0;
+  cursor: pointer; /*esta propiedad hace cambiar la forma del puntero del raton cuando pasamos por encima del boton*/
+}
+.amount-quantity .quantity-minos button {
+  border: none;
+  border-top-left-radius: 0.4rem;
+  border-bottom-left-radius: 0.4rem;
+}
+.amount-quantity .quantity-item {
+  width: 20%;
+}
+.amount-quantity .quantity-item input { /*se especifico sus medidad, se asigno un 
+color predeterminado y se configuro el alineamiento del texto mostrado por el cuadro*/
+  border: 0;
+  height: 100%;
+  color: #000;
+  text-align: center;
+  width: 100%;
+}
+
+.slider-gallery-main {
+  padding: 2rem;
+}
+.slider-gallery-main .slider-gallery-miniatures {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2rem;
+}
+
+.slider { /*El slider nos permite usar el ancho total de la pagina para presentar una imagen como fondo,
+en la cual podremos posicionar diferentes elementos (en nuestro caso texto y un boton) que permitiran 
+al usuario interacionar con nuestra web */
+  position: relative; /*Posicion relativa especifica de un elemento lo posiciona detras de cualquier otro elemento
+y es ubicado en una posicon especifica dentro de la pagina */
+  width: 100%;
+  overflow: hidden;
+  height: 80vh;
+}
+.slider .slider-imagen {
+  position: absolute; /*Posicion absoluta especifica de un elemento lo posiciona delante de cualquier otro elemento
+y es ubicado en una posicon especifica dentro del elemento*/
+  z-index: 900; /*z-index nos indica la "profundidad" o "capa" donde se situa un elemento.
+pueden usarse diferentes valores (-1, 1, 2 ó 1000, 1001, 1002) para indicar las capas.
+sin embargo, siempre debe darse el valor mas bajo al elemento que se usa en el fondo 
+y el mas alto al elemento que se quiere sobre el. En este caso $z-index-slider-image = 1000*/
+}
+.slider .slider-titulo {
+  background-color: rgba(0, 0, 0, 0.219); /*$s-basic-color:  hsla(0, 0%, 0%, 0.22), equivale al color negro, un atributo que se usara en diferentes lugares de nuestra web*/
+  position: absolute;
+  padding: 0.5rem 1rem;
+  z-index: 1001; /*el valor "$z-index-featured-elements", en este caso, se refiere a la variable configuradas por el usuario
+para asignar un valor de 1001 a este elemento. Esta variable podra usarse en otros sitios de la web al ser generico*/
+  left: 10%;
+  top: 30vh;
+}
+.slider .slider-titulo h1 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: hsl(0deg, 0%, 100%); /*$p-basic-color: hsl(0, 0%, 100%) equivale al color blanco, un atributo que se usara en diferentes lugares de nuestra web */
+}
+.slider .slider-boton {
+  position: absolute;
+  z-index: 1001;
+  left: 10%; /*posicion horizontal absoluta dentro contenedor slider*/
+  top: 40vh; /*posicion vertical absoluta dentro contenedor slider*/
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; /*Es la fuente que usaremos en los textos. En este caso la fuente debe descargarse de Google fonts, indicandolo en la seccion <head> de cada una de nuestras paginas */
+  font-size: 1.3em;
+}
+
+.checkout-summary {
+  padding: 1vh;
+  width: 80%;
+}
+
+.checkout-summary {
+  padding: 1vh;
+  width: 80%;
+}
+
+.summary-element-item {
+  text-align: center;
+  padding: 0 0;
+  font-weight: 600;
+}
+
+.summary-title {
+  background-color: #ffffff;
+  border-style: solid;
+  border-color: #ffffff;
+  text-align: center;
+  margin-top: 1.5rem;
+  padding: 1vh 0;
+}
+
+.summary-title h3 {
+  color: blue;
+  font-weight: 600;
+}
+
+.tabs {
+  background-color: hsl(0deg, 0%, 100%);
+  margin-bottom: 1rem;
+  width: 100%;
+}
+.tabs .tabs-items {
+  background-color: hsl(226deg, 63%, 45%);
+  display: flex;
+  width: 100%;
+}
+.tabs .tabs-items .tab-item {
+  color: hsl(0deg, 0%, 100%);
+  cursor: pointer;
+  padding: 1rem;
+}
+.tabs .tabs-items .tab-item.active {
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(0deg, 73%, 43%);
+}
+.tabs .tabs-contents {
+  padding: 1rem;
+}
+.tabs .tabs-contents .tab-content {
+  display: none;
+}
+.tabs .tabs-contents .tab-content.active {
+  background-color: hsl(0deg, 0%, 100%);
+  display: block;
+}
+.tabs .tabs-contents .tab-content.active p {
+  color: hsl(226deg, 63%, 45%);
+}
+
+.checkout {
+  width: 80%;
+  padding: 2rem 10%;
+}
+
+.checkout-info {
+  width: 100%;
+}
+
+.checkout-bill {
+  border-style: solid;
+  border-color: #ffffff;
+}
+
+.bill-element {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.checkout-payment {
+  width: 100%;
+  margin-left: auto;
+}
+
+.shipping-form {
+  font-size: 1.5rem;
+  padding: 2rem;
+  font-size: 1.5rem;
+}
+
+.payment-button {
+  width: 20%;
+  margin-left: 1rem;
+}
+
+.checkout-payment {
+  margin: 1rem 0 1rem 0;
+}
+
+.checkout-payment-payment button {
+  margin-left: 1rem;
+}
+
+.checkout-payment-item input[type=radio] {
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  border-radius: 100%;
+  left: 15px;
+}
+
+.checkout-payment-item {
+  position: relative;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 0 0 4rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.shopping-cart {
+  width: 90%;
+  margin: 0 5%;
+}
+
+.table {
+  padding: 2rem 0;
+}
+
+.table-header {
+  border-bottom: 0.3rem solid white;
+}
+
+.table-body {
+  padding: 2rem 0;
+}
+
+.table-head, .table-body-data-element {
+  padding: 0.5rem 0;
+  text-align: center;
+}
+
+.table-head span, .table-body-data-element span {
+  color: hsl(0deg, 0%, 100%);
+  font-size: 1.5rem;
+}
+
+.shopping-summary {
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  margin-top: 0.5vh;
+}
+
+/* Post revision Carlos */
+.shopping-summary > .column {
+  width: 30%;
+  margin-left: auto;
+}
+
+/* /Post revision Carlos */
+.shop-item div {
+  width: 44%;
+  padding: 0.5rem 3rem;
+  display: flex;
+  justify-content: center;
+  border: solid white;
+}
+
+.back-button, .buy-button {
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+}
+
+.contacto {
+  padding: 0 10%;
+  width: 80%;
+}
+
+.contacto-datos {
+  width: 100%;
+}
+
+.contacto-dato {
+  display: flex;
+  justify-content: start;
+  margin: 2rem 5rem;
+  font-size: 2rem;
+}
+
+.contacto-icono {
+  width: 10%;
+}
+
+.contacto-icono svg path {
+  fill: hsl(0deg, 0%, 100%);
+}
+
+.contacto-informacion span {
+  color: hsl(0deg, 0%, 100%);
+}
+
+.contact-form {
+  font-size: 1.5rem;
+  padding: 2rem;
+  margin: 0 0 0 2rem;
+}
+
 .product {
   width: 80%;
   padding: 2rem 10%;
@@ -719,6 +1006,9 @@ y el mas alto al elemento que se quiere sobre el. En este caso $z-index-slider-i
   margin-bottom: 2rem;
   text-align: justify;
 }
+.product .product-description .product-description-detail p {
+  margin-bottom: 1rem;
+}
 .product .product-description .product-rent-amount {
   display: flex;
   align-items: center;
@@ -726,47 +1016,11 @@ y el mas alto al elemento que se quiere sobre el. En este caso $z-index-slider-i
   margin: 0 auto;
   margin-bottom: 2rem;
 }
-.product .product-description .add-to-cart-button {
+.product .add-to-cart-button {
   margin: 0 auto;
   width: max-content;
 }
 
-/*productos*/
-.two-columns-aside { /*eliminar*/
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-.two-columns-aside .column-aside {
-  width: 20%;
-}
-.two-columns-aside .column-aside .products-categories {
-  border-right: 1px solid #ffffff;
-  border-width: 0.2rem;
-  width: 100%;
-  height: 100%;
-}
-.two-columns-aside .column-aside .products-categories .products-categories-title h2 {
-  font-size: 2.5rem;
-}
-.two-columns-aside .column-aside .products-categories .menu-visible li {
-  padding: 0.5rem 0;
-  font-size: 1.5rem;
-}
-.two-columns-aside .column-main { /*eliminar*/
-  width: 75%;
-}
-.two-columns-aside .column-main .products-availability {
-  margin-bottom: 2rem;
-}
-.two-columns-aside .column-main .products-availability .products-categories {
-  border-right: 1px solid #ffffff;
-  border-width: 0.2rem;
-  width: 100%;
-  height: 100%;
-}
-
-/* Para dar márgenes a una página asignamos un width menor de 100 y lo que sobra se lo damos a los padding*/
 .products {
   margin-top: 2rem;
   padding: 0 5%;
@@ -842,6 +1096,90 @@ y el mas alto al elemento que se quiere sobre el. En este caso $z-index-slider-i
   border: 0.18rem solid #1C6EA4;
   background: #1666A4;
   background: linear-gradient(to right, #1666A4 0%, #2388CB 50%, #39CAEA 100%);
+}
+
+.products-avail-categories > .products-availability-items p {
+  font-size: 1.5rem;
+}
+
+.menu-productos > ul {
+  font-size: 1.2rem;
+}
+
+.menu-visible li {
+  padding: 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+.menu-productos select {
+  width: 100%;
+}
+
+.products-availability {
+  margin-bottom: 2rem;
+}
+
+/* Para empujar una caja a un extremo le damos un width menor que 100 y un margin auto que usará todo el espacio sobrante como margen*/
+.menu-productos {
+  margin-left: auto;
+  width: 50%;
+}
+
+.products-categories {
+  border-right: 1px solid #ffffff;
+  border-width: 0.2rem;
+  width: 100%;
+  height: 100%;
+}
+
+.products-categories-title h2 {
+  font-size: 2.5rem;
+}
+
+.product-mosaico {
+  border: 0.5rem solid white;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.product-image {
+  position: relative;
+  z-index: 800;
+}
+
+.product-price {
+  position: absolute;
+  z-index: 1000;
+  right: 0;
+  top: 0;
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+  font-size: 1.3em;
+  z-index: 900;
+  padding: 0 1rem;
+  background-color: #000000;
+}
+
+.product-caracterist {
+  text-align: center;
+  padding: 1rem 0 1rem 0;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.product-button button {
+  text-align: center;
+  padding: 1rem 0 1rem 0;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 600;
+  border: 0.18rem solid #1C6EA4;
+  background: #1666A4;
+  background: linear-gradient(to right, #1666A4 0%, #2388CB 50%, #39CAEA 100%);
+  width: 100%;
 }
 
 .products-avail-categories > .products-availability-items p {
