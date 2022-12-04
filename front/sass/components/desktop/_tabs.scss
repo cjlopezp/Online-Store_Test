@@ -1,0 +1,43 @@
+.tabs{
+
+    background-color: hsl(0, 0%, 100%);
+    margin-bottom: 1rem;
+    width: 100%;
+
+    .tabs-items{
+
+        background-color: hsl(226, 63%, 45%);
+        display: flex;
+        width: 100%;
+
+        .tab-item{
+            color: hsl(0, 0%, 100%);
+            cursor: pointer;
+            padding: 1rem;
+        }
+
+        .tab-item.active{
+            background-color: hsl(0, 0%, 100%);
+            color: $s-basic-color;
+        }
+    }
+
+    .tabs-contents{
+
+        padding: 1rem;
+
+        .tab-content{
+            display: none;
+        }
+
+        .tab-content.active{
+
+            background-color: hsl(0, 0%, 100%);
+            display: block;
+        
+            p{
+                color: hsl(226, 63%, 45%);
+            }
+        }
+    }
+}

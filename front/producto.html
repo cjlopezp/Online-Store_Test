@@ -1,0 +1,153 @@
+<doctype html>
+
+    <html lang="es">
+        
+        <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1"> <!--Esta linea especifica en que tipos d epantallas puede verse la pagina-->
+            <link rel="shortcut icon" href="https://www.youtube.com/s/desktop/12d6b690/img/favicon.ico"> <!--imagen (icono, FAVICON) que sera mostrada en la pestaña nenlazada desde otra fuente-->
+
+            <meta name="description" content="descripción de la web, se recomienda 90 caracteres"> <!--Es la ficha que contiene la descripcion de la pagina y que sera leida por el buscador-->
+            <meta name="keywords"    content="palabras clave, separadas, por comas">
+       
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+            <link href="style/app.css" rel="stylesheet"> <!--señala el link del archivo css de donde se toma el estilo de la pagina-->
+            <script type="module" src="js/index.js"></script>
+        </head>
+
+
+        <body>
+            
+            <header>
+                <div class="two-columns">       
+                    <div class="column">   
+                        <div class="logo">
+                            <div class="logo-imagen">
+                                <img src="images/logo.png" alt="logo">
+                            </div> 
+                            <div class="logo-titulo">
+                                <h2>Mallorca Sea</h2> 
+                            </div>                                                
+                        </div>
+                    </div>
+                        
+                    <div class="column"> 
+                        <nav class="menu-opciones">
+                            <ul><!--hacer lista horizontal no numerada ul/ con CSS--><!--normalmente son una lista-->
+                                <li>Inicio</li>
+                                <li>Reserva</li>
+                                <li>Contactos</li>
+                            </ul>
+                        </nav>  
+                    </div>
+                </div>
+            </header>      
+            
+
+            <main>
+
+                <div class="product">
+                    <div class="two-columns">
+                        <div class="column">
+                            <div class="slider-gallery">
+                                <div class="slider-gallery-main">
+                                    <img src="images/producto/miniaturas/1705-page_detail-6149.jpg" alt="">
+                                </div>
+                                <div class="slider-gallery-miniatures"> 
+                                    <div class="five-columns">          
+                                        <div class="column">
+                                            <div class="slider-gallery-miniature"><img src="images/producto/miniaturas/1705-page_detail-6149.jpg" alt=""></div><!--imagenes detalladas del barco en miniatura-->
+                                        </div> 
+                                        <div class="column">   
+                                            <div class="slider-gallery-miniature"><img src="images/producto/miniaturas/1705-page_detail-6328.jpg" alt=""></div>
+                                        </div>
+                                        <div class="column">   
+                                            <div class="slider-gallery-miniature"><img src="images/producto/miniaturas/1705-page_detail-6329.jpg" alt=""></div>
+                                        </div>  
+                                        <div class="column">  
+                                            <div class="slider-gallery-miniature"><img src="images/producto/miniaturas/1705-page_detail-6343.jpg" alt=""></div>
+                                        </div>  
+                                        <div class="column">   
+                                            <div class="slider-gallery-miniature"><img src="images/producto/miniaturas/1705-page_detail-6356.jpg" alt=""></div> 
+                                        </div>                   
+                                    </div>                                                              
+                                </div>                      
+                            </div><!--imagen del barco - Es un slider-->                   
+                        </div>          
+   
+                        <div class="column">
+                            <div class="product-description">
+                                <div class="product-description-title">
+                                    <h1>Barca de 6 metros de eslora</h1>
+                                </div>
+                                <div class="product-description-price">
+                                    <h2>120 Euros/día</h2>
+                                </div>
+
+                                <div class="tabs">
+                                    <ul class="tabs-items">
+                                        <li class="tab-item active" data-tab="description">Descripción</li>
+                                        <li class="tab-item" data-tab="specifications">Especificaciones técnicas</li>
+                                    </ul>
+
+                                    <div class="tabs-contents">
+                                        <div class="tab-content active" data-tab="description">
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus quam, aliquid earum totam quae suscipit molestiae eius facere quod nemo incidunt vitae beatae iste? Quod veritatis inventore dolor cum porro?
+                                                Vitae aliquid illo obcaecati corrupti officia. At cumque aspernatur quidem voluptate, eveniet aperiam eum dolor, obcaecati qui neque veniam sequi officiis in nostrum voluptatibus nam magnam, modi veritatis omnis culpa.
+                                            </p>
+                                        </div>
+                                        <div class="tab-content"  data-tab="specifications">
+                                            <p>
+                                                Mollitia in eum reiciendis minima natus, corporis sit nemo. Sapiente aperiam sunt commodi. Temporibus nulla ex qui a delectus numquam, dolorum, labore neque consectetur nemo doloribus, impedit alias corporis illum.
+                                                Facilis animi ut ratione cum atque architecto quaerat obcaecati? Velit ratione voluptates aspernatur voluptatum, quidem illo, maxime accusamus ad animi labore quo repudiandae pariatur corporis quam nulla fuga non ipsum?
+                                                Voluptate ducimus voluptatem laborum cum ipsum soluta aliquam veritatis ea! Nisi perspiciatis distinctio beatae ea unde inventore quam commodi tempore labore atque neque, placeat, ducimus saepe consequuntur soluta consequatur veritatis.
+                                                Unde voluptas ullam dolore laborum facere alias totam rerum, sapiente rem expedita amet ratione iure aliquam reprehenderit optio deserunt quisquam quia tenetur voluptatum quaerat dicta aut ad. Temporibus, reprehenderit pariatur?
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="product-rent-amount">
+
+                                    <div class="product-rent-dias"><p>Cantidad de días</p> </div>
+    
+                                    <div class="amount-quantity">
+                                            
+                                        <div class="quantity-minos">
+                                            <button id="quantityMinus">-</button>
+                                        </div>
+    
+                                        <div class="quantity-item">
+                                            <input type="number" value="1" id="quantityItem" type="number" min="1">
+                                        </div> <!--insertar elemento dinamico que cambie el numero segun se usen los botones que lo acompañen--> 
+                                    
+                                        <div class="quantity-plus">
+                                            <button id="quantityPlus">+</button>
+                                        </div>
+                                                                                            
+                                    </div>
+                                </div>
+    
+                                <div class="add-to-cart-button">
+                                    <button class="custom-button" type="submit" value="sumit">Reservar</button>
+                                </div>
+                                                
+                            </div>                                    
+                        
+                                                              
+                        </div>       
+                    </div> <!--ciere two columns pagina-->
+                </div>
+            </main>
+
+            <footer class="footer-distribution">
+                <div class="footer-copyright"><p>@2048</p></div>
+                <div class="footer-link"><a href="">Link sitio de verdad</a></div> <!--Aqui link pagina de verdad-->
+            </footer> 
+
+        </body>
+
+    </html>

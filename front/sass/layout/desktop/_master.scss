@@ -1,0 +1,16 @@
+body{
+    background-color: rgb(42, 76, 186, 255);
+}
+
+main{
+    margin: 1rem 0;
+    width: 100%;
+}
+
+.desktop-only{
+    display: revert;
+}
+
+.mobile-only{
+    display: none;
+}

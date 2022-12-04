@@ -1,0 +1,22 @@
+.form-element{
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.form-element .form-element-input textarea{
+    color:hsl(0, 0%, 0%);
+    height: 20vh;
+    padding: 2rem;
+}
+
+.form-element .form-element-input input,
+.form-element .form-element-input textarea,
+.form-element .form-element-input select{
+    color:hsl(0, 0%, 0%);
+    padding-left: 0.5rem;
+    width: 100%;
+}
+
+.form-send-button{
+    width: max-content;
+}

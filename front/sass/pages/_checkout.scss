@@ -1,0 +1,60 @@
+.checkout{
+    width: 80%;
+    padding: 2rem 10%;
+}
+
+.checkout-info{
+    width: 100%;
+}
+
+.checkout-bill{
+    border-style: solid;
+    border-color: #ffffff;
+}
+
+.bill-element{
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+.checkout-payment {
+    width: 100%;
+    margin-left: auto;
+}
+
+
+.shipping-form{
+    font-size: 1.5rem;
+    padding: 2rem;
+    font-size: 1.5rem;
+}
+
+.payment-button{
+    width: 20%;
+    margin-left: 1rem;
+}
+
+.checkout-payment{
+    margin: 1rem 0 1rem 0;
+}
+
+.checkout-payment-payment button{
+    margin-left: 1rem;
+}
+
+.checkout-payment-item input[type=radio]{
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border-radius: 100%;
+    left: 15px;
+}
+
+.checkout-payment-item{ 
+    position: relative;
+    margin-bottom: 0.5rem;
+	padding: 0.5rem 0 0 4rem;
+    font-size: 1.5rem;	
+    font-weight: 600;
+}
