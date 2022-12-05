@@ -4,6 +4,8 @@ import { renderForm } from "./form.js";
 import { renderNotification } from "./notification.js";
 import { renderTabs } from "./tabs.js";
 
+
+
 renderPlusMinusButton();
 renderTextCounterForm();
 renderForm();

@@ -691,6 +691,9 @@ color: white;
 }
 
 
+.svg_container {
+  margin: 1rem 0;
+}
 
 /* .menu-administacion {
   width: 100%;
@@ -711,14 +714,10 @@ color: white;
 }
 
 
-
-
 .ficheros {
-  width: 100%;
+  width: 95%;
   margin-left: 0.5rem;
 }
-
-
 
 .fichero {
   width: 90%;
@@ -737,6 +736,7 @@ color: white;
 
 .fichero-informacion > ul > li > span {
   color: aqua;
+  margin-right: 0.5rem;
 }
 
 .fichero-informacion > ul {
@@ -745,11 +745,11 @@ color: white;
 
 .fichero-column {
   width: 45%;
-  margin-left:;
 }
 
 .icon-column {
   width: 15%;
+  margin-right: 1.5rem;
  
 
 }
@@ -761,10 +761,124 @@ color: white;
   margin-left: 1rem;
 }
 
-
-
-.menu-administacion {
-  display: flex;
-  justify-content:flex-end;
+.data-administration.two-columns {
+  margin-top: 2rem;
 }
 
+
+.menu-administracion {
+  width: 50%;
+  height: 90%;
+  display: flex;
+  justify-content: space-around;
+  margin-left: 1rem;
+  
+}
+
+.menu-admin-icon.span {
+  height: 90%;
+}
+
+
+.iconos-administracion {
+width: 15%;
+height: 90%;
+display: flex;
+justify-content: space-evenly;
+margin-left: 21rem;
+}
+
+.input-category {
+width: 45%;
+margin-left: 2rem;
+margin-top: 0.8rem;
+}
+
+.input-category.category-title.h3 {
+  margin-left: 6rem;
+}
+
+.input-category.select {
+  width: 45%;
+}
+
+.input-name {
+  width: 45%;
+  margin-right: 2rem;
+  margin-top: 0.8rem;
+  
+}
+
+.idioma-select {
+  width: 93%;
+  margin: 0 0 0 2rem;
+  margin-top: 0.8rem;
+}
+
+.input-title {
+  width: 80%;
+  
+  margin-left: 2rem;
+  margin-top: 0.8rem;
+}
+
+.description {
+  width: 93%;
+  margin-left: 2rem;
+  margin-top: 0.8rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
