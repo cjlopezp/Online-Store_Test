@@ -1,11 +1,12 @@
-import { renderPlusMinusButton } from "./plus-minus-button.js";
 import { renderTextCounterForm } from "./text-counter-form.js";
 import { renderForm } from "./form.js";
 import { renderNotification } from "./notification.js";
-import { renderTabButtons} from "./tabs.js"
+import { renderTabs} from "./tabs.js"
+import { renderLogin} from "./login.js"
 
-renderPlusMinusButton();
+
 renderTextCounterForm();
 renderForm();
 renderNotification();
-renderTabButtons();
+renderTabs();
+renderLogin();
