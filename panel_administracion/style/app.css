@@ -947,3 +947,12 @@ margin-top: 0.8rem;
 .colum-iva {
   width: 80%;
 }
+
+.login-box {
+  background: rgb(35, 107, 240);
+  border: 1px solid #ddd; 
+  margin: 100px 0;
+  padding: 2vh 0vh 2vh 0vh;
+  display: flex;
+  justify-content: center;
+}
