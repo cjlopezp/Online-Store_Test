@@ -117,7 +117,7 @@
 
                         <div class="column">
                             <div class="contact-form">
-                                <form>
+                                <form action="http://127.0.0.1:8080/api/front/contacts">
                                     <div class="two-columns">
                                         <div class="column">
                                             <div class="form-element">
@@ -172,14 +172,14 @@
                                                     <label for="message">Mensaje</label>
                                                 </div>
                                                 <div class="form-element-input">
-                                                    <textarea class="input_message" data-validate="textarea" maxlength="50" id="message" required autocomplte="off"></textarea>                             
+                                                    <textarea class="input_message" name="message" data-validate="textarea" maxlength="100" id="message" required autocomplte="off"></textarea>                             
                                                     <div id="counter"></div>
                                                 </div>
                                             </div>
                                         </div>
     
                                         <div class="form-send-button">
-                                            <button class="custom-button send-form-button" id="send-button" type="submit" value="Submit">Enviar</button>
+                                            <button class="custom-button send-form-button contact-send-button" id="send-button" type="submit" value="Submit">Enviar</button>
                                         </div>
                                     </div>
                                 </form>
