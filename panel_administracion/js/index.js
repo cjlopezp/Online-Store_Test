@@ -4,7 +4,7 @@ import { renderContactForm } from "./contactForm.js";
 import { renderNotification } from "./notification.js";
 import { renderTabs} from "./tabs.js"
 import { renderLogin} from "./login.js"
-
+import './pageTitle.js';
 
 renderTextCounterForm();
 renderForm();
