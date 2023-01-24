@@ -2,7 +2,7 @@ class PageTitle extends HTMLElement {
 
     constructor() {
         super(); //super: trae todo el funcionamiento d HTML element
-        this.shadow = this.attachShadow({ mode: 'open' }); //declara una propiedad (shadow).ShadowDOM: submodulo donde JS ejecutara acciones y si hay bloque, no afectara al resto del codigo
+        this.shadow = this.attachShadow({ mode: 'open' }); //declara una propiedad (this.shadow).ShadowDOM: submodulo donde JS ejecutara acciones y si hay bloque, no afectara al resto del codigo
         this.title = this.getAttribute('title');
     }
 
@@ -42,7 +42,7 @@ class PageTitle extends HTMLElement {
     }
 }
 //'page-title-component' como ejemplo. Debe tener un guion, sin carateres especiales, ni numeros. Todo en minusculas
-//'page-title-component'ejecutara un componente cuando este titulo s ecite en un HTML <page-title-component title="Clientes"></page-title-component>
+//'page-title-component'ejecutara un componente cuando este titulo se cite en un HTML <page-title-component title="Clientes"></page-title-component>
 customElements.define('page-title-component', PageTitle);
 
 //page-title-component se conectara (ejecutara) PageTitle
