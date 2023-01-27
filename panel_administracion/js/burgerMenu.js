@@ -151,11 +151,10 @@ class Menu extends HTMLElement {
         #menu
         {
             position: absolute;
-            width: 300px;
+            width: 200px;
             margin: -100px 0 0 -50px;
             padding: 50px;
-            padding-top: 125px;
-            
+            padding-top: 125px;            
             background: #ededed;
             list-style-type: none;
             -webkit-font-smoothing: antialiased;
@@ -165,6 +164,9 @@ class Menu extends HTMLElement {
             transform: translate(-100%, 0);
             
             transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+            display: flex;
+            flex-direction: column;
+
         }
 
         #menu li
@@ -177,6 +179,7 @@ class Menu extends HTMLElement {
         {
             padding: 10px 10px;
             font-size: 22px;
+            height: 50px; 
         }
 
         /*
