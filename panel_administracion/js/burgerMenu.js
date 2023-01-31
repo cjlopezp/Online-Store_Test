@@ -214,14 +214,6 @@ class Menu extends HTMLElement {
 
         `;	
 
-        console.log(this.menuItems);
-
-        this.shadow.querySelector('#menuToggle').addEventListener('click', () => {
-            console.log("Carlos, a mi si me funciona el Openchat!");
-        });
-
-        //ini
-
         this.menuItems.forEach(menuItem => {
             let element = document.createElement("a");
             element.href = menuItem.customUrl;
@@ -229,30 +221,21 @@ class Menu extends HTMLElement {
             element.innerHTML = menuItem.name;
             this.shadowRoot.querySelector("#menu").appendChild(element);
         });
-
-        //end
+        
 
         this.shadowRoot.querySelectorAll('.burlink').forEach(el => {
-            el.addEventListener('click', () => {
-                console.log(`Link ${el.href} clicked`);//ATENCION A ESTO, NO VEO EFECTO EN LA WEB//
+            el.addEventListener('click', event => {
+
+                event.preventDefault();
 
                 document.dispatchEvent(new CustomEvent('newUrl', {
                     detail: {
                         title: el.textContent,
+                        url: el.getAttribute('href')
                     }
                 }));
             });
         });
-
-        //inicio
-
-        
-
-        //final
-
-
-
-
     }
 }
 
