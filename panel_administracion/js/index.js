@@ -6,6 +6,7 @@ import { renderLogin} from "./login.js"
 import './pageTitle.js';
 import './burgerMenu.js';
 import "./notification.js";
+import "./table.js";
 
 
 renderTextCounterForm();
