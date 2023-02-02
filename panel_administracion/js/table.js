@@ -11,6 +11,8 @@ class Table extends HTMLElement {
         
         document.addEventListener("newUrl",( event =>{
             this.setAttribute('url', event.detail.url);
+            
+
         }));
     }
 
@@ -63,11 +65,6 @@ class Table extends HTMLElement {
             margin-right: 0.5rem;
         }
         
-        
-
-
-
-
         </style>
 
         <div class="ficheros">
@@ -102,8 +99,6 @@ class Table extends HTMLElement {
 
         let ficheros = this.shadow.querySelector(".ficheros");
         let tableStructure = this.setTableStructure();
-
-        console.log(tableStructure.headers);
         
         this.data.forEach( element => {
 
@@ -155,11 +150,14 @@ class Table extends HTMLElement {
             svgContainer.classList.add("svg-container");
             iconosFicheros.append(svgContainer);
 
+            console.log(element.id)
+
             let svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
             
             svg.setAttribute("style", "width:24px;height:24px");
             svg.setAttribute("viewBox", "0 0 24 24");
             svg.classList.add("edit");
+            svg.setAttribute("id", element.id);
             svgContainer.append(svg);
 
             let path = document.createElementNS("http://www.w3.org/2000/svg", "path");
@@ -172,6 +170,7 @@ class Table extends HTMLElement {
             svg2.setAttribute("style", "width:24px;height:24px");
             svg2.setAttribute("viewBox", "0 0 24 24");
             svg2.classList.add("delete");
+            svg2.setAttribute("id", element.id);
             svgContainer.append(svg2);
 
             let path2 = document.createElementNS("http://www.w3.org/2000/svg", "path");
@@ -182,6 +181,10 @@ class Table extends HTMLElement {
 
 
         });	
+
+
+
+        
     }
 
     setTableStructure() {
