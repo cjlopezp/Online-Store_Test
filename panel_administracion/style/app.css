@@ -637,6 +637,10 @@ nuestro codigo, pero necesitemos apicar otras en casos eparticulares como este  
   background-color: hsl(0deg, 0%, 100%);
   margin-bottom: 1rem;
   width: 100%;
+ 
+
+
+  
 }
 .tabs .tabs-items {
   background-color: hsl(226deg, 63%, 45%);
@@ -796,6 +800,10 @@ color: white;
 
 .column-admin {
   width: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
 }
 
 .iconos-administracion {
@@ -875,11 +883,12 @@ margin-top: 0.8rem;
 .tabs-header {
   display: flex;
   flex-direction: row;
+  justify-content:flex-start;
   gap:.3rem;
 }
 
 .tabs-header.main {
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 

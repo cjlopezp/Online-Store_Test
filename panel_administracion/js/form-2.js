@@ -23,7 +23,7 @@ export let renderForm = () => {
 
         });
     }
-
+    //ini
     render() {
 
         this.shadow.innerHTML = //si se incluyen comillas sencillas (') en el codigo, se pueden combinar lenguajes
