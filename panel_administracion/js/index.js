@@ -9,6 +9,8 @@ import './burgerMenu.js';
 import "./notification.js";
 import "./table.js";
 import "./formlogadm.js";
+import "./formStructure.js"
+
 
 
 renderTextCounterForm();

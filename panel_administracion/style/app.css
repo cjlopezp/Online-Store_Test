@@ -705,12 +705,6 @@ color: white;
   align-items: flex-end;
 } */
 
-.iconos-administracion {
-  width: 100%;
-  display: flex;
-  justify-items: flex-end;
-}
-
 .save-button {
   
 
@@ -806,7 +800,7 @@ color: white;
 
 }
 
-.iconos-administracion {
+.botones-administracion {
   display: flex;
   justify-content: space-evenly;
 }
@@ -883,14 +877,13 @@ margin-top: 0.8rem;
 .tabs-header {
   display: flex;
   flex-direction: row;
-  justify-content:flex-start;
+  justify-content:space-between;
   gap:.3rem;
 }
 
-.tabs-header.main {
-  justify-content: flex-start;
+.tabs-header-buttons{
+  display: flex;
 }
-
 
 .tabs-header-main-buttons {
   display: flex;
