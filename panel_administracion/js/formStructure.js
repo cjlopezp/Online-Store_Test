@@ -219,8 +219,7 @@ class FormStr extends HTMLElement {
                                         <label for="email">Email</label>
                                         <input type="email" name="email" required />
                                     </div>
-                            
-                                                
+                                                                            
                                     <div class="form-element">
                                         <label for="password">Contraseña</label>
                                         <input type="password" name="password" required />
@@ -399,37 +398,53 @@ class FormStr extends HTMLElement {
 
                             let label = document.createElement("label");
                             label.innerText = formElement.label;
+                            label.setAttribute("for", item);
 
                             elementDiv.append(label);
 
+                            //ini INPUT
                             let input = document.createElement("input");
                             //input.innerType = formElement.input;
                             input.type = formElement.input;
-                            input.id = formElement.name;
-                            if (formElement.placeholder) {
-                                input.placeholder = formElement.placeholder;
-                            }
-                            elementDiv.append(input)
-                            elementDiv.append(input)
+                            input.id = item;
+                            input.name = item;
+                            
+                            
 
-                            //let type = document.createElement("type");
-                            ///type.innerType = formElement.type;
-                            //elementInput.append(type)
+                                                        // Asignación de atributos adicionales
+                            Object.keys(formElement).forEach(attribute => {
+                                if (attribute !== 'label' && attribute !== 'input' && attribute !== 'select' && attribute !== 'name' && attribute !== 'placeholder') {
+                                    if (formElement.input === "radio" || formElement.input === "checkbox") {
+                                        input.setAttribute(attribute, formElement[attribute]);
+                                    } else {
+                                        input.setAttribute(attribute, formElement[attribute]);
+                                    }
+                                }
+                            });
+                            
+                            
+
+                            //if (formElement.placeholder) {
+                            //    input.placeholder = formElement.placeholder;
+                           // }
+                            elementDiv.append(input)
+                           //end INPUT
+
+
+                           //ini
+
+                           
+
+                           //end
 
                             fila.appendChild(elementDiv); 
-
 
                         });    
                     };    
                 });
 
                 console.log(formStructure.tabsContent[tab].rows)
-
-            }
-
-              
-
-            
+            }            
         });
           
 
@@ -476,6 +491,19 @@ class FormStr extends HTMLElement {
                     });
     
                     tabButton.classList.add("active");
+
+                    //ini
+
+                    // Aquí se recorren los elementos del formulario para generar los elementos HTML
+                    // correspondientes y añadirlos al HTML
+                    
+
+
+
+                    //end
+
+
+
     
                     if(tabContent.querySelector('.tab-button')){
                         tabContent.querySelector('.tab-button').classList.add('active');
@@ -742,7 +770,7 @@ class FormStr extends HTMLElement {
                 }
             }
         };
-
+        
 }
 
 customElements.define('form-structure', FormStr);
