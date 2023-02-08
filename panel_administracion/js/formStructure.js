@@ -219,8 +219,7 @@ class FormStr extends HTMLElement {
                                         <label for="email">Email</label>
                                         <input type="email" name="email" required />
                                     </div>
-                            
-                                                
+                                                                            
                                     <div class="form-element">
                                         <label for="password">Contraseña</label>
                                         <input type="password" name="password" required />
@@ -399,6 +398,7 @@ class FormStr extends HTMLElement {
 
                             let label = document.createElement("label");
                             label.innerText = formElement.label;
+                            label.setAttribute("for", item);
 
                             elementDiv.append(label);
 
@@ -410,26 +410,51 @@ class FormStr extends HTMLElement {
                                 input.placeholder = formElement.placeholder;
                             }
                             elementDiv.append(input)
-                            //elementDiv.append(input)
+                            elementDiv.append(input)
 
-                            //let type = document.createElement("type");
-                            ///type.innerType = formElement.type;
-                            //elementInput.append(type)
+                                            
+                                               
+                                            if (formElement.element == "select") {
+                                                let select = document.createElement('select');
+                                                select.name = item;
+                                                select.required = formElement.required;
+                                                
+                                                formElement.options.forEach(function(option) {
+                                                    let optionElement = document.createElement('option');
+                                                    optionElement.value = option.value;
+                                                    optionElement.innerHTML = option.label; //captura valores del select
+                                                    select.appendChild(optionElement);
+                                                });
+                                                
+                                                elementDiv.appendChild(select);
+                                            }
+                                                  
+
+                                                
+                                            
+                                        });
+                                    } 
+                                    
+                                    else {
+                                        input.setAttribute(attribute, formElement[attribute]);
+                                    }
+                                }
+                            });
+            
+                            if(formElement.type !== "checkbox" && formElement.type !== "radio"){
+                                elementDiv.append(input)
+                            }
+
+                            
 
                             fila.appendChild(elementDiv); 
-
 
                         });    
                     };    
                 });
 
                 console.log(formStructure.tabsContent[tab].rows)
-
-            }
-
-              
-
-            
+            }            
         });
           
 
@@ -476,6 +501,19 @@ class FormStr extends HTMLElement {
                     });
     
                     tabButton.classList.add("active");
+
+                    //ini
+
+                    // Aquí se recorren los elementos del formulario para generar los elementos HTML
+                    // correspondientes y añadirlos al HTML
+                    
+
+
+
+                    //end
+
+
+
     
                     if(tabContent.querySelector('.tab-button')){
                         tabContent.querySelector('.tab-button').classList.add('active');
@@ -742,7 +780,7 @@ class FormStr extends HTMLElement {
                 }
             }
         };
-
+    
 }
 
 customElements.define('form-structure', FormStr);
