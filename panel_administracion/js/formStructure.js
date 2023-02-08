@@ -402,40 +402,70 @@ class FormStr extends HTMLElement {
 
                             elementDiv.append(label);
 
-                            //ini INPUT
-                            let input = document.createElement("input");
-                            //input.innerType = formElement.input;
-                            input.type = formElement.input;
+                            let input = document.createElement(formElement.element);
                             input.id = item;
                             input.name = item;
-                            
-                            
 
-                                                        // Asignación de atributos adicionales
+                            // Asignación de atributos adicionales
                             Object.keys(formElement).forEach(attribute => {
-                                if (attribute !== 'label' && attribute !== 'input' && attribute !== 'select' && attribute !== 'name' && attribute !== 'placeholder') {
-                                    if (formElement.input === "radio" || formElement.input === "checkbox") {
-                                        input.setAttribute(attribute, formElement[attribute]);
-                                    } else {
+
+                                if (attribute !== 'label' && attribute !== 'name' && attribute !== 'element') {
+                                
+                                    if(attribute == "options") {
+
+                                        formElement[attribute].forEach( option => {
+
+                                            if(formElement.type === "checkbox" || formElement.type === "radio"){
+                                                
+                                                let label = document.createElement('label');
+                                                label.innerHTML = option.label;
+                                                label.setAttribute("for", option.value);
+
+                                                let checkbox = document.createElement('input');
+                                                checkbox.type = formElement.type;
+                                                checkbox.id = option.value;
+                                                checkbox.name = item;
+                                                checkbox.value = option.value;
+                                                checkbox.checked = option.checked || false;
+                                                
+                                                elementDiv.appendChild(label);
+                                                elementDiv.appendChild(checkbox);
+                                            }
+
+                                            
+                                               
+                                            if (formElement.element == "select") {
+                                                let select = document.createElement('select');
+                                                select.name = item;
+                                                select.required = formElement.required;
+                                                
+                                                formElement.options.forEach(function(option) {
+                                                    let optionElement = document.createElement('option');
+                                                    optionElement.value = option.value;
+                                                    optionElement.innerHTML = option.label; //captura valores del select
+                                                    select.appendChild(optionElement);
+                                                });
+                                                
+                                                elementDiv.appendChild(select);
+                                            }
+                                                  
+
+                                                
+                                            
+                                        });
+                                    } 
+                                    
+                                    else {
                                         input.setAttribute(attribute, formElement[attribute]);
                                     }
                                 }
                             });
+            
+                            if(formElement.type !== "checkbox" && formElement.type !== "radio"){
+                                elementDiv.append(input)
+                            }
+
                             
-                            
-
-                            //if (formElement.placeholder) {
-                            //    input.placeholder = formElement.placeholder;
-                           // }
-                            elementDiv.append(input)
-                           //end INPUT
-
-
-                           //ini
-
-                           
-
-                           //end
 
                             fila.appendChild(elementDiv); 
 
@@ -770,7 +800,7 @@ class FormStr extends HTMLElement {
                 }
             }
         };
-        
+    
 }
 
 customElements.define('form-structure', FormStr);
