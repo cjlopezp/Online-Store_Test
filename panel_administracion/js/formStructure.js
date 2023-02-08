@@ -410,7 +410,7 @@ class FormStr extends HTMLElement {
                                 input.placeholder = formElement.placeholder;
                             }
                             elementDiv.append(input)
-                            elementDiv.append(input)
+                            //elementDiv.append(input)
 
                             //let type = document.createElement("type");
                             ///type.innerType = formElement.type;
