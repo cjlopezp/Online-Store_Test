@@ -398,8 +398,7 @@ class FormStr extends HTMLElement {
 
                             let label = document.createElement("label");
                             label.innerText = formElement.label;
-                            label.setAttribute("for", item);
-
+                            label.setAttribute("for", item);                            
                             elementDiv.append(label);
 
                             let input = document.createElement(formElement.element);
@@ -434,24 +433,18 @@ class FormStr extends HTMLElement {
 
                                             
                                                
-                                            if (formElement.element == "select") {
-                                                let select = document.createElement('select');
-                                                select.name = item;
-                                                select.required = formElement.required;
+                                            if (formElement.element == "select" && formElement.options.length > 0) {
+  
                                                 
                                                 formElement.options.forEach(function(option) {
-                                                    let optionElement = document.createElement('option');
+                                                    let optionElement = document.createElement("option");
                                                     optionElement.value = option.value;
-                                                    optionElement.innerHTML = option.label; //captura valores del select
-                                                    select.appendChild(optionElement);
+                                                    optionElement.innerHTML = option.label;
+                                                    input.appendChild(optionElement);
                                                 });
-                                                
-                                                elementDiv.appendChild(select);
+                                                    
+                                                elementDiv.appendChild(input); 
                                             }
-                                                  
-
-                                                
-                                            
                                         });
                                     } 
                                     
@@ -676,7 +669,8 @@ class FormStr extends HTMLElement {
                                                 {
                                                     label: 'Usuario',
                                                     value: 'user'
-                                                }
+                                                },
+                                                
                                             ]
                                         }
                                     }
