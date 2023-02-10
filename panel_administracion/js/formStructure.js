@@ -281,6 +281,7 @@ class FormStr extends HTMLElement {
                             formElementLabel.classList.add('form-element-label');
                             formElementInput.classList.add('form-element-input');
 
+<<<<<<< HEAD
                             let inputContainer = null;
         
                             if(formElementStructure.label){
@@ -309,6 +310,52 @@ class FormStr extends HTMLElement {
                                     if(!this.shadow.querySelector('image-gallery-component')){
                                         const imageGallery = document.createElement('image-gallery-component');
                                         this.shadow.append(imageGallery);
+=======
+                            const elementDiv = document.createElement('div');
+                            elementDiv.classList.add('form-element');
+
+                            let label = document.createElement("label");
+                            label.innerText = formElement.label;
+                            label.setAttribute("for", item);
+
+                            elementDiv.append(label);
+
+                            let input = document.createElement("input");
+                            //input.innerType = formElement.input;
+                            input.type = formElement.input;
+                            input.id = formElement.name;
+                            if (formElement.placeholder) {
+                                input.placeholder = formElement.placeholder;
+                            }
+                            elementDiv.append(input)
+                            elementDiv.append(input)
+
+                                            
+                                               
+                                            if (formElement.element == "select") {
+                                                let select = document.createElement('select');
+                                                select.name = item;
+                                                select.required = formElement.required;
+                                                
+                                                formElement.options.forEach(function(option) {
+                                                    let optionElement = document.createElement('option');
+                                                    optionElement.value = option.value;
+                                                    optionElement.innerHTML = option.label; //captura valores del select
+                                                    select.appendChild(optionElement);
+                                                });
+                                                
+                                                elementDiv.appendChild(select);
+                                            }
+                                                  
+
+                                                
+                                            
+                                        });
+                                    } 
+                                    
+                                    else {
+                                        input.setAttribute(attribute, formElement[attribute]);
+>>>>>>> c309f817734d3baf5ea6e9f969c907678d092c40
                                     }
                             
                                     break;
