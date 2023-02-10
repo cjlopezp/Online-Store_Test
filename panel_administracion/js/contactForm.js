@@ -1,7 +1,7 @@
 import {validateForm} from './validate.js';
 
 export let renderContactForm = () => {
-
+    
     let sendFormButton = document.querySelector('.contact-send-button');
 
     if(sendFormButton){
@@ -11,7 +11,7 @@ export let renderContactForm = () => {
             event.preventDefault();
 
             let form = document.querySelector('form');
-    
+            
             // if(!validateForm(form.elements)){
             //     return;
             // }
@@ -32,9 +32,9 @@ export let renderContactForm = () => {
             // Podemos convertir el objeto FormData en un objeto json mediante el método entries.
     
             let formData = new FormData(form);
-            let formDataJson = Object.fromEntries(formData.entries());
+            let formDataJson = Object.formEntries(formData.entries());
             let url = form.action;
-
+            
             
             console.log(url);
         

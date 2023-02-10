@@ -3,20 +3,26 @@ class FormStr extends HTMLElement {
     constructor() {
         super(); //super: trae todo el funcionamiento d HTML element
         this.shadow = this.attachShadow({ mode: 'open' }); //declara una propiedad (this.shadow).ShadowDOM: submodulo donde JS ejecutara acciones y si hay bloque, no afectara al resto del codigo
+        this.url =  this.getAttribute("url");
     }
+    
+    static get observedAttributes() { return ['url']; }
 
-   
     connectedCallback() {
-        this.render();
 
-        // Obtengo el elemento padre donde se van a pintar los tabs
-       
+        document.addEventListener("newUrl",( event =>{
+            this.setAttribute('url', event.detail.url);
+        }));
+
+        document.addEventListener("showElement",( event =>{
+            this.showElement(event.detail.id);
+        }));
     };
+
+    attributeChangedCallback(name, oldValue, newValue){ //actualiza el atributo, segun haya sido cambiado por el usuario u otro modulo (programacion reactiva)
+        this.render();      
+    }
             
-
-    
-
-    
     async render() { 
 
         this.shadow.innerHTML =    
@@ -148,6 +154,7 @@ class FormStr extends HTMLElement {
         {
             display: flex;
             justify-content: space-between;
+            gap: 2rem;
             line-height:2.5;
         }
 
@@ -163,7 +170,27 @@ class FormStr extends HTMLElement {
         {
             display: flex;
             flex-direction: column;
+            width: 100%;
         }
+
+        .form-element-label span{
+            margin-left: 1rem;
+        }
+
+        input, select, textarea{
+            width: 100%;
+        }
+
+        .checkbox-container, .radio-container{
+            display:flex;
+            gap: 1rem;
+            width: 100%;
+        }
+
+        input[type="radio"], input[type="checkbox"]{
+            width: 5%;
+        }
+
 
         </style>
 
@@ -182,175 +209,28 @@ class FormStr extends HTMLElement {
                         
                             <div class="tabs-header-buttons">
                                 <div class="icono-administracion">
-
-                                    <svg class="form-save-button save-button" viewBox="0 0 24 24">
+                                    <button class="save-button" type="submit">
+                                        <svg class="save-button" viewBox="0 0 24 24">
                                         <path fill="currentColor" d="M15,9H5V5H15M12,19A3,3 0 0,1 9,16A3,3 0 0,1 12,13A3,3 0 0,1 15,16A3,3 0 0,1 12,19M17,3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V7L17,3Z" />
-                                    </svg>
+                                        </svg>
+                                    </button>
+                                    
                                     
                                 </div>
 
                                 <div class="icono-administracion">
-                                    
-                                    <svg class="form-clean-button clean-button" viewBox="0 0 24 24">
-                                        <path fill="currentColor" d="M19.36,2.72L20.78,4.14L15.06,9.85C16.13,11.39 16.28,13.24 15.38,14.44L9.06,8.12C10.26,7.22 12.11,7.37 13.65,8.44L19.36,2.72M5.93,17.57C3.92,15.56 2.69,13.16 2.35,10.92L7.23,8.83L14.67,16.27L12.58,21.15C10.34,20.81 7.94,19.58 5.93,17.57Z" />
-                                    </svg>
-
+                                    <button class="clean-button" type="reset">
+                                        <svg class="form-clean-button clean-button"  viewBox="0 0 24 24">
+                                            <path fill="currentColor" d="M19.36,2.72L20.78,4.14L15.06,9.85C16.13,11.39 16.28,13.24 15.38,14.44L9.06,8.12C10.26,7.22 12.11,7.37 13.65,8.44L19.36,2.72M5.93,17.57C3.92,15.56 2.69,13.16 2.35,10.92L7.23,8.83L14.67,16.27L12.58,21.15C10.34,20.81 7.94,19.58 5.93,17.57Z" />
+                                        </svg>
+                                    </button>
                                 </div>
                             </div>
                         </div>
 
                         <div class="tabs-body">
             
-                            <div id="tab-2" class="tab-content active">
-                                <div>
-                                    <h3>Principal</h3>
-                                </div>
-                        
-                    
-                                <div class="fila">
-                    
-                                    <div class="form-element">
-                                        <input type="hidden" name="id" />
-                                        <label for="name">Nombre</label>
-                                        <input type="text" name="name" maxLength="10" required /> 
-                                    </div>
-                            
-                                    <div class="form-element">
-                                        <label for="email">Email</label>
-                                        <input type="email" name="email" required />
-                                    </div>
-                                                                            
-                                    <div class="form-element">
-                                        <label for="password">Contraseña</label>
-                                        <input type="password" name="password" required />
-                                    </div>
-                            
-                                    <div class="form-element">
-                                        <label for="repeatPassword">Repita la contraseña</label>
-                                        <input type="password" name="repeatPassword" required />
-                                    </div>
-                    
-                                </div>
-                        
-                                <div class="fila">
-                                
-                                    <div>
-                                    <label for="edad">Edad</label>
-                                    <input type="number" name="edad" required />
-                                    </div>
-                    
-                                    <div>
-                                    <label for="telefono">Teléfono</label>
-                                    <input type="tel" name="telefono" required />
-                                    </div>
-                    
-                                    <div>
-                                        <label for="sex">Sexo</label>
-                                        <input type="radio" name="sex" value="M" checked />
-                                        <label for="sex">Masculino</label>
-                                        <input type="radio" name="sex" value="F" />
-                                        <label for="sex">Femenino</label>
-                                    </div>
-                                
-                                </div> 
-                                
-                    
-                                <div class="fila">
-                                    <div>
-                                        <label for="role">Rol</label>
-                                        <select name="role" required>
-                                            <option value="admin">Administrador</option>
-                                            <option value="user">Usuario</option>
-                                        </select>    
-                                    </div>
-                    
-                                    <div>
-                                        <label for="permissions">Permisos</label>
-                                        <input type="checkbox" name="permissions" value="create" checked />
-                                        <label for="permissions">Crear</label>
-                                        <input type="checkbox" name="permissions" value="read" />
-                                        <label for="permissions">Leer</label>
-                                        <input type="checkbox" name="permissions" value="update" />
-                                        <label for="permissions">Actualizar</label>
-                                        <input type="checkbox" name="permissions" value="delete" />
-                                        <label for="permissions">Eliminar</label>
-                                    </div>
-                                </div>
-                        
-                            
-                                <div class="fila">
-                        
-                                    <div>
-                                        <label for="url">URL</label>
-                                        <input type="url" name="url" required />
-                                    </div>
-                    
-                                    <div>
-                                        <label for="creationDate">Fecha de creación</label>
-                                        <input type="date" id="creationDate" placeholder="" required />
-                                    </div>
-                                                                                    
-                                    <div>
-                                        <label for="creationTime">Hora de creación</label>
-                                        <input type="time" id="creationTime" placeholder="" required />
-                                    </div>                                                   
-                                                                                    
-                                </div>                                            
-                                                                                
-                                <div class="fila">                                                   
-                                                                                
-                                    <div>
-                                        <label for="reservationWeek">Semana de reserva</label>
-                                        <input type="week" id="reservationWeek" placeholder="" required />
-                                    </div>
-                    
-                                    <div>
-                                        <label for="reservationMonth">Mes de reserva</label>
-                                        <input type="month" id="reservationMonth" placeholder="" required />
-                                    </div>
-                    
-                                    <div>
-                                        <label for="reservationDateTime">Fecha y hora</label>
-                                        <input type="datetime-local" id="reservationDateTime" placeholder="" required />
-                                    </div>
-                                                
-                                </div>
-                    
-                    
-                                <div class="filaC"> 
-                                
-                                    <div>
-                                        <label for="capital">Capital</label>
-                                        <input type="range" id="capital" min="0" max="100" step="1" value="50" placeholder="" />
-                                    </div>
-                    
-                                    <div>
-                                        <label for="color">Color</label>
-                                        <input type="color" name="color" />
-                                    </div>
-                                
-                                </div>
-                    
-                    
-                                <div class="fila"> 
-                                
-                                <div>
-                                    <label for="pdf">Pdf</label>
-                                    <input type="file" id="pdf" placeholder="" required />
-                                    </div>
-                            
-                                    <div>
-                                    <label for="search">Buscar</label>
-                                    <input type="search" id="search" placeholder="" required />
-                                    </div>
-                            
-                                    <div>
-                                    <label for="description">Descripción</label>
-                                    <textarea id="description" maxLength="100" placeholder="" required></textarea>
-                                    </div> 
-                                
-                                </div>
-                           </div>
+                           
                         </div>  
                     </div> 
                 </div> 
@@ -360,10 +240,9 @@ class FormStr extends HTMLElement {
 
         let formStructure = await this.setFormStructure();
 
+        const form = this.shadow.querySelector("form");
         const tabsHeaderButtons = this.shadow.querySelector('.tabs-header-buttons');
         const tabsBody = this.shadow.querySelector('.tabs-body');
-
-        
         
         Object.keys(formStructure.tabs).forEach(tab => {
             // Creo el botón
@@ -379,90 +258,163 @@ class FormStr extends HTMLElement {
             tabContent.classList.add('tab-content');
             tabsBody.appendChild(tabContent);
           
-            
 
             if (formStructure.tabsContent[tab] && formStructure.tabsContent[tab].rows) {
                 Object.keys(formStructure.tabsContent[tab].rows).forEach(row => {
-                  const fila = document.createElement('div');
-                  fila.classList.add('fila');
-                  tabContent.appendChild(fila); 
+                    const fila = document.createElement('div');
+                    fila.classList.add('fila');
+                    tabContent.appendChild(fila); 
                   // Iteramos sobre cada elemento de la fila
                     if (formStructure.tabsContent[tab].rows[row] && formStructure.tabsContent[tab].rows[row].formElements) {
 
-                        Object.keys(formStructure.tabsContent[tab].rows[row].formElements).forEach( item => {
+                        for(let field in formStructure.tabsContent[tab].rows[row].formElements) {
 
-                            let formElement = formStructure.tabsContent[tab].rows[row].formElements[item];
+                            let formElementStructure = formStructure.tabsContent[tab].rows[row].formElements[field];
+        
+                            const formElementContainer = document.createElement('div');
+                            const formElementLabel = document.createElement('div');
+                            const formElementInput = document.createElement('div');
+                            formElementContainer.append(formElementLabel);
+                            formElementContainer.append(formElementInput);
+                
+                            formElementContainer.classList.add('form-element');
+                            formElementLabel.classList.add('form-element-label');
+                            formElementInput.classList.add('form-element-input');
 
-                            const elementDiv = document.createElement('div');
-                            elementDiv.classList.add('form-element');
+                            let inputContainer = null;
+        
+                            if(formElementStructure.label){
+                                const label = document.createElement('label');
+                                label.textContent = formElementStructure.label;
+                                label.htmlFor = field;
+                                formElementLabel.append(label);
+                            }
+        
+                            let formElement = document.createElement(formElementStructure.element);
+                            formElement.setAttribute("name", field);
+                            formElement.setAttribute("id", field);
+        
+                            if(formElementStructure.type === "hidden"){
+                                form.append(formElement);
+                            }else if(formElementStructure.type != "checkbox" && formElementStructure.type != "radio"){
+                                formElementInput.append(formElement); 
+                                fila.append(formElementContainer);
+                                tabContent.append(fila);
+                            }
+        
+                            switch(formElementStructure.type) {
+        
+                                case "file":
+        
+                                    if(!this.shadow.querySelector('image-gallery-component')){
+                                        const imageGallery = document.createElement('image-gallery-component');
+                                        this.shadow.append(imageGallery);
+                                    }
+                            
+                                    break;
+        
+                                case "checkbox":
+                                case "radio":
+        
+                                    inputContainer = document.createElement('div');
+                                    inputContainer.classList.add(`${formElementStructure.type}-container`);
+                                    formElementInput.append(inputContainer);
+        
+                                    break;
+        
+                                default:
+        
+                                    if(formElementStructure.type === "range"){
+        
+                                        inputContainer = document.createElement('div');
+                                        inputContainer.classList.add(`${formElementStructure.type}-container`);
+                                        formElementInput.append(inputContainer);
+        
+                                        const rangeValue = document.createElement('span');
+                                        rangeValue.classList.add('range-value');
+                                        rangeValue.innerText = formElementStructure.value;
+                                        formElementInput.append(rangeValue);
+            
+                                        formElement.addEventListener('input', () => {
+                                            rangeValue.innerText = formElement.value;
+                                        });
+                                    }
+                            }
+        
+                            Object.keys(formElementStructure).forEach(attribute => {
+        
+                                switch(attribute) {
+        
+                                    case "element":
+                                    case "label":
+                                    case "name":
+                                        
+                                        break;
+        
+                                    case "options":
 
-                            let label = document.createElement("label");
-                            label.innerText = formElement.label;
-                            label.setAttribute("for", item);                            
-                            elementDiv.append(label);
-
-                            let input = document.createElement(formElement.element);
-                            input.id = item;
-                            input.name = item;
-
-                            // Asignación de atributos adicionales
-                            Object.keys(formElement).forEach(attribute => {
-
-                                if (attribute !== 'label' && attribute !== 'name' && attribute !== 'element') {
+                                        fila.append(formElementContainer);
+                                        tabContent.append(fila);
+        
+                                        formElementStructure[attribute].forEach( option => {
+        
+                                            if(formElementStructure.type === "checkbox" || formElementStructure.type === "radio"){
                                 
-                                    if(attribute == "options") {
-
-                                        formElement[attribute].forEach( option => {
-
-                                            if(formElement.type === "checkbox" || formElement.type === "radio"){
-                                                
-                                                let label = document.createElement('label');
-                                                label.innerHTML = option.label;
-                                                label.setAttribute("for", option.value);
-
-                                                let checkbox = document.createElement('input');
-                                                checkbox.type = formElement.type;
-                                                checkbox.id = option.value;
-                                                checkbox.name = item;
-                                                checkbox.value = option.value;
-                                                checkbox.checked = option.checked || false;
-                                                
-                                                elementDiv.appendChild(label);
-                                                elementDiv.appendChild(checkbox);
+                                                const input = document.createElement('input');
+                                                const inputLabel = document.createElement('label');
+                                                inputLabel.innerText = option.label;
+                                                input.id = field;
+                                                input.type = formElementStructure.type;
+                                                input.name = field;
+                                                input.value = option.value || '';
+                                                input.checked = option.checked || false;
+                                                input.disabled = option.disabled || false;
+        
+                                                inputContainer.append(inputLabel);
+                                                inputContainer.append(input);
                                             }
-
-                                            
-                                               
-                                            if (formElement.element == "select" && formElement.options.length > 0) {
-  
-                                                
-                                                formElement.options.forEach(function(option) {
-                                                    let optionElement = document.createElement("option");
-                                                    optionElement.value = option.value;
-                                                    optionElement.innerHTML = option.label;
-                                                    input.appendChild(optionElement);
-                                                });
-                                                    
-                                                elementDiv.appendChild(input); 
+            
+                                            if (formElementStructure.element == "select") {
+        
+                                                const optionElement = document.createElement('option');
+                                                optionElement.value = option.value;
+                                                optionElement.textContent = option.label;
+                                                formElement.append(optionElement);
+                                            }                                            
+                                        });
+        
+                                        break;
+        
+                                    case "validate":
+        
+                                        formElement.dataset.validate = formElementStructure[attribute];
+        
+                                        break;
+        
+                                    case "maxLength":
+        
+                                        formElement.setAttribute(attribute, formElementStructure[attribute]);
+                                        const counter = document.createElement('span');
+                                        formElementLabel.append(counter);
+            
+                                        formElement.addEventListener('input', () => {
+            
+                                            if(formElement.value.length > 0){
+                                                counter.textContent = formElement.value.length + ' / ' + formElement.maxLength;                            
+                                            }else{
+                                                counter.textContent = '';
                                             }
                                         });
-                                    } 
-                                    
-                                    else {
-                                        input.setAttribute(attribute, formElement[attribute]);
-                                    }
+        
+                                        break;
+        
+                                    default:
+        
+                                        formElement.setAttribute(attribute, formElementStructure[attribute]);
                                 }
                             });
-            
-                            if(formElement.type !== "checkbox" && formElement.type !== "radio"){
-                                elementDiv.append(input)
-                            }
-
-                            
-
-                            fila.appendChild(elementDiv); 
-
-                        });    
+        
+                        }; 
                     };    
                 });
 
@@ -470,18 +422,15 @@ class FormStr extends HTMLElement {
             }            
         });
           
-
-
-
-
-
-
-        this.shadow.querySelector(".tab-button").classList.add("active");
-
         this.renderTabs();
+        this.renderButtons();
     };
 
     renderTabs(){
+
+        this.shadow.querySelector(".tab-button").classList.add("active");
+        this.shadow.querySelector(".tab-content").classList.add("active");
+
         let tabButtons = this.shadow.querySelectorAll(".tab-button");
         
         // Asignamos un manejador de eventos al clic en cada botón de pestaña
@@ -537,13 +486,176 @@ class FormStr extends HTMLElement {
         });
     }
 
+    renderButtons = async () => {
+
+        let sendFormButton = this.shadow.querySelector('.save-button');
+        let cleanButton = this.shadow.querySelector('.clean-button');
+
+        sendFormButton.addEventListener('click', async event => {
+
+            event.preventDefault();
+
+            let form = this.shadow.querySelector('form');
+    
+            // if(!validateForm(form.elements)){
+            //     return;
+            // }
+    
+            let formData = new FormData(form);
+            let formDataJson = Object.fromEntries(formData.entries());
+            let url = `http://127.0.0.1:8080${this.getAttribute("url")}`;
+    
+            let response = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Authorization': 'Bearer ' + sessionStorage.getItem('accessToken'),
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formDataJson)
+            });
+
+            switch(response.status){
+
+                case 200: 
+
+                    this.render();
+
+                    document.dispatchEvent(new CustomEvent('newData'))
+
+                    document.dispatchEvent(new CustomEvent('message', {
+                        detail: {
+                            text: 'Formulario enviado correctamente',
+                            type: 'success'
+                        }
+                    }));
+                
+                    break;
+
+                case 500:
+
+                    document.dispatchEvent(new CustomEvent('message', {
+                        detail: {
+                            text: 'Algún error en los datos suministrados',
+                            type: 'error'
+                        }
+                    }));
+
+                    break;
+                    
+                case 401:
+
+                    document.dispatchEvent(new CustomEvent('message', {
+                        detail: {
+                            text: 'No tiene permiso',
+                            type: 'error'
+                        }
+                    }));
+
+                    break;
+            }
+               
+        });
+
+        cleanButton.addEventListener('click', async event => {
+
+            event.preventDefault();
+
+            this.render();
+        });
+    }
+
+    async showElement(id){
+
+
+        let result = await fetch(`http://127.0.0.1:8080${this.getAttribute("url")}/${id}`,{
+            headers: {
+                'Authorization': 'Bearer ' + sessionStorage.getItem('accessToken'),
+                },
+            }
+        );
+
+        let data = await result.json();
+
+        for( const [key,value] of Object.entries(data)){
+
+            console.log(key)
+            console.log(value)
+           
+
+
+
+        }
+    }
+
     setFormStructure = async () => {
        
         let url = this.getAttribute('url');
 
         switch (url) {
 
+
             case '/api/admin/users':
+
+                return {
+
+                    tabs:{
+                        main: {
+                            label: 'Users'
+                        }
+                        
+                    },
+
+                    tabsContent: {
+
+                        main: {
+                            rows:{
+                                row1: {
+                                    formElements:{
+                                        name: {
+                                            label: 'Nombre',
+                                            element: 'input',
+                                            maxLength: '15',
+                                            type: 'text',
+                                            placeholder: '',
+                                            required: true,
+                                            validate: 'only-letters'
+                                        },
+                                        email: {
+                                            label: 'Email',
+                                            element: 'input',
+                                            type: 'email',
+                                            placeholder: '',
+                                            required: true,
+                                            validate: 'email'
+                                        },
+                                    }
+                                },
+                                row2: {
+                                    formElements:{
+                                        password:{
+                                            label: 'Password',
+                                            element: 'input',
+                                            type: 'password',
+                                            placeholder: '',
+                                            required: true,
+                                        },
+                                        repeatPassword:{
+                                            label: 'Repeat password',
+                                            element: 'input',
+                                            type: 'password',
+                                            placeholder: '',
+                                            required: true,
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+        
+
+            
+            case '/api/admin/ejemplo':
 
                 return {
 
@@ -793,11 +905,8 @@ class FormStr extends HTMLElement {
                     }
                 }
             }
-        };
+        }
     
 }
 
 customElements.define('form-structure', FormStr);
-
-
-
