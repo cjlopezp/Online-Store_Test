@@ -281,36 +281,6 @@ class FormStr extends HTMLElement {
                             formElementLabel.classList.add('form-element-label');
                             formElementInput.classList.add('form-element-input');
 
-<<<<<<< HEAD
-                            let inputContainer = null;
-        
-                            if(formElementStructure.label){
-                                const label = document.createElement('label');
-                                label.textContent = formElementStructure.label;
-                                label.htmlFor = field;
-                                formElementLabel.append(label);
-                            }
-        
-                            let formElement = document.createElement(formElementStructure.element);
-                            formElement.setAttribute("name", field);
-                            formElement.setAttribute("id", field);
-        
-                            if(formElementStructure.type === "hidden"){
-                                form.append(formElement);
-                            }else if(formElementStructure.type != "checkbox" && formElementStructure.type != "radio"){
-                                formElementInput.append(formElement); 
-                                fila.append(formElementContainer);
-                                tabContent.append(fila);
-                            }
-        
-                            switch(formElementStructure.type) {
-        
-                                case "file":
-        
-                                    if(!this.shadow.querySelector('image-gallery-component')){
-                                        const imageGallery = document.createElement('image-gallery-component');
-                                        this.shadow.append(imageGallery);
-=======
                             const elementDiv = document.createElement('div');
                             elementDiv.classList.add('form-element');
 
@@ -355,7 +325,6 @@ class FormStr extends HTMLElement {
                                     
                                     else {
                                         input.setAttribute(attribute, formElement[attribute]);
->>>>>>> c309f817734d3baf5ea6e9f969c907678d092c40
                                     }
                             
                                     break;
