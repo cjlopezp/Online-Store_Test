@@ -85,7 +85,9 @@ class Table extends HTMLElement {
                         </div>
                     </div>
                 </div>        
-            </div>   
+            </div> 
+            
+            <delete-message> </delete-message>
         </div>                     
         `;
 
@@ -186,8 +188,13 @@ class Table extends HTMLElement {
             svg2.classList.add("delete-button");
             svg2.setAttribute("id", element.id);
             deleteButton.append(svg2);
-            deleteButton.addEventListener('click', async event => {
 
+            deleteButton.addEventListener('click', async event => {
+                document.dispatchEvent(new CustomEvent('showDeleteModal', {
+                    detail: {
+                        id: element.id,
+                    }
+                }));
             });
 
             let path2 = document.createElementNS("http://www.w3.org/2000/svg", "path");

@@ -578,7 +578,9 @@ class FormStr extends HTMLElement {
 
         for( const [key,value] of Object.entries(data)){
 
-            console.log()
+            if(this.shadow.querySelector(`[name="${key}"]`)){
+                this.shadow.querySelector(`[name="${key}"]`).value = value;
+            }
         }
 
     }
