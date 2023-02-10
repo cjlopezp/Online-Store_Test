@@ -281,50 +281,34 @@ class FormStr extends HTMLElement {
                             formElementLabel.classList.add('form-element-label');
                             formElementInput.classList.add('form-element-input');
 
-                            const elementDiv = document.createElement('div');
-                            elementDiv.classList.add('form-element');
-
-                            let label = document.createElement("label");
-                            label.innerText = formElement.label;
-                            label.setAttribute("for", item);
-
-                            elementDiv.append(label);
-
-                            let input = document.createElement("input");
-                            //input.innerType = formElement.input;
-                            input.type = formElement.input;
-                            input.id = formElement.name;
-                            if (formElement.placeholder) {
-                                input.placeholder = formElement.placeholder;
+                            let inputContainer = null;
+        
+                            if(formElementStructure.label){
+                                const label = document.createElement('label');
+                                label.textContent = formElementStructure.label;
+                                label.htmlFor = field;
+                                formElementLabel.append(label);
                             }
-                            elementDiv.append(input)
-                            elementDiv.append(input)
-
-                                            
-                                               
-                                            if (formElement.element == "select") {
-                                                let select = document.createElement('select');
-                                                select.name = item;
-                                                select.required = formElement.required;
-                                                
-                                                formElement.options.forEach(function(option) {
-                                                    let optionElement = document.createElement('option');
-                                                    optionElement.value = option.value;
-                                                    optionElement.innerHTML = option.label; //captura valores del select
-                                                    select.appendChild(optionElement);
-                                                });
-                                                
-                                                elementDiv.appendChild(select);
-                                            }
-                                                  
-
-                                                
-                                            
-                                        });
-                                    } 
-                                    
-                                    else {
-                                        input.setAttribute(attribute, formElement[attribute]);
+        
+                            let formElement = document.createElement(formElementStructure.element);
+                            formElement.setAttribute("name", field);
+                            formElement.setAttribute("id", field);
+        
+                            if(formElementStructure.type === "hidden"){
+                                form.append(formElement);
+                            }else if(formElementStructure.type != "checkbox" && formElementStructure.type != "radio"){
+                                formElementInput.append(formElement); 
+                                fila.append(formElementContainer);
+                                tabContent.append(fila);
+                            }
+        
+                            switch(formElementStructure.type) {
+        
+                                case "file":
+        
+                                    if(!this.shadow.querySelector('image-gallery-component')){
+                                        const imageGallery = document.createElement('image-gallery-component');
+                                        this.shadow.append(imageGallery);
                                     }
                             
                                     break;
@@ -594,13 +578,9 @@ class FormStr extends HTMLElement {
 
         for( const [key,value] of Object.entries(data)){
 
-            console.log(key)
-            console.log(value)
-           
-
-
-
+            console.log()
         }
+
     }
 
     setFormStructure = async () => {
