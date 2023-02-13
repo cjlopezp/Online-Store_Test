@@ -1,3 +1,5 @@
+import {API_URL} from '../config/config.js'
+
 class FormStr extends HTMLElement {
 
     constructor() {
@@ -15,6 +17,7 @@ class FormStr extends HTMLElement {
         }));
 
         document.addEventListener("showElement",( event =>{
+            this.id = event.detail.id;
             this.showElement(event.detail.id);
         }));
     };
@@ -503,10 +506,11 @@ class FormStr extends HTMLElement {
     
             let formData = new FormData(form);
             let formDataJson = Object.fromEntries(formData.entries());
-            let url = `http://127.0.0.1:8080${this.getAttribute("url")}`;
+            let url = this.id ? `${API_URL}${this.getAttribute("url")}/${this.id}` :  `${API_URL}${this.getAttribute("url")}`;
+            let method = this.id ? "PUT" : "POST";
     
             let response = await fetch(url, {
-                method: 'POST',
+                method: method,
                 headers: {
                     'Authorization': 'Bearer ' + sessionStorage.getItem('accessToken'),
                     'Content-Type': 'application/json'
@@ -520,7 +524,7 @@ class FormStr extends HTMLElement {
 
                     this.render();
 
-                    document.dispatchEvent(new CustomEvent('newData'))
+                    document.dispatchEvent(new CustomEvent('refreshTable'))
 
                     document.dispatchEvent(new CustomEvent('message', {
                         detail: {
@@ -567,7 +571,7 @@ class FormStr extends HTMLElement {
     async showElement(id){
 
 
-        let result = await fetch(`http://127.0.0.1:8080${this.getAttribute("url")}/${id}`,{
+        let result = await fetch(`${API_URL}${this.getAttribute("url")}/${id}`,{
             headers: {
                 'Authorization': 'Bearer ' + sessionStorage.getItem('accessToken'),
                 },

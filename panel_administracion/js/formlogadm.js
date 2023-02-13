@@ -1,3 +1,5 @@
+import {API_URL} from '../config/config.js'
+
 class Formlog extends HTMLElement {
 
     constructor() {
@@ -63,7 +65,7 @@ class Formlog extends HTMLElement {
             const form = event.target.closest('form');
             const formData = new FormData(form);
             const formDataJson = Object.fromEntries(formData.entries());
-            fetch('http://127.0.0.1:8080/api/auth/users/signin', {
+            fetch(`${API_URL}/api/auth/users/signin`, {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json'

@@ -1,3 +1,5 @@
+import {API_URL} from '../config/config.js'
+
 class Menu extends HTMLElement {
 
     constructor() {
@@ -12,7 +14,7 @@ class Menu extends HTMLElement {
 
     async loadData(){
 
-        let result = await fetch('http://127.0.0.1:8080/api/admin/menus/display/admin-header',{
+        let result = await fetch(`${API_URL}/api/admin/menus/display/admin-header`,{
             headers: {
                 'Authorization': 'Bearer ' + sessionStorage.getItem('accessToken'),
                 },
@@ -177,9 +179,9 @@ class Menu extends HTMLElement {
 
         #menu a
         {
-            padding: 10px 10px;
+            padding: 5px 5px;
             font-size: 22px;
-            height: 50px; 
+            height: ; 
         }
 
         /*

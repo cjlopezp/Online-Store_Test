@@ -1,8 +1,13 @@
+import {API_URL} from '../config/config.js'
+
 class Table extends HTMLElement {
 
     constructor() {
         super(); //super: trae todo el funcionamiento d HTML element
         this.shadow = this.attachShadow({ mode: 'open' }); //declara una propiedad (this.shadow).ShadowDOM: submodulo donde JS ejecutara acciones y si hay bloque, no afectara al resto del codigo
+        this.total = null;
+        this.currentPage = null;
+        this.pages = null;
     }
 
     static get observedAttributes() { return ['url']; }
@@ -13,7 +18,7 @@ class Table extends HTMLElement {
             this.setAttribute('url', event.detail.url);
         }));
 
-        document.addEventListener("newData",( event =>{
+        document.addEventListener("refreshTable",( event =>{
             this.loadData().then(() => this.render());
         }));
     }
@@ -22,9 +27,13 @@ class Table extends HTMLElement {
         this.loadData().then(() => this.render());
     }
 
-    async loadData(){
+    async loadData(pagination){
 
-        let result = await fetch(`http://127.0.0.1:8080${this.getAttribute("url")}`,{
+        let url = pagination ? pagination : `${API_URL}${this.getAttribute("url")}`
+
+        console.log(url)
+
+        let result = await fetch(url ,{
             headers: {
                 'Authorization': 'Bearer ' + sessionStorage.getItem('accessToken'),
                 },
@@ -32,6 +41,13 @@ class Table extends HTMLElement {
         );
         let data = await result.json();
         this.data = data.rows;
+        
+        //console.log(data.meta);
+
+        // Actualizar informacion de paginacion con datos de metadatos
+        this.total = data.meta.total;
+        this.currentPage = data.meta.currentPage;
+        this.pages = data.meta.pages;
     }
 
 
@@ -66,6 +82,40 @@ class Table extends HTMLElement {
         .key{
             margin-right: 0.5rem;
         }
+
+        .table-pagination {
+            margin-top: 1em;
+        }
+       
+        .table-pagination .table-pagination-info{
+            color: hsl(0, 0%, 100%);
+            display: flex;
+            font-family: 'Roboto', sans-serif;
+            justify-content: space-between;
+        }
+
+        .table-pagination .table-pagination-buttons p{
+            color: hsl(0, 0%, 100%);
+            font-family: 'Roboto', sans-serif;
+            margin: 1rem 0;
+        }
+
+        .table-pagination-info p{
+            margin: 0;
+        }
+   
+        .table-pagination .table-pagination-button{
+            cursor: pointer;
+            margin-right: 1em;
+        }
+   
+        .table-pagination .table-pagination-button:hover{
+            color: hsl(19, 100%, 50%);
+        }
+   
+        .table-pagination .table-pagination-button.inactive{
+            color: hsl(0, 0%, 69%);
+        }
         
         </style>
 
@@ -86,9 +136,21 @@ class Table extends HTMLElement {
                     </div>
                 </div>        
             </div> 
-            
-            <delete-message> </delete-message>
-        </div>                     
+        </div>   
+        <div class="table-pagination">
+            <div class="table-pagination-info">
+                <div class="table-pagination-total"><p><span id="total-page">${this.total}</span> registros</p></div>
+                <div class="table-pagination-pages"><p>Página <span id="current-page">${this.currentPage}</span> de <span id="last-page">${this.pages}</span></p></div>
+            </div>
+            <div class="table-pagination-buttons">
+                <p>
+                    <span class="table-pagination-button" id="firstPageUrl">Primera</span>
+                    <span class="table-pagination-button" id="previousPageUrl">Anterior</span>
+                    <span class="table-pagination-button" id="nextPageUrl">Siguiente</span>
+                    <span class="table-pagination-button" id="lastPageUrl">Última</span>
+                </p>
+            </div>
+        </div>                  
         `;
 
         let ficheros = this.shadow.querySelector(".ficheros");
@@ -203,6 +265,39 @@ class Table extends HTMLElement {
             svg2.append(path2);
         });	 
 
+        this.renderPageButtons();
+    }
+
+    renderPageButtons(){
+
+        let firstPageUrl = this.shadow.getElementById("firstPageUrl");
+        let previousPageUrl = this.shadow.getElementById("previousPageUrl");
+        let nextPageUrl = this.shadow.getElementById("nextPageUrl");
+        let lastPageUrl = this.shadow.getElementById("lastPageUrl");
+
+        firstPageUrl.addEventListener("click", () => {
+            let url = `${API_URL}${this.getAttribute("url")}?page=1`;
+            this.loadData(url).then( () => this.render());
+        });
+
+        previousPageUrl.addEventListener("click", () => {
+            if (this.currentPage > 1) {
+                let url = `${API_URL}${this.getAttribute("url")}?page=${parseInt(this.currentPage) - 1}`;
+                this.loadData(url).then( () => this.render());
+            }
+        });
+
+        nextPageUrl.addEventListener("click", () => {
+            if (this.currentPage < this.pages) {
+                let url = `${API_URL}${this.getAttribute("url")}?page=${parseInt(this.currentPage) + 1}`;
+                this.loadData(url).then( () => this.render());
+            }
+        });
+
+        lastPageUrl.addEventListener("click", () => {
+            let url = `${API_URL}${this.getAttribute("url")}?page=${this.pages}`;
+            this.loadData(url).then( () => this.render());
+        });
     }
 
     setTableStructure() {
