@@ -1,4 +1,7 @@
 import {API_URL} from '../config/config.js'
+import {validateForm} from './validate.js';
+
+
 
 class FormStr extends HTMLElement {
 
@@ -20,11 +23,27 @@ class FormStr extends HTMLElement {
             this.id = event.detail.id;
             this.showElement(event.detail.id);
         }));
+
+        //ini
+        
+        
+        
+       
+        //end
+
+
+
     };
 
     attributeChangedCallback(name, oldValue, newValue){ //actualiza el atributo, segun haya sido cambiado por el usuario u otro modulo (programacion reactiva)
         this.render();      
     }
+
+    //ini
+
+    
+
+    //end
             
     async render() { 
 
@@ -32,7 +51,9 @@ class FormStr extends HTMLElement {
         ` 
         <style>
 
-       
+        
+
+
         .tabs {
             background-color: hsl(0deg, 0%, 100%);
             margin-bottom: 1rem;
@@ -238,8 +259,15 @@ class FormStr extends HTMLElement {
                     </div> 
                 </div> 
             </div>                                     
-        </form>     
+        </form> 
+        
+        
+
         `;     
+
+
+        
+
 
         let formStructure = await this.setFormStructure();
 
@@ -908,7 +936,56 @@ class FormStr extends HTMLElement {
                 }
             }
         }
-    
+
+        
+        handleSubmit = async (event) => {
+        event.preventDefault();
+
+        const form = event.target;
+        const formInputs = form.querySelectorAll('input');
+        const isValid = validateForm(formInputs);
+
+        if (isValid) {
+            try {
+                const response = await fetch(API_URL + url, {
+                    method: 'POST',
+                    body: new FormData(form)
+                });
+
+                if (response.ok) {
+                    // Show success modal
+                    const modal = document.createElement('div');
+                    modal.classList.add('modal');
+                    modal.innerHTML = `
+                        <div class="modal-content">
+                            <h3>Success</h3>
+                            <p>The data was submitted successfully.</p>
+                            <button class="btn" type="button" onclick="this.parentNode.parentNode.remove()">Close</button>
+                        </div>
+                    `;
+                    document.body.appendChild(modal);
+                } else {
+                    // Show error modal
+                    const modal = document.createElement('div');
+                    modal.classList.add('modal');
+                    modal.innerHTML = `
+                        <div class="modal-content">
+                            <h3>Error</h3>
+                            <p>There was an error submitting the data.</p>
+                            <button class="btn" type="button" onclick="this.parentNode.parentNode.remove()">Close</button>
+                        </div>
+                    `;
+                    document.body.appendChild(modal);
+                }
+            } catch (error) {
+                console.error(error);
+            }
+        }
+    }
+
+
+
+
 }
 
 customElements.define('form-structure', FormStr);

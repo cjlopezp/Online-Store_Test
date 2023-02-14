@@ -9,7 +9,7 @@ import "./table.js";
 import "./formlogadm.js";
 import "./formStructure.js"
 import "./deleteNotification.js"
-
+import "./validate.js";
 
 
 
