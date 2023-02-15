@@ -1,5 +1,5 @@
 import {API_URL} from '../config/config.js'
-import {validateForm} from './validate.js';
+// import {validateForm} from './config/validate.js' 
 
 
 
@@ -24,26 +24,13 @@ class FormStr extends HTMLElement {
             this.showElement(event.detail.id);
         }));
 
-        //ini
-        
-        
-        
-       
-        //end
-
-
-
     };
 
     attributeChangedCallback(name, oldValue, newValue){ //actualiza el atributo, segun haya sido cambiado por el usuario u otro modulo (programacion reactiva)
         this.render();      
     }
 
-    //ini
 
-    
-
-    //end
             
     async render() { 
 
@@ -216,9 +203,50 @@ class FormStr extends HTMLElement {
         }
 
 
+        
+        /*<!MODAL*/
+        .modal {
+            display: none; /* Ocultar el modal por defecto */
+            position: fixed; /* Fijar la posición del modal */
+            z-index: 1; /* Situar el modal por encima de todo */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4); /* Fondo oscuro semitransparente */
+        }
+        
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+        }
+        
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        .invalid{
+            border: 2px solid #F3130C;
+        }
+
         </style>
 
-        <form>
+        <form >
 
             <div class="two-columns">
             
@@ -261,7 +289,13 @@ class FormStr extends HTMLElement {
             </div>                                     
         </form> 
         
-        
+        <div class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p id="modal-message"></p>
+                <p id="error-message"></p>
+            </div>
+        </div>
 
         `;     
 
@@ -495,15 +529,7 @@ class FormStr extends HTMLElement {
     
                     tabButton.classList.add("active");
 
-                    //ini
-
-                    // Aquí se recorren los elementos del formulario para generar los elementos HTML
-                    // correspondientes y añadirlos al HTML
                     
-
-
-
-                    //end
 
 
 
@@ -522,21 +548,30 @@ class FormStr extends HTMLElement {
         let sendFormButton = this.shadow.querySelector('.save-button');
         let cleanButton = this.shadow.querySelector('.clean-button');
 
+        //ini
+
+        
+
+        //end
+
+
+
         sendFormButton.addEventListener('click', async event => {
 
             event.preventDefault();
 
             let form = this.shadow.querySelector('form');
     
-            // if(!validateForm(form.elements)){
-            //     return;
-            // }
-    
+
             let formData = new FormData(form);
             let formDataJson = Object.fromEntries(formData.entries());
             let url = this.id ? `${API_URL}${this.getAttribute("url")}/${this.id}` :  `${API_URL}${this.getAttribute("url")}`;
             let method = this.id ? "PUT" : "POST";
-    
+            
+            if(!this.validateForm(form.elements)){
+                return;
+            }
+                      
             let response = await fetch(url, {
                 method: method,
                 headers: {
@@ -545,6 +580,7 @@ class FormStr extends HTMLElement {
                 },
                 body: JSON.stringify(formDataJson)
             });
+            
 
             switch(response.status){
 
@@ -553,13 +589,6 @@ class FormStr extends HTMLElement {
                     this.render();
 
                     document.dispatchEvent(new CustomEvent('refreshTable'))
-
-                    document.dispatchEvent(new CustomEvent('message', {
-                        detail: {
-                            text: 'Formulario enviado correctamente',
-                            type: 'success'
-                        }
-                    }));
                 
                     break;
 
@@ -572,6 +601,9 @@ class FormStr extends HTMLElement {
                         }
                     }));
 
+                    
+
+
                     break;
                     
                 case 401:
@@ -583,10 +615,13 @@ class FormStr extends HTMLElement {
                         }
                     }));
 
+                    
                     break;
-            }
-               
+            }               
         });
+
+
+                
 
         cleanButton.addEventListener('click', async event => {
 
@@ -609,13 +644,69 @@ class FormStr extends HTMLElement {
         let data = await result.json();
 
         for( const [key,value] of Object.entries(data)){
-
+           
             if(this.shadow.querySelector(`[name="${key}"]`)){
-                this.shadow.querySelector(`[name="${key}"]`).value = value;
+                this.shadow.querySelector(`[name="${key}"]`).value = value;       
+            }            
+        }
+
+
+    }
+
+    validateForm = formInputs => {
+
+        let validForm = true;
+       
+        let validators = {
+            "only-letters": /^[a-zA-Z\s]+$/g,
+            "only-numbers": /\d/g,
+            "telephone": /^\d{9}$/g,
+            "email": /\w+@\w+\.\w+/g,
+            "web": /^(http|https):\/\/\w+\.\w+/g,
+            "password": /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/g,
+            "date": /^\d{4}-\d{2}-\d{2}$/g,
+            "time": /^\d{2}:\d{2}$/g
+        }
+    
+        for (let i = 0; i < formInputs.length; i++) {
+    
+            if (formInputs[i].dataset.validate){
+    
+                if(formInputs[i].value.match(validators[formInputs[i].dataset.validate]) == null) {
+                    formInputs[i].classList.add('invalid');
+                    validForm = false;
+                }else{
+                    formInputs[i].classList.remove('invalid');
+                }
             }
         }
 
-    }
+        if(!validForm){
+            let modalMessage = this.shadow.querySelector('#modal-message');
+            let errorMessage = this.shadow.querySelector('#error-message');
+            let modal = this.shadow.querySelector('.modal');
+            let close = this.shadow.querySelector('.close');
+        
+            if (modalMessage && errorMessage && modal && close) {
+                modalMessage.innerText = "Hay errores en los datos introducidos";
+                errorMessage.innerText = "Revisa los campos marcados en rojo";
+                modal.style.display = "block";
+        
+                close.onclick = function() {
+                    modal.style.display = "none";
+                }
+        
+                window.onclick = function(event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+            }
+        }
+    
+        return validForm;
+    };
+    
 
     setFormStructure = async () => {
        
@@ -644,7 +735,7 @@ class FormStr extends HTMLElement {
                                         name: {
                                             label: 'Nombre',
                                             element: 'input',
-                                            maxLength: '15',
+                                            maxLength: '50',
                                             type: 'text',
                                             placeholder: '',
                                             required: true,
@@ -683,7 +774,81 @@ class FormStr extends HTMLElement {
                     }
                 }
         
+                case '/api/admin/books':
 
+                    return {
+
+                        tabs:{
+                            main: {
+                                label: 'books'
+                            }
+                            
+                        },
+
+                        tabsContent: {
+
+                            main: {
+                                rows:{
+                                    row1: {
+                                        formElements:{
+                                            title: {
+                                                label: 'Titulo',
+                                                element: 'input',
+                                                maxLength: '50',
+                                                type: 'text',
+                                                placeholder: '',
+                                                required: true,
+                                                validate: 'required'
+                                            },
+                                            author: {
+                                                label: 'Author',
+                                                element: 'input',
+                                                type: 'text',
+                                                placeholder: '',
+                                                required: true,
+                                                validate: 'required'
+                                            },
+                                        }
+                                    },
+                                    row2: {
+                                        formElements:{
+                                            description:{
+                                                label: 'Descripción',
+                                                element: 'textarea',                                                                                            placeholder: '',
+                                                required: true,
+                                            },
+                                            isbn:{
+                                                label: 'ISBN',
+                                                element: 'input',
+                                                type: 'alphanumeric',
+                                                placeholder: '',
+                                                required: true,
+                                            }
+                                        }
+                                    },
+                                    row3: {
+                                        formElements:{
+                                            pageCount:{
+                                                label: 'Page count',
+                                                element: 'input',
+                                                type: 'only-numbers',
+                                                placeholder: '',
+                                                required: true,
+                                            },
+                                            publishedDate:{
+                                                label: 'Pulished date',
+                                                element: 'input',
+                                                type: 'date',
+                                                placeholder: '',
+                                                required: true,
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+    
             
             case '/api/admin/ejemplo':
 
@@ -937,50 +1102,17 @@ class FormStr extends HTMLElement {
             }
         }
 
-        
+        //ini
         handleSubmit = async (event) => {
-        event.preventDefault();
-
-        const form = event.target;
-        const formInputs = form.querySelectorAll('input');
-        const isValid = validateForm(formInputs);
-
-        if (isValid) {
-            try {
-                const response = await fetch(API_URL + url, {
-                    method: 'POST',
-                    body: new FormData(form)
-                });
-
-                if (response.ok) {
-                    // Show success modal
-                    const modal = document.createElement('div');
-                    modal.classList.add('modal');
-                    modal.innerHTML = `
-                        <div class="modal-content">
-                            <h3>Success</h3>
-                            <p>The data was submitted successfully.</p>
-                            <button class="btn" type="button" onclick="this.parentNode.parentNode.remove()">Close</button>
-                        </div>
-                    `;
-                    document.body.appendChild(modal);
-                } else {
-                    // Show error modal
-                    const modal = document.createElement('div');
-                    modal.classList.add('modal');
-                    modal.innerHTML = `
-                        <div class="modal-content">
-                            <h3>Error</h3>
-                            <p>There was an error submitting the data.</p>
-                            <button class="btn" type="button" onclick="this.parentNode.parentNode.remove()">Close</button>
-                        </div>
-                    `;
-                    document.body.appendChild(modal);
-                }
-            } catch (error) {
-                console.error(error);
-            }
-        }
+            console.log(hola)
+        // event.preventDefault();
+        // console.log(hola)
+        // const form = event.target;
+        // const formInputs = form.querySelectorAll('form-element-input');
+        
+        
+            
+        
     }
 
 
